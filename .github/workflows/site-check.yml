@@ -1,0 +1,43 @@
+name: site-check
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate-static-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify core files exist
+        run: |
+          test -f index.html
+          test -f assets/styles.css
+          test -f assets/app.js
+          test -f search-index.json
+
+      - name: Verify homepage references assets
+        run: |
+          grep -q 'assets/styles.css' index.html
+          grep -q 'assets/app.js' index.html
+          grep -q 'id="search-input"' index.html
+
+      - name: Basic HTML smoke check
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          html = Path('index.html').read_text(encoding='utf-8')
+          required = [
+              '<title>X Files Wiki</title>',
+              'id="search"',
+              'id="collections"',
+              'GitHub Pages',
+          ]
+          missing = [item for item in required if item not in html]
+          if missing:
+              raise SystemExit(f'Missing required markers: {missing}')
+          print('static homepage smoke check ok')
+          PY

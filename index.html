@@ -3,32 +3,80 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#08111f" />
+  <meta name="description" content="Archivo estático de X Files: anomalías, teorías, remote viewing, Marte, Backrooms y rarezas curadas desde Obsidian." />
   <title>X Files Wiki</title>
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   
     <div class="shell">
+      <div class="topbar">
+        <a class="brand" href="index.html" aria-label="Ir al inicio de X Files Wiki">
+          <span class="brand-mark">X</span>
+          <span class="brand-copy">
+            <strong>X Files Wiki</strong>
+            <small>Static intelligence archive</small>
+          </span>
+        </a>
+        <div class="topbar-actions">
+          <span class="utility-badge">GitHub Pages</span>
+          <span class="utility-badge">Mobile ready</span>
+          <span class="utility-badge">Press <kbd>/</kbd> to search</span>
+        </div>
+      </div>
+
       <header class="hero hero-home">
         <div class="hero-copy">
-          <div class="eyebrow">X Files Wiki</div>
-          <h1>Archivo navegable de anomalías, teorías, lore y rarezas.</h1>
-          <p>Website estático generado desde tu vault de Obsidian. Base oscura, navegación rápida y búsqueda local sin backend.</p>
+          <div class="eyebrow">X Files // Curated archive</div>
+          <div class="hero-kicker">Vault público derivado desde Obsidian</div>
+          <h1>Un archivo oscuro, limpio y navegable para anomalías, teorías, lore y rarezas.</h1>
+          <p>Diseñado para abrir rápido en celular, recorrer clusters temáticos y encontrar notas sin backend. Navegación directa, búsqueda local y una capa visual más editorial y profesional.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#search">Buscar notas</a>
-            <a class="button button-secondary" href="#latest">Ver últimas</a>
+            <a class="button button-primary" href="#search">Explorar archivo</a>
+            <a class="button button-secondary" href="#collections">Ver colecciones</a>
+          </div>
+          <div class="trust-row">
+            <span>21 notas publicadas</span>
+            <span>5 clusters activos</span>
+            <span>48 tags distintos</span>
           </div>
           <div class="hero-tags"><span class="tag-chip">x-files <small>21</small></span><span class="tag-chip">theories <small>16</small></span><span class="tag-chip">mars <small>9</small></span><span class="tag-chip">cia <small>8</small></span><span class="tag-chip">remote-viewing <small>6</small></span><span class="tag-chip">stargate <small>6</small></span><span class="tag-chip">nasa <small>5</small></span><span class="tag-chip">documentary <small>4</small></span></div>
         </div>
         <div class="hero-panel">
-          <div class="hero-panel-title">Estado del archivo</div>
-          <div class="hero-metrics"><div><strong>21</strong><span>notas publicadas</span></div><div><strong>5</strong><span>clusters activos</span></div><div><strong>48</strong><span>tags distintos</span></div><div><strong>2026-04-20 19:23</strong><span>último build</span></div></div>
+          <div class="hero-panel-title">Archive status</div>
+          <div class="hero-metrics">
+            <div><strong>21</strong><span>notas publicadas</span></div>
+            <div><strong>5</strong><span>clusters activos</span></div>
+            <div><strong>48</strong><span>tags distintos</span></div>
+            <div><strong>2026-04-20 19:23</strong><span>último build</span></div>
+          </div>
+          <div class="panel-note">Deploy automático en cada push a <code>main</code> vía GitHub Pages.</div>
         </div>
       </header>
+
+      <section class="stat-strip" aria-label="Resumen rápido del archivo">
+        <div class="stat-card">
+          <span class="stat-label">Cobertura</span>
+          <strong>UAP, CIA, Marte, liminal y más</strong>
+          <p>Clusters separados para navegar sin mezclar evidencia, lore y especulación.</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Formato</span>
+          <strong>Static-first</strong>
+          <p>Sin login, sin backend y con carga inmediata desde GitHub Pages.</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Uso</span>
+          <strong>Búsqueda local</strong>
+          <p>Filtra por título, resumen o tags. Ideal para revisar desde teléfono.</p>
+        </div>
+      </section>
 
       <nav class="topnav">
         <a href="index.html">Inicio</a>
         <a href="x-files.html">Área X Files</a>
+        <a href="#collections">Colecciones</a>
         <a href="#group-ufo-uap">UFO / UAP</a><a href="#group-cia-remote-viewing">CIA / Remote Viewing</a><a href="#group-marte">Marte</a><a href="#group-backrooms-liminal">Backrooms / Liminal</a><a href="#group-otros">Otros</a>
       </nav>
 
@@ -36,7 +84,7 @@
         <div class="section-head">
           <div>
             <h2>Búsqueda local</h2>
-            <p>Filtra por título, resumen o tags. No requiere servidor.</p>
+            <p>Filtra por título, resumen o tags. Todo corre en el navegador.</p>
           </div>
           <span id="search-count">21 notas indexadas</span>
         </div>
@@ -44,7 +92,45 @@
           <input id="search-input" type="search" placeholder="Ej: remote viewing, mars, uap, backrooms..." autocomplete="off" />
           <button id="search-clear" type="button">Limpiar</button>
         </div>
+        <div class="search-hint">Atajo: presiona <kbd>/</kbd> para enfocar y <kbd>Esc</kbd> para limpiar.</div>
         <div id="search-results" class="search-results"></div>
+      </section>
+
+      <section class="section" id="collections">
+        <div class="section-head">
+          <div>
+            <h2>Colecciones</h2>
+            <p>Entrada rápida a los frentes principales del archivo.</p>
+          </div>
+          <span>5 clusters</span>
+        </div>
+        <div class="cluster-grid">
+          <a class="cluster-card" href="#group-ufo-uap">
+            <span class="cluster-eyebrow">01</span>
+            <h3>UFO / UAP</h3>
+            <p>papers, sightings, seguimiento y material oficial útil para observación.</p>
+          </a>
+          <a class="cluster-card" href="#group-cia-remote-viewing">
+            <span class="cluster-eyebrow">02</span>
+            <h3>CIA / Remote Viewing</h3>
+            <p>documentos, Stargate, sessions y piezas de contexto histórico.</p>
+          </a>
+          <a class="cluster-card" href="#group-marte">
+            <span class="cluster-eyebrow">03</span>
+            <h3>Marte</h3>
+            <p>anomalías, océanos antiguos, Cydonia y lecturas oficiales vs especulación.</p>
+          </a>
+          <a class="cluster-card" href="#group-backrooms-liminal">
+            <span class="cluster-eyebrow">04</span>
+            <h3>Backrooms / Liminal</h3>
+            <p>estética uncanny, internet lore y mapas de referencia cultural.</p>
+          </a>
+          <a class="cluster-card" href="#group-otros">
+            <span class="cluster-eyebrow">05</span>
+            <h3>Otros</h3>
+            <p>nodos híbridos, teorías raras y piezas que todavía no encajan en una sola caja.</p>
+          </a>
+        </div>
       </section>
 
       <section class="section intro">
