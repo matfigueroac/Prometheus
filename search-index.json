@@ -12,10 +12,14 @@
     ],
     "url": "aaro-uap-workshop-2025.html",
     "updated": "2026-04-23",
-    "search": "aaro uap workshop paper (2025) esta nota sigue sin el contenido completo del paper, pero ya no queda como simple placeholder. dentro del vault, su funcion es preservar una referencia oficial reciente de aaro y dejar claro por que podria importar: cual x-files uap aaro paper government unresolved",
+    "kind": "resource",
+    "group": "UFO / UAP",
+    "search": "aaro uap workshop paper (2025) esta nota sigue sin el contenido completo del paper, pero ya no queda como simple placeholder. dentro del vault, su funcion es preservar una referencia oficial reciente de aaro y dejar claro por que podria importar: cual resource ufo / uap x-files uap aaro paper government unresolved",
     "title_norm": "aaro uap workshop paper (2025)",
     "summary_norm": "esta nota sigue sin el contenido completo del paper, pero ya no queda como simple placeholder. dentro del vault, su funcion es preservar una referencia oficial reciente de aaro y dejar claro por que podria importar: cual",
-    "tags_norm": "x-files uap aaro paper government unresolved"
+    "tags_norm": "x-files uap aaro paper government unresolved",
+    "kind_norm": "resource",
+    "group_norm": "ufo / uap"
   },
   {
     "title": "Ancient civilizations and theories",
@@ -30,10 +34,14 @@
     ],
     "url": "ancient-civilizations-and-theories.html",
     "updated": "2026-04-23",
-    "search": "ancient civilizations and theories nodo marco para ordenar arqueologia alternativa, civilizaciones perdidas, catastrofismo, megalitismo y lecturas simbolicas de la antiguedad sin tratarlas como bloque homogeneo. la funcion de esta nota es separar `discove x-files theories ancient-civilizations archaeology catastrophism megaliths",
+    "kind": "resource",
+    "group": "Otros",
+    "search": "ancient civilizations and theories nodo marco para ordenar arqueologia alternativa, civilizaciones perdidas, catastrofismo, megalitismo y lecturas simbolicas de la antiguedad sin tratarlas como bloque homogeneo. la funcion de esta nota es separar `discove resource otros x-files theories ancient-civilizations archaeology catastrophism megaliths",
     "title_norm": "ancient civilizations and theories",
     "summary_norm": "nodo marco para ordenar arqueologia alternativa, civilizaciones perdidas, catastrofismo, megalitismo y lecturas simbolicas de la antiguedad sin tratarlas como bloque homogeneo. la funcion de esta nota es separar `discove",
-    "tags_norm": "x-files theories ancient-civilizations archaeology catastrophism megaliths"
+    "tags_norm": "x-files theories ancient-civilizations archaeology catastrophism megaliths",
+    "kind_norm": "resource",
+    "group_norm": "otros"
   },
   {
     "title": "Ancient Ocean on Mars: Evidence vs Open Debate",
@@ -50,10 +58,14 @@
     ],
     "url": "ancient-ocean-on-mars-evidence-vs-open-debate.html",
     "updated": "2026-04-17",
-    "search": "ancient ocean on mars: evidence vs open debate nodo x files para el tema `oceano antiguo en marte`, separado entre evidencia geomorfologica fuerte y debate todavia abierto sobre su extension, duracion y nivel de certeza. x-files mars ocean nasa caltech nature ancient-mars theories",
+    "kind": "resource",
+    "group": "Marte",
+    "search": "ancient ocean on mars: evidence vs open debate nodo x files para el tema `oceano antiguo en marte`, separado entre evidencia geomorfologica fuerte y debate todavia abierto sobre su extension, duracion y nivel de certeza. resource marte x-files mars ocean nasa caltech nature ancient-mars theories",
     "title_norm": "ancient ocean on mars: evidence vs open debate",
     "summary_norm": "nodo x files para el tema `oceano antiguo en marte`, separado entre evidencia geomorfologica fuerte y debate todavia abierto sobre su extension, duracion y nivel de certeza.",
-    "tags_norm": "x-files mars ocean nasa caltech nature ancient-mars theories"
+    "tags_norm": "x-files mars ocean nasa caltech nature ancient-mars theories",
+    "kind_norm": "resource",
+    "group_norm": "marte"
   },
   {
     "title": "Ancient Water on Mars and Climate Loss",
@@ -69,10 +81,14 @@
     ],
     "url": "ancient-water-on-mars-and-climate-loss.html",
     "updated": "2026-04-17",
-    "search": "ancient water on mars and climate loss nota base para el eje `agua antigua / canales / habitabilidad pasada` dentro del paquete marte en x files. x-files mars nasa water climate ancient-mars theories",
+    "kind": "resource",
+    "group": "Marte",
+    "search": "ancient water on mars and climate loss nota base para el eje `agua antigua / canales / habitabilidad pasada` dentro del paquete marte en x files. resource marte x-files mars nasa water climate ancient-mars theories",
     "title_norm": "ancient water on mars and climate loss",
     "summary_norm": "nota base para el eje `agua antigua / canales / habitabilidad pasada` dentro del paquete marte en x files.",
-    "tags_norm": "x-files mars nasa water climate ancient-mars theories"
+    "tags_norm": "x-files mars nasa water climate ancient-mars theories",
+    "kind_norm": "resource",
+    "group_norm": "marte"
   },
   {
     "title": "Backrooms Kane Pixels Timeline",
@@ -88,10 +104,14 @@
     ],
     "url": "backrooms-kane-pixels-timeline.html",
     "updated": "2026-04-23",
-    "search": "backrooms kane pixels timeline cronologia detallada del universo de kane pixels centrada en async research, el threshold y la transicion del concepto backrooms desde experimento corporativo hacia desastre espacial, biologico y narrativo. x-files backrooms liminal-spaces kane-pixels timeline lore analog-horror",
+    "kind": "resource",
+    "group": "Backrooms / Liminal",
+    "search": "backrooms kane pixels timeline cronologia detallada del universo de kane pixels centrada en async research, el threshold y la transicion del concepto backrooms desde experimento corporativo hacia desastre espacial, biologico y narrativo. resource backrooms / liminal x-files backrooms liminal-spaces kane-pixels timeline lore analog-horror",
     "title_norm": "backrooms kane pixels timeline",
     "summary_norm": "cronologia detallada del universo de kane pixels centrada en async research, el threshold y la transicion del concepto backrooms desde experimento corporativo hacia desastre espacial, biologico y narrativo.",
-    "tags_norm": "x-files backrooms liminal-spaces kane-pixels timeline lore analog-horror"
+    "tags_norm": "x-files backrooms liminal-spaces kane-pixels timeline lore analog-horror",
+    "kind_norm": "resource",
+    "group_norm": "backrooms / liminal"
   },
   {
     "title": "Backrooms and Liminal Spaces Deep Dive",
@@ -107,10 +127,14 @@
     ],
     "url": "backrooms-liminal-spaces-deep-dive.html",
     "updated": "2026-04-23",
-    "search": "backrooms and liminal spaces deep dive marco conceptual amplio sobre que son los liminal spaces, por que producen inquietud y nostalgia al mismo tiempo, como the backrooms cristaliza esa estetica y por que el fenomeno se volvio una mitologia central de la cul x-files backrooms liminal-spaces aesthetics internet-culture psychology analog-horror",
+    "kind": "resource",
+    "group": "Backrooms / Liminal",
+    "search": "backrooms and liminal spaces deep dive marco conceptual amplio sobre que son los liminal spaces, por que producen inquietud y nostalgia al mismo tiempo, como the backrooms cristaliza esa estetica y por que el fenomeno se volvio una mitologia central de la cul resource backrooms / liminal x-files backrooms liminal-spaces aesthetics internet-culture psychology analog-horror",
     "title_norm": "backrooms and liminal spaces deep dive",
     "summary_norm": "marco conceptual amplio sobre que son los liminal spaces, por que producen inquietud y nostalgia al mismo tiempo, como the backrooms cristaliza esa estetica y por que el fenomeno se volvio una mitologia central de la cul",
-    "tags_norm": "x-files backrooms liminal-spaces aesthetics internet-culture psychology analog-horror"
+    "tags_norm": "x-files backrooms liminal-spaces aesthetics internet-culture psychology analog-horror",
+    "kind_norm": "resource",
+    "group_norm": "backrooms / liminal"
   },
   {
     "title": "CIA Mars Exploration 1984",
@@ -125,10 +149,14 @@
     ],
     "url": "cia-mars-exploration-1984.html",
     "updated": "2026-04-23",
-    "search": "cia mars exploration 1984 documento desclasificado asociado al universo de remote viewing / stargate. registra una sesion del `1984-05-22` en la que un sujeto describe percepciones sobre marte en una epoca aproximada de hace `1 millon de anos`, u x-files cia remote-viewing mars stargate theories",
+    "kind": "resource",
+    "group": "CIA / Remote Viewing",
+    "search": "cia mars exploration 1984 documento desclasificado asociado al universo de remote viewing / stargate. registra una sesion del `1984-05-22` en la que un sujeto describe percepciones sobre marte en una epoca aproximada de hace `1 millon de anos`, u resource cia / remote viewing x-files cia remote-viewing mars stargate theories",
     "title_norm": "cia mars exploration 1984",
     "summary_norm": "documento desclasificado asociado al universo de remote viewing / stargate. registra una sesion del `1984-05-22` en la que un sujeto describe percepciones sobre marte en una epoca aproximada de hace `1 millon de anos`, u",
-    "tags_norm": "x-files cia remote-viewing mars stargate theories"
+    "tags_norm": "x-files cia remote-viewing mars stargate theories",
+    "kind_norm": "resource",
+    "group_norm": "cia / remote viewing"
   },
   {
     "title": "CIA Reading Room Record 1693729",
@@ -143,10 +171,14 @@
     ],
     "url": "cia-readingroom-record-1693729.html",
     "updated": "2026-04-23",
-    "search": "cia reading room record 1693729 este nodo sigue siendo un registro cia no resuelto, pero ya no queda como nota vacia: su funcion dentro del vault es conservar un identificador estable del reading room y marcar explicitamente que se trata de una fuente x-files cia document reading-room stargate unresolved",
+    "kind": "resource",
+    "group": "CIA / Remote Viewing",
+    "search": "cia reading room record 1693729 este nodo sigue siendo un registro cia no resuelto, pero ya no queda como nota vacia: su funcion dentro del vault es conservar un identificador estable del reading room y marcar explicitamente que se trata de una fuente resource cia / remote viewing x-files cia document reading-room stargate unresolved",
     "title_norm": "cia reading room record 1693729",
     "summary_norm": "este nodo sigue siendo un registro cia no resuelto, pero ya no queda como nota vacia: su funcion dentro del vault es conservar un identificador estable del reading room y marcar explicitamente que se trata de una fuente",
-    "tags_norm": "x-files cia document reading-room stargate unresolved"
+    "tags_norm": "x-files cia document reading-room stargate unresolved",
+    "kind_norm": "resource",
+    "group_norm": "cia / remote viewing"
   },
   {
     "title": "CIA Reading Room Record 273505",
@@ -161,10 +193,14 @@
     ],
     "url": "cia-readingroom-record-273505.html",
     "updated": "2026-04-23",
-    "search": "cia reading room record 273505 este registro del cia reading room ya no debe leerse como un placeholder aislado: dentro del vault, su importancia principal es que esta directamente conectado con `[[resources/gondola-wish]]`. aunque la vista `print` es x-files cia document reading-room stargate remote-viewing",
+    "kind": "resource",
+    "group": "CIA / Remote Viewing",
+    "search": "cia reading room record 273505 este registro del cia reading room ya no debe leerse como un placeholder aislado: dentro del vault, su importancia principal es que esta directamente conectado con `[[resources/gondola-wish]]`. aunque la vista `print` es resource cia / remote viewing x-files cia document reading-room stargate remote-viewing",
     "title_norm": "cia reading room record 273505",
     "summary_norm": "este registro del cia reading room ya no debe leerse como un placeholder aislado: dentro del vault, su importancia principal es que esta directamente conectado con `[[resources/gondola-wish]]`. aunque la vista `print` es",
-    "tags_norm": "x-files cia document reading-room stargate remote-viewing"
+    "tags_norm": "x-files cia document reading-room stargate remote-viewing",
+    "kind_norm": "resource",
+    "group_norm": "cia / remote viewing"
   },
   {
     "title": "Cydonia: Martian Mystery Region",
@@ -179,10 +215,14 @@
     ],
     "url": "cydonia-martian-mystery-region.html",
     "updated": "2026-04-23",
-    "search": "cydonia: martian mystery region cydonia es una de las regiones mas utiles de toda la carpeta marte porque concentra dos historias al mismo tiempo: una historia cientifica real sobre geologia, hielo y clima marciano; y una historia cultural sobre la `fa x-files mars cydonia nasa theories anomalies",
+    "kind": "resource",
+    "group": "Marte",
+    "search": "cydonia: martian mystery region cydonia es una de las regiones mas utiles de toda la carpeta marte porque concentra dos historias al mismo tiempo: una historia cientifica real sobre geologia, hielo y clima marciano; y una historia cultural sobre la `fa resource marte x-files mars cydonia nasa theories anomalies",
     "title_norm": "cydonia: martian mystery region",
     "summary_norm": "cydonia es una de las regiones mas utiles de toda la carpeta marte porque concentra dos historias al mismo tiempo: una historia cientifica real sobre geologia, hielo y clima marciano; y una historia cultural sobre la `fa",
-    "tags_norm": "x-files mars cydonia nasa theories anomalies"
+    "tags_norm": "x-files mars cydonia nasa theories anomalies",
+    "kind_norm": "resource",
+    "group_norm": "marte"
   },
   {
     "title": "Face on Mars: Official Image Reanalysis",
@@ -197,10 +237,14 @@
     ],
     "url": "face-on-mars-official-image-reanalysis.html",
     "updated": "2026-04-23",
-    "search": "face on mars: official image reanalysis la `face on mars` es probablemente el ejemplo mas famoso de pareidolia planetaria moderna. la utilidad de esta nota no esta solo en registrar que nasa la considera una formacion natural, sino en dejar claro *como* una im x-files mars cydonia nasa anomalies face-on-mars",
+    "kind": "resource",
+    "group": "Marte",
+    "search": "face on mars: official image reanalysis la `face on mars` es probablemente el ejemplo mas famoso de pareidolia planetaria moderna. la utilidad de esta nota no esta solo en registrar que nasa la considera una formacion natural, sino en dejar claro *como* una im resource marte x-files mars cydonia nasa anomalies face-on-mars",
     "title_norm": "face on mars: official image reanalysis",
     "summary_norm": "la `face on mars` es probablemente el ejemplo mas famoso de pareidolia planetaria moderna. la utilidad de esta nota no esta solo en registrar que nasa la considera una formacion natural, sino en dejar claro *como* una im",
-    "tags_norm": "x-files mars cydonia nasa anomalies face-on-mars"
+    "tags_norm": "x-files mars cydonia nasa anomalies face-on-mars",
+    "kind_norm": "resource",
+    "group_norm": "marte"
   },
   {
     "title": "GONDOLA WISH",
@@ -216,10 +260,14 @@
     ],
     "url": "gondola-wish.html",
     "updated": "2026-04-23",
-    "search": "gondola wish `gondola wish` es una pieza importante del paquete stargate no porque pruebe que la parapsicologia funcionara, sino porque muestra algo mas concreto: en 1978 existian actores del aparato militar/inteligencia estadouniden x-files cia stargate remote-viewing document theories opsec",
+    "kind": "resource",
+    "group": "CIA / Remote Viewing",
+    "search": "gondola wish `gondola wish` es una pieza importante del paquete stargate no porque pruebe que la parapsicologia funcionara, sino porque muestra algo mas concreto: en 1978 existian actores del aparato militar/inteligencia estadouniden resource cia / remote viewing x-files cia stargate remote-viewing document theories opsec",
     "title_norm": "gondola wish",
     "summary_norm": "`gondola wish` es una pieza importante del paquete stargate no porque pruebe que la parapsicologia funcionara, sino porque muestra algo mas concreto: en 1978 existian actores del aparato militar/inteligencia estadouniden",
-    "tags_norm": "x-files cia stargate remote-viewing document theories opsec"
+    "tags_norm": "x-files cia stargate remote-viewing document theories opsec",
+    "kind_norm": "resource",
+    "group_norm": "cia / remote viewing"
   },
   {
     "title": "How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 1 of 3)",
@@ -235,10 +283,14 @@
     ],
     "url": "how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-1.html",
     "updated": "2026-04-23",
-    "search": "how the cia spent millions on psychic spies - project: stargate (documentary 1 of 3) primera parte de la trilogia. funciona como puerta de entrada al universo stargate: guerra fria, miedo a la ventaja sovietica, sri, ingo swann, joseph mcmoneagle, entrenamiento contemporaneo y aparicion de ed dames. no i x-files cia stargate remote-viewing documentary ufo theories",
+    "kind": "resource",
+    "group": "UFO / UAP",
+    "search": "how the cia spent millions on psychic spies - project: stargate (documentary 1 of 3) primera parte de la trilogia. funciona como puerta de entrada al universo stargate: guerra fria, miedo a la ventaja sovietica, sri, ingo swann, joseph mcmoneagle, entrenamiento contemporaneo y aparicion de ed dames. no i resource ufo / uap x-files cia stargate remote-viewing documentary ufo theories",
     "title_norm": "how the cia spent millions on psychic spies - project: stargate (documentary 1 of 3)",
     "summary_norm": "primera parte de la trilogia. funciona como puerta de entrada al universo stargate: guerra fria, miedo a la ventaja sovietica, sri, ingo swann, joseph mcmoneagle, entrenamiento contemporaneo y aparicion de ed dames. no i",
-    "tags_norm": "x-files cia stargate remote-viewing documentary ufo theories"
+    "tags_norm": "x-files cia stargate remote-viewing documentary ufo theories",
+    "kind_norm": "resource",
+    "group_norm": "ufo / uap"
   },
   {
     "title": "How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 2 of 3)",
@@ -253,10 +305,14 @@
     ],
     "url": "how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-2.html",
     "updated": "2026-04-23",
-    "search": "how the cia spent millions on psychic spies - project: stargate (documentary 2 of 3) la segunda parte es la mas importante si se quiere entender como el documental intenta defender la seriedad de stargate. corrige parcialmente el exceso de la parte 1 al cuestionar el metodo de `ed dames`, busca a `joseph x-files cia stargate remote-viewing documentary theories",
+    "kind": "resource",
+    "group": "CIA / Remote Viewing",
+    "search": "how the cia spent millions on psychic spies - project: stargate (documentary 2 of 3) la segunda parte es la mas importante si se quiere entender como el documental intenta defender la seriedad de stargate. corrige parcialmente el exceso de la parte 1 al cuestionar el metodo de `ed dames`, busca a `joseph resource cia / remote viewing x-files cia stargate remote-viewing documentary theories",
     "title_norm": "how the cia spent millions on psychic spies - project: stargate (documentary 2 of 3)",
     "summary_norm": "la segunda parte es la mas importante si se quiere entender como el documental intenta defender la seriedad de stargate. corrige parcialmente el exceso de la parte 1 al cuestionar el metodo de `ed dames`, busca a `joseph",
-    "tags_norm": "x-files cia stargate remote-viewing documentary theories"
+    "tags_norm": "x-files cia stargate remote-viewing documentary theories",
+    "kind_norm": "resource",
+    "group_norm": "cia / remote viewing"
   },
   {
     "title": "How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 3 of 3)",
@@ -272,10 +328,14 @@
     ],
     "url": "how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-3.html",
     "updated": "2026-04-23",
-    "search": "how the cia spent millions on psychic spies - project: stargate (documentary 3 of 3) tercera parte y cierre de la trilogia. el foco casi completo es `mars 1,000,000 bc`, probablemente el caso mas famoso y mas extremo del folklore stargate. el episodio combina entrevista amplia con `joseph mcmoneagle`, co x-files cia stargate remote-viewing documentary theories mars",
+    "kind": "resource",
+    "group": "CIA / Remote Viewing",
+    "search": "how the cia spent millions on psychic spies - project: stargate (documentary 3 of 3) tercera parte y cierre de la trilogia. el foco casi completo es `mars 1,000,000 bc`, probablemente el caso mas famoso y mas extremo del folklore stargate. el episodio combina entrevista amplia con `joseph mcmoneagle`, co resource cia / remote viewing x-files cia stargate remote-viewing documentary theories mars",
     "title_norm": "how the cia spent millions on psychic spies - project: stargate (documentary 3 of 3)",
     "summary_norm": "tercera parte y cierre de la trilogia. el foco casi completo es `mars 1,000,000 bc`, probablemente el caso mas famoso y mas extremo del folklore stargate. el episodio combina entrevista amplia con `joseph mcmoneagle`, co",
-    "tags_norm": "x-files cia stargate remote-viewing documentary theories mars"
+    "tags_norm": "x-files cia stargate remote-viewing documentary theories mars",
+    "kind_norm": "resource",
+    "group_norm": "cia / remote viewing"
   },
   {
     "title": "Latest UFO Sightings watch",
@@ -289,10 +349,14 @@
     ],
     "url": "latest-ufo-sightings-watch.html",
     "updated": "2026-04-20",
-    "search": "latest ufo sightings watch seguir `https://www.latest-ufo-sightings.net/` como fuente secundaria / agregador de contenido ufo-uap para detectar articulos nuevos que valga la pena derivar a x files. x-files ufo uap watchlist internet-culture",
+    "kind": "resource",
+    "group": "UFO / UAP",
+    "search": "latest ufo sightings watch seguir `https://www.latest-ufo-sightings.net/` como fuente secundaria / agregador de contenido ufo-uap para detectar articulos nuevos que valga la pena derivar a x files. resource ufo / uap x-files ufo uap watchlist internet-culture",
     "title_norm": "latest ufo sightings watch",
     "summary_norm": "seguir `https://www.latest-ufo-sightings.net/` como fuente secundaria / agregador de contenido ufo-uap para detectar articulos nuevos que valga la pena derivar a x files.",
-    "tags_norm": "x-files ufo uap watchlist internet-culture"
+    "tags_norm": "x-files ufo uap watchlist internet-culture",
+    "kind_norm": "resource",
+    "group_norm": "ufo / uap"
   },
   {
     "title": "Mars Canals: Schiaparelli, Lowell, and the Interpretive Error",
@@ -308,10 +372,14 @@
     ],
     "url": "mars-canals-schiaparelli-lowell-and-the-interpretive-error.html",
     "updated": "2026-04-17",
-    "search": "mars canals: schiaparelli, lowell, and the interpretive error nota x files sobre el origen historico de los \"canales de marte\" como caso clasico de observacion limitada, traduccion ambigua y expansion especulativa. x-files mars canals schiaparelli lowell theories history-of-science",
+    "kind": "resource",
+    "group": "Marte",
+    "search": "mars canals: schiaparelli, lowell, and the interpretive error nota x files sobre el origen historico de los \"canales de marte\" como caso clasico de observacion limitada, traduccion ambigua y expansion especulativa. resource marte x-files mars canals schiaparelli lowell theories history-of-science",
     "title_norm": "mars canals: schiaparelli, lowell, and the interpretive error",
     "summary_norm": "nota x files sobre el origen historico de los \"canales de marte\" como caso clasico de observacion limitada, traduccion ambigua y expansion especulativa.",
-    "tags_norm": "x-files mars canals schiaparelli lowell theories history-of-science"
+    "tags_norm": "x-files mars canals schiaparelli lowell theories history-of-science",
+    "kind_norm": "resource",
+    "group_norm": "marte"
   },
   {
     "title": "Mars X Files: Anomalies vs Official Readings",
@@ -326,10 +394,14 @@
     ],
     "url": "mars-x-files-anomalies-vs-official-readings.html",
     "updated": "2026-04-23",
-    "search": "mars x files: anomalies vs official readings nodo marco para leer marte dentro de x files sin mezclar tres capas distintas: `datos planetarios reales`, `anomalias visuales`, `lore especulativo`. la idea no es matar el imaginario marciano, sino ordenarlo para distin x-files mars anomalies nasa theories analysis",
+    "kind": "resource",
+    "group": "Marte",
+    "search": "mars x files: anomalies vs official readings nodo marco para leer marte dentro de x files sin mezclar tres capas distintas: `datos planetarios reales`, `anomalias visuales`, `lore especulativo`. la idea no es matar el imaginario marciano, sino ordenarlo para distin resource marte x-files mars anomalies nasa theories analysis",
     "title_norm": "mars x files: anomalies vs official readings",
     "summary_norm": "nodo marco para leer marte dentro de x files sin mezclar tres capas distintas: `datos planetarios reales`, `anomalias visuales`, `lore especulativo`. la idea no es matar el imaginario marciano, sino ordenarlo para distin",
-    "tags_norm": "x-files mars anomalies nasa theories analysis"
+    "tags_norm": "x-files mars anomalies nasa theories analysis",
+    "kind_norm": "resource",
+    "group_norm": "marte"
   },
   {
     "title": "Mars X Files Map",
@@ -343,10 +415,14 @@
     ],
     "url": "mars-x-files-map.html",
     "updated": "2026-04-17",
-    "search": "mars x files map indice operativo para ordenar el paquete marte en x files con una taxonomia simple: `fuerte`, `debatido`, `especulativo`. x-files mars taxonomy analysis theories",
+    "kind": "resource",
+    "group": "Marte",
+    "search": "mars x files map indice operativo para ordenar el paquete marte en x files con una taxonomia simple: `fuerte`, `debatido`, `especulativo`. resource marte x-files mars taxonomy analysis theories",
     "title_norm": "mars x files map",
     "summary_norm": "indice operativo para ordenar el paquete marte en x files con una taxonomia simple: `fuerte`, `debatido`, `especulativo`.",
-    "tags_norm": "x-files mars taxonomy analysis theories"
+    "tags_norm": "x-files mars taxonomy analysis theories",
+    "kind_norm": "resource",
+    "group_norm": "marte"
   },
   {
     "title": "Stargate documentary trilogy index",
@@ -361,10 +437,14 @@
     ],
     "url": "stargate-documentary-trilogy-index.html",
     "updated": "2026-04-23",
-    "search": "stargate documentary trilogy index esta nota no reemplaza los tres documentales: los ordena. su funcion es servir como mapa maestro del paquete `stargate / cia / remote viewing` dentro de la wiki, separando capas que en el propio documental aparecen mezcl x-files cia stargate remote-viewing documentary theories",
+    "kind": "resource",
+    "group": "CIA / Remote Viewing",
+    "search": "stargate documentary trilogy index esta nota no reemplaza los tres documentales: los ordena. su funcion es servir como mapa maestro del paquete `stargate / cia / remote viewing` dentro de la wiki, separando capas que en el propio documental aparecen mezcl resource cia / remote viewing x-files cia stargate remote-viewing documentary theories",
     "title_norm": "stargate documentary trilogy index",
     "summary_norm": "esta nota no reemplaza los tres documentales: los ordena. su funcion es servir como mapa maestro del paquete `stargate / cia / remote viewing` dentro de la wiki, separando capas que en el propio documental aparecen mezcl",
-    "tags_norm": "x-files cia stargate remote-viewing documentary theories"
+    "tags_norm": "x-files cia stargate remote-viewing documentary theories",
+    "kind_norm": "resource",
+    "group_norm": "cia / remote viewing"
   },
   {
     "title": "UAP Nuclear Sites Peer Reviewed Validation",
@@ -382,10 +462,14 @@
     ],
     "url": "uap-nuclear-sites-peer-reviewed-validation.html",
     "updated": "2026-04-17",
-    "search": "uap nuclear sites peer reviewed validation la nota ya no depende solo del articulo periodistico. queda respaldada por dos fuentes primarias locales: el paper publicado en *scientific reports* y su preprint en research square. ambos sostienen una asociacion estadi x-files uap ufo nuclear science astronomy preprint scientific-reports theories",
+    "kind": "resource",
+    "group": "UFO / UAP",
+    "search": "uap nuclear sites peer reviewed validation la nota ya no depende solo del articulo periodistico. queda respaldada por dos fuentes primarias locales: el paper publicado en *scientific reports* y su preprint en research square. ambos sostienen una asociacion estadi resource ufo / uap x-files uap ufo nuclear science astronomy preprint scientific-reports theories",
     "title_norm": "uap nuclear sites peer reviewed validation",
     "summary_norm": "la nota ya no depende solo del articulo periodistico. queda respaldada por dos fuentes primarias locales: el paper publicado en *scientific reports* y su preprint en research square. ambos sostienen una asociacion estadi",
-    "tags_norm": "x-files uap ufo nuclear science astronomy preprint scientific-reports theories"
+    "tags_norm": "x-files uap ufo nuclear science astronomy preprint scientific-reports theories",
+    "kind_norm": "resource",
+    "group_norm": "ufo / uap"
   },
   {
     "title": "Wiki Improvement Roadmap",
@@ -399,9 +483,13 @@
     ],
     "url": "wiki-improvement-roadmap.html",
     "updated": "2026-04-23",
-    "search": "wiki improvement roadmap elevar todo el vault desde `indice util + notas base` hacia un sistema mas detallado, navegable y reusable. la regla de mejora sera simple: cada nota importante debe dejar de ser un placeholder y pasar a ser una referenc wiki roadmap maintenance obsidian x-files",
+    "kind": "resource",
+    "group": "Otros",
+    "search": "wiki improvement roadmap elevar todo el vault desde `indice util + notas base` hacia un sistema mas detallado, navegable y reusable. la regla de mejora sera simple: cada nota importante debe dejar de ser un placeholder y pasar a ser una referenc resource otros wiki roadmap maintenance obsidian x-files",
     "title_norm": "wiki improvement roadmap",
     "summary_norm": "elevar todo el vault desde `indice util + notas base` hacia un sistema mas detallado, navegable y reusable. la regla de mejora sera simple: cada nota importante debe dejar de ser un placeholder y pasar a ser una referenc",
-    "tags_norm": "wiki roadmap maintenance obsidian x-files"
+    "tags_norm": "wiki roadmap maintenance obsidian x-files",
+    "kind_norm": "resource",
+    "group_norm": "otros"
   }
 ]

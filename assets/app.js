@@ -1,9 +1,12 @@
 const root = document.documentElement;
 const searchInput = document.getElementById('search-input');
+const quickSearchInput = document.getElementById('quick-search-input');
+const quickSearchForm = document.getElementById('quick-search-form');
 const resultsNode = document.getElementById('search-results');
 const countNode = document.getElementById('search-count');
 const clearButton = document.getElementById('search-clear');
 const themeToggle = document.getElementById('theme-toggle');
+const homeSearchPath = 'index.html#search';
 
 initTheme();
 initSearch();
@@ -32,25 +35,65 @@ function applyTheme(theme) {
 }
 
 function initSearch() {
-  if (!searchInput || !resultsNode || !countNode || !clearButton) return;
+  const hasMainSearch = !!(searchInput && resultsNode && countNode && clearButton);
+  const hasQuickSearch = !!(quickSearchInput && quickSearchForm);
+  if (!hasMainSearch && !hasQuickSearch) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const initialQuery = normalize(params.get('q') || '');
+
+  syncInputs(initialQuery, { skip: null });
+
+  if (hasQuickSearch) {
+    quickSearchForm.addEventListener('submit', (event) => {
+      const query = normalize(quickSearchInput.value);
+      if (hasMainSearch) {
+        event.preventDefault();
+        syncInputs(query, { skip: quickSearchInput });
+        updateSearch();
+        searchInput.focus();
+        searchInput.select();
+        return;
+      }
+
+      quickSearchInput.value = query;
+      quickSearchForm.action = query ? `index.html?q=${encodeURIComponent(query)}#search` : homeSearchPath;
+    });
+
+    quickSearchInput.addEventListener('input', () => {
+      if (!hasMainSearch) return;
+      const query = normalize(quickSearchInput.value);
+      syncInputs(query, { skip: quickSearchInput });
+      updateSearch();
+    });
+  }
+
+  if (!hasMainSearch) return;
 
   let items = [];
 
   const renderCards = (matches, query) => {
     if (!matches.length) {
-      resultsNode.innerHTML = `<div class="empty-state">Sin resultados para <strong>${escapeHtml(query)}</strong>.</div>`;
+      resultsNode.innerHTML = `<div class="empty-state">Sin resultados para <strong>${escapeHtml(query)}</strong>. Prueba con <code>mars</code>, <code>cia</code>, <code>remote viewing</code> o <code>uap</code>.</div>`;
       countNode.textContent = '0 resultados';
       return;
     }
 
-    resultsNode.innerHTML = matches.map((item) => `
+    resultsNode.innerHTML = matches.map((item, index) => `
       <a class="result-card" href="${item.url}">
-        <div class="result-head">
-          <h3>${escapeHtml(item.title)}</h3>
-          <span>${escapeHtml(item.updated)}</span>
+        <div class="result-rank">#${index + 1}</div>
+        <div class="result-body">
+          <div class="result-head">
+            <h3>${highlightText(item.title, query)}</h3>
+            <span>${escapeHtml(item.updated)}</span>
+          </div>
+          <div class="result-meta">
+            <span class="result-pill">${escapeHtml(item.group || 'Archivo')}</span>
+            <span class="result-pill result-pill-muted">${escapeHtml(item.kind || 'nota')}</span>
+          </div>
+          <p>${highlightText(item.summary, query)}</p>
+          <div class="card-tags">${item.tags.map((tag) => `<span>${highlightText(tag, query)}</span>`).join('')}</div>
         </div>
-        <p>${escapeHtml(item.summary)}</p>
-        <div class="card-tags">${item.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('')}</div>
       </a>
     `).join('');
     countNode.textContent = `${matches.length} resultado${matches.length === 1 ? '' : 's'}`;
@@ -64,30 +107,45 @@ function initSearch() {
       .slice(0, 24);
   };
 
-  const updateSearch = () => {
+  function updateSearch() {
     const query = normalize(searchInput.value);
+    syncInputs(query, { skip: searchInput });
+    updateUrl(query);
+
     if (!query) {
-      resultsNode.innerHTML = '<div class="empty-state">Escribe para buscar en títulos, resúmenes y tags.</div>';
+      resultsNode.innerHTML = `
+        <div class="empty-state empty-state-rich">
+          <strong>Búsqueda lista.</strong>
+          <span>Escribe para buscar en títulos, resúmenes, tags, tipo de nota y clúster.</span>
+          <div class="search-suggestions">
+            <button type="button" class="suggestion-chip" data-query="remote viewing">remote viewing</button>
+            <button type="button" class="suggestion-chip" data-query="mars">mars</button>
+            <button type="button" class="suggestion-chip" data-query="cia">cia</button>
+            <button type="button" class="suggestion-chip" data-query="uap">uap</button>
+          </div>
+        </div>`;
       countNode.textContent = `${items.length} notas indexadas`;
+      bindSuggestionChips();
       return;
     }
+
     renderCards(searchItems(query), query);
-  };
+  }
 
   hydrateItems()
     .then((data) => {
       items = Array.isArray(data) ? data : [];
-      resultsNode.innerHTML = '<div class="empty-state">Escribe para buscar en títulos, resúmenes y tags.</div>';
-      countNode.textContent = `${items.length} notas indexadas`;
+      updateSearch();
     })
-    .catch(() => {
+    .catch((error) => {
+      console.error('No se pudo hidratar el índice local', error);
       resultsNode.innerHTML = '<div class="empty-state">No se pudo cargar el índice de búsqueda.</div>';
       countNode.textContent = 'búsqueda no disponible';
     });
 
   searchInput.addEventListener('input', updateSearch);
   clearButton.addEventListener('click', () => {
-    searchInput.value = '';
+    syncInputs('', { skip: null });
     updateSearch();
     searchInput.focus();
   });
@@ -95,37 +153,93 @@ function initSearch() {
 
 function initShortcuts() {
   document.addEventListener('keydown', (event) => {
-    if (event.key === '/' && document.activeElement !== searchInput && searchInput) {
+    const activeSearch = searchInput || quickSearchInput;
+    if (event.key === '/' && document.activeElement !== activeSearch && activeSearch) {
       event.preventDefault();
-      searchInput.focus();
-      searchInput.select();
+      activeSearch.focus();
+      activeSearch.select();
     }
 
-    if (event.key === 'Escape' && searchInput && document.activeElement === searchInput) {
-      searchInput.value = '';
-      searchInput.dispatchEvent(new Event('input'));
-      searchInput.blur();
+    if (event.key === 'Escape' && activeSearch && document.activeElement === activeSearch) {
+      activeSearch.value = '';
+      activeSearch.dispatchEvent(new Event('input'));
+      activeSearch.blur();
     }
   });
 }
 
 function hydrateItems() {
   const embedded = document.getElementById('search-data');
-  if (embedded?.textContent) return Promise.resolve(JSON.parse(embedded.textContent));
-  return fetch('search-index.json').then((response) => response.json());
+  if (embedded?.textContent) {
+    return Promise.resolve(JSON.parse(decodeHtmlEntities(embedded.textContent)));
+  }
+
+  return fetch('search-index.json')
+    .then((response) => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    });
+}
+
+function bindSuggestionChips() {
+  document.querySelectorAll('.suggestion-chip').forEach((button) => {
+    button.addEventListener('click', () => {
+      const query = normalize(button.dataset.query || '');
+      syncInputs(query, { skip: null });
+      if (searchInput) {
+        searchInput.dispatchEvent(new Event('input'));
+        searchInput.focus();
+      }
+    });
+  });
+}
+
+function syncInputs(query, { skip } = {}) {
+  if (searchInput && skip !== searchInput) searchInput.value = query;
+  if (quickSearchInput && skip !== quickSearchInput) quickSearchInput.value = query;
+}
+
+function updateUrl(query) {
+  if (!searchInput) return;
+  const url = new URL(window.location.href);
+  if (query) {
+    url.searchParams.set('q', query);
+    url.hash = 'search';
+  } else {
+    url.searchParams.delete('q');
+    if (url.hash === '#search') url.hash = '';
+  }
+  window.history.replaceState({}, '', url);
 }
 
 function scoreItem(item, query) {
   let score = 0;
-  if (item.title_norm?.includes(query)) score += 12;
-  if (item.tags_norm?.includes(query)) score += 8;
+  if (item.title_norm?.includes(query)) score += 16;
+  if (item.tags_norm?.includes(query)) score += 10;
+  if (item.kind_norm?.includes(query)) score += 7;
+  if (item.group_norm?.includes(query)) score += 6;
   if (item.summary_norm?.includes(query)) score += 4;
   if (item.search?.includes(query)) score += 2;
   return score;
 }
 
+function highlightText(value, query) {
+  const safe = escapeHtml(String(value || ''));
+  if (!query) return safe;
+
+  const terms = [...new Set(query.split(' ').filter(Boolean))];
+  if (!terms.length) return safe;
+
+  let highlighted = safe;
+  for (const term of terms) {
+    const escapedTerm = escapeRegex(term);
+    highlighted = highlighted.replace(new RegExp(`(${escapedTerm})`, 'gi'), '<mark>$1</mark>');
+  }
+  return highlighted;
+}
+
 function normalize(value) {
-  return value
+  return (value || '')
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -133,8 +247,18 @@ function normalize(value) {
     .trim();
 }
 
+function decodeHtmlEntities(value) {
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = value;
+  return textarea.value;
+}
+
+function escapeRegex(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function escapeHtml(value) {
-  return value
+  return String(value)
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
