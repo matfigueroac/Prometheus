@@ -22,26 +22,28 @@
     "group_norm": "ufo / uap"
   },
   {
-    "title": "Ancient Civilizations and Theories",
-    "summary": "This note is the framework node for the `lost civilizations / megaliths / catastrophism / ancient symbolic memory` lane inside X Files. Its purpose is not to validate a hidden prehistory, but to organize the ecosystem ca",
+    "title": "Ancient Civilizations and Alternative Chronology",
+    "summary": "**Ancient Civilizations is a major X Files topic.** It should not be filed under “Other”. It is one of the main lanes alongside UAP/NHI, Mars anomalies, CIA/Stargate and consciousness/esoteric research.",
     "tags": [
       "x-files",
-      "theories",
       "ancient-civilizations",
-      "archaeology",
-      "catastrophism",
-      "megaliths"
+      "alternative-history",
+      "younger-dryas",
+      "megalithic-sites",
+      "sacred-geometry",
+      "flood-myths",
+      "matthew-lacroix"
     ],
     "url": "ancient-civilizations-and-theories.html",
-    "updated": "2026-04-23",
+    "updated": "2026-04-24",
     "kind": "resource",
-    "group": "Other",
-    "search": "ancient civilizations and theories this note is the framework node for the `lost civilizations / megaliths / catastrophism / ancient symbolic memory` lane inside x files. its purpose is not to validate a hidden prehistory, but to organize the ecosystem ca resource other x-files theories ancient-civilizations archaeology catastrophism megaliths",
-    "title_norm": "ancient civilizations and theories",
-    "summary_norm": "this note is the framework node for the `lost civilizations / megaliths / catastrophism / ancient symbolic memory` lane inside x files. its purpose is not to validate a hidden prehistory, but to organize the ecosystem ca",
-    "tags_norm": "x-files theories ancient-civilizations archaeology catastrophism megaliths",
+    "group": "Ancient Civilizations",
+    "search": "ancient civilizations and alternative chronology **ancient civilizations is a major x files topic.** it should not be filed under “other”. it is one of the main lanes alongside uap/nhi, mars anomalies, cia/stargate and consciousness/esoteric research. resource ancient civilizations x-files ancient-civilizations alternative-history younger-dryas megalithic-sites sacred-geometry flood-myths matthew-lacroix",
+    "title_norm": "ancient civilizations and alternative chronology",
+    "summary_norm": "**ancient civilizations is a major x files topic.** it should not be filed under “other”. it is one of the main lanes alongside uap/nhi, mars anomalies, cia/stargate and consciousness/esoteric research.",
+    "tags_norm": "x-files ancient-civilizations alternative-history younger-dryas megalithic-sites sacred-geometry flood-myths matthew-lacroix",
     "kind_norm": "resource",
-    "group_norm": "other"
+    "group_norm": "ancient civilizations"
   },
   {
     "title": "Ancient Ocean on Mars: Evidence vs Open Debate",
@@ -423,6 +425,52 @@
     "tags_norm": "x-files mars taxonomy analysis theories",
     "kind_norm": "resource",
     "group_norm": "mars"
+  },
+  {
+    "title": "Matthew LaCroix",
+    "summary": "Matthew LaCroix is a recurring X Files / Ancient Civilizations source focused on alternative ancient history, Sumerian and Mesopotamian traditions, flood myths, sacred symbolism, megalithic sites and possible pre-catastr",
+    "tags": [
+      "x-files",
+      "ancient-civilizations",
+      "matthew-lacroix",
+      "mesopotamia",
+      "sumer",
+      "flood-myths",
+      "sacred-geometry"
+    ],
+    "url": "matthew-lacroix.html",
+    "updated": "2026-04-24",
+    "kind": "resource",
+    "group": "Ancient Civilizations",
+    "search": "matthew lacroix matthew lacroix is a recurring x files / ancient civilizations source focused on alternative ancient history, sumerian and mesopotamian traditions, flood myths, sacred symbolism, megalithic sites and possible pre-catastr resource ancient civilizations x-files ancient-civilizations matthew-lacroix mesopotamia sumer flood-myths sacred-geometry",
+    "title_norm": "matthew lacroix",
+    "summary_norm": "matthew lacroix is a recurring x files / ancient civilizations source focused on alternative ancient history, sumerian and mesopotamian traditions, flood myths, sacred symbolism, megalithic sites and possible pre-catastr",
+    "tags_norm": "x-files ancient-civilizations matthew-lacroix mesopotamia sumer flood-myths sacred-geometry",
+    "kind_norm": "resource",
+    "group_norm": "ancient civilizations"
+  },
+  {
+    "title": "Something Big Happened in 12,000 BC — Matthew LaCroix / Jesse Michels",
+    "summary": "This interview is a high-density map of Matthew LaCroix's current ancient-civilization thesis: humanity may have inherited fragments of an older global sacred-science tradition, disrupted by late-Pleistocene catastrophes",
+    "tags": [
+      "x-files",
+      "ancient-civilizations",
+      "younger-dryas",
+      "plasma-events",
+      "lost-civilization",
+      "matthew-lacroix",
+      "jesse-michels"
+    ],
+    "url": "something-big-happened-in-12000-bc-matthew-lacroix.html",
+    "updated": "undated",
+    "kind": "resource",
+    "group": "Ancient Civilizations",
+    "search": "something big happened in 12,000 bc — matthew lacroix / jesse michels this interview is a high-density map of matthew lacroix's current ancient-civilization thesis: humanity may have inherited fragments of an older global sacred-science tradition, disrupted by late-pleistocene catastrophes resource ancient civilizations x-files ancient-civilizations younger-dryas plasma-events lost-civilization matthew-lacroix jesse-michels",
+    "title_norm": "something big happened in 12,000 bc — matthew lacroix / jesse michels",
+    "summary_norm": "this interview is a high-density map of matthew lacroix's current ancient-civilization thesis: humanity may have inherited fragments of an older global sacred-science tradition, disrupted by late-pleistocene catastrophes",
+    "tags_norm": "x-files ancient-civilizations younger-dryas plasma-events lost-civilization matthew-lacroix jesse-michels",
+    "kind_norm": "resource",
+    "group_norm": "ancient civilizations"
   },
   {
     "title": "Stargate documentary trilogy index",
