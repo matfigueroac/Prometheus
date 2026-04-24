@@ -288,3 +288,56 @@ function initActiveSectionNav() {
     if (section) observer.observe(section);
   });
 }
+
+function initMobileNavigation() {
+  const drawer = document.getElementById('mobile-drawer');
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const close = document.getElementById('mobile-drawer-close');
+  const bottomItems = [...document.querySelectorAll('.mobile-bottom-nav a, .mobile-bottom-nav button')];
+  if (!drawer || !toggle) return;
+
+  const setOpen = (open) => {
+    drawer.classList.toggle('is-open', open);
+    drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.classList.toggle('drawer-open', open);
+  };
+
+  toggle.addEventListener('click', () => setOpen(!drawer.classList.contains('is-open')));
+  if (close) close.addEventListener('click', () => setOpen(false));
+  drawer.addEventListener('click', (event) => {
+    if (event.target === drawer || event.target.closest('a')) setOpen(false);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setOpen(false);
+  });
+
+  const current = `${window.location.pathname.split('/').pop() || 'index.html'}${window.location.hash}`;
+  bottomItems.forEach((item) => {
+    if (item.tagName === 'A') {
+      const url = new URL(item.href, window.location.href);
+      const itemKey = `${url.pathname.split('/').pop() || 'index.html'}${url.hash}`;
+      if (current === itemKey || (!window.location.hash && itemKey === 'index.html')) item.classList.add('mobile-active');
+    }
+  });
+}
+
+function initReadingMode() {
+  const button = document.getElementById('reading-mode-toggle');
+  if (!button) return;
+  const key = 'xfiles-reading-mode';
+  const apply = (enabled) => {
+    document.body.classList.toggle('reading-mode', enabled);
+    button.textContent = enabled ? 'Exit reading mode' : 'Reading mode';
+    button.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+  };
+  apply(localStorage.getItem(key) === '1');
+  button.addEventListener('click', () => {
+    const next = !document.body.classList.contains('reading-mode');
+    localStorage.setItem(key, next ? '1' : '0');
+    apply(next);
+  });
+}
+
+initMobileNavigation();
+initReadingMode();
