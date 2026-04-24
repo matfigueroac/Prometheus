@@ -339,5 +339,81 @@ function initReadingMode() {
   });
 }
 
+function initCommandPalette() {
+  const palette = document.getElementById('command-palette');
+  if (!palette) return;
+  const open = () => {
+    palette.classList.add('is-open');
+    palette.setAttribute('aria-hidden', 'false');
+    palette.querySelector('.command-item')?.focus();
+  };
+  const close = () => {
+    palette.classList.remove('is-open');
+    palette.setAttribute('aria-hidden', 'true');
+  };
+  document.addEventListener('keydown', (event) => {
+    const commandKey = event.metaKey || event.ctrlKey;
+    if (commandKey && event.key.toLowerCase() === 'k') {
+      event.preventDefault();
+      palette.classList.contains('is-open') ? close() : open();
+    }
+    if (event.key === 'Escape') close();
+  });
+  palette.querySelectorAll('[data-command-close]').forEach((node) => node.addEventListener('click', close));
+  palette.querySelectorAll('[data-command-href]').forEach((node) => {
+    node.addEventListener('click', () => {
+      const href = node.getAttribute('data-command-href');
+      if (href) window.location.href = href;
+      close();
+    });
+  });
+  palette.querySelector('[data-command-theme]')?.addEventListener('click', () => {
+    document.getElementById('theme-toggle')?.click();
+    close();
+  });
+  palette.querySelector('[data-command-reading]')?.addEventListener('click', () => {
+    document.getElementById('reading-mode-toggle')?.click();
+    close();
+  });
+}
+
+function initReadingProgress() {
+  const bar = document.getElementById('reading-progress-bar');
+  if (!bar) return;
+  const update = () => {
+    const scrollable = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const pct = Math.min(100, Math.max(0, (window.scrollY / scrollable) * 100));
+    bar.style.width = `${pct}%`;
+  };
+  update();
+  document.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+}
+
+function initConstellationInteractions() {
+  document.querySelectorAll('.constellation-node, .diagram-link').forEach((node) => {
+    node.addEventListener('mouseenter', () => node.classList.add('is-focused'));
+    node.addEventListener('mouseleave', () => node.classList.remove('is-focused'));
+    node.addEventListener('focus', () => node.classList.add('is-focused'));
+    node.addEventListener('blur', () => node.classList.remove('is-focused'));
+  });
+}
+
+function initHeadingAnchors() {
+  document.querySelectorAll('.note-body h2[id], .note-body h3[id], .note-body h4[id]').forEach((heading) => {
+    if (heading.querySelector('.heading-anchor')) return;
+    const link = document.createElement('a');
+    link.className = 'heading-anchor';
+    link.href = `#${heading.id}`;
+    link.textContent = '#';
+    link.setAttribute('aria-label', `Link to ${heading.textContent}`);
+    heading.appendChild(link);
+  });
+}
+
 initMobileNavigation();
 initReadingMode();
+initCommandPalette();
+initReadingProgress();
+initConstellationInteractions();
+initHeadingAnchors();
