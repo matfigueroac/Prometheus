@@ -11,6 +11,7 @@ const homeSearchPath = 'index.html#search';
 initTheme();
 initSearch();
 initShortcuts();
+initActiveSectionNav();
 
 function initTheme() {
   const stored = localStorage.getItem('xfiles-theme');
@@ -29,8 +30,8 @@ function initTheme() {
 function applyTheme(theme) {
   root.dataset.theme = theme;
   if (themeToggle) {
-    themeToggle.textContent = theme === 'light' ? 'Oscuro' : 'Claro';
-    themeToggle.setAttribute('aria-label', `Cambiar a tema ${theme === 'light' ? 'oscuro' : 'claro'}`);
+    themeToggle.textContent = theme === 'light' ? 'Dark' : 'Light';
+    themeToggle.setAttribute('aria-label', `Switch to ${theme === 'light' ? 'dark' : 'light'} theme`);
   }
 }
 
@@ -74,8 +75,8 @@ function initSearch() {
 
   const renderCards = (matches, query) => {
     if (!matches.length) {
-      resultsNode.innerHTML = `<div class="empty-state">Sin resultados para <strong>${escapeHtml(query)}</strong>. Prueba con <code>mars</code>, <code>cia</code>, <code>remote viewing</code> o <code>uap</code>.</div>`;
-      countNode.textContent = '0 resultados';
+      resultsNode.innerHTML = `<div class="empty-state">No results for <strong>${escapeHtml(query)}</strong>. Try <code>mars</code>, <code>cia</code>, <code>remote viewing</code>, or <code>uap</code>.</div>`;
+      countNode.textContent = '0 results';
       return;
     }
 
@@ -96,7 +97,7 @@ function initSearch() {
         </div>
       </a>
     `).join('');
-    countNode.textContent = `${matches.length} resultado${matches.length === 1 ? '' : 's'}`;
+    countNode.textContent = `${matches.length} result${matches.length === 1 ? '' : 's'}`;
   };
 
   const searchItems = (query) => {
@@ -115,8 +116,8 @@ function initSearch() {
     if (!query) {
       resultsNode.innerHTML = `
         <div class="empty-state empty-state-rich">
-          <strong>Búsqueda lista.</strong>
-          <span>Escribe para buscar en títulos, resúmenes, tags, tipo de nota y clúster.</span>
+          <strong>Search ready.</strong>
+          <span>Type to search titles, summaries, tags, note type, and cluster.</span>
           <div class="search-suggestions">
             <button type="button" class="suggestion-chip" data-query="remote viewing">remote viewing</button>
             <button type="button" class="suggestion-chip" data-query="mars">mars</button>
@@ -124,7 +125,7 @@ function initSearch() {
             <button type="button" class="suggestion-chip" data-query="uap">uap</button>
           </div>
         </div>`;
-      countNode.textContent = `${items.length} notas indexadas`;
+      countNode.textContent = `${items.length} indexed notes`;
       bindSuggestionChips();
       return;
     }
@@ -138,9 +139,9 @@ function initSearch() {
       updateSearch();
     })
     .catch((error) => {
-      console.error('No se pudo hidratar el índice local', error);
-      resultsNode.innerHTML = '<div class="empty-state">No se pudo cargar el índice de búsqueda.</div>';
-      countNode.textContent = 'búsqueda no disponible';
+      console.error('Could not hydrate local index', error);
+      resultsNode.innerHTML = '<div class="empty-state">Could not load the search index.</div>';
+      countNode.textContent = 'search unavailable';
     });
 
   searchInput.addEventListener('input', updateSearch);
@@ -264,4 +265,26 @@ function escapeHtml(value) {
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#39;');
+}
+
+
+function initActiveSectionNav() {
+  const groupLinks = [...document.querySelectorAll('.site-links a[href^="index.html#group-"]')];
+  if (!groupLinks.length || !('IntersectionObserver' in window)) return;
+
+  const byHash = new Map(groupLinks.map((link) => [new URL(link.href, window.location.href).hash, link]));
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+    groupLinks.forEach((link) => link.classList.remove('nav-active'));
+    const active = byHash.get(`#${visible.target.id}`);
+    if (active) active.classList.add('nav-active');
+  }, { rootMargin: '-20% 0px -55% 0px', threshold: [0.12, 0.25, 0.5] });
+
+  byHash.forEach((_, hash) => {
+    const section = document.querySelector(hash);
+    if (section) observer.observe(section);
+  });
 }
