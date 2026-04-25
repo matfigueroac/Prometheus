@@ -33,8 +33,9 @@ jobs:
           required = [
               '<title>X Files Wiki</title>',
               'id="search"',
-              'id="collections"',
-              'GitHub Pages',
+              'id="topic-hubs"',
+              'featured-investigation-grid',
+              'research-constellation',
           ]
           missing = [item for item in required if item not in html]
           if missing:
