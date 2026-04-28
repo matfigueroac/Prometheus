@@ -461,6 +461,33 @@
     "group_norm": "ufo / uap"
   },
   {
+    "title": "Garry Nolan: UFOs and Aliens | Lex Fridman Podcast #262",
+    "summary": "Source hub: [[resources/lex-fridman-podcast/index]]",
+    "tags": [
+      "x-files",
+      "lex-fridman-podcast",
+      "garry-nolan",
+      "ufo",
+      "uap",
+      "aliens",
+      "stanford",
+      "atacama-skeleton",
+      "anomalous-materials",
+      "consciousness",
+      "astrobiology"
+    ],
+    "url": "lex-fridman-podcast-garry-nolan-ufos-and-aliens-lex-fridman-262.html",
+    "updated": "2026-04-28",
+    "kind": "resource",
+    "group": "UFO / UAP",
+    "search": "garry nolan: ufos and aliens | lex fridman podcast #262 source hub: [[resources/lex-fridman-podcast/index]] resource ufo / uap x-files lex-fridman-podcast garry-nolan ufo uap aliens stanford atacama-skeleton anomalous-materials consciousness astrobiology",
+    "title_norm": "garry nolan: ufos and aliens | lex fridman podcast #262",
+    "summary_norm": "source hub: [[resources/lex-fridman-podcast/index]]",
+    "tags_norm": "x-files lex-fridman-podcast garry-nolan ufo uap aliens stanford atacama-skeleton anomalous-materials consciousness astrobiology",
+    "kind_norm": "resource",
+    "group_norm": "ufo / uap"
+  },
+  {
     "title": "Lex Fridman Podcast — X Files source folder",
     "summary": "Area: [[areas/x-files]]",
     "tags": [
@@ -470,7 +497,7 @@
       "source-index"
     ],
     "url": "lex-fridman-podcast-index.html",
-    "updated": "2026-04-26",
+    "updated": "2026-04-28",
     "kind": "resource-index",
     "group": "Other",
     "search": "lex fridman podcast — x files source folder area: [[areas/x-files]] resource-index other x-files lex-fridman-podcast podcasts source-index",
