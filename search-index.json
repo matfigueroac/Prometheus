@@ -132,13 +132,13 @@
     "url": "backrooms-kane-pixels-timeline.html",
     "updated": "2026-04-23",
     "kind": "resource",
-    "group": "Backrooms / Liminal",
-    "search": "backrooms kane pixels timeline detailed timeline of the kane pixels universe focusing on async research, threshold, and the transition of the backrooms concept from corporate experiment to spatial, biological, and narrative disaster. resource backrooms / liminal x-files backrooms liminal-spaces kane-pixels timeline lore analog-horror",
+    "group": "Uncanny / Liminal",
+    "search": "backrooms kane pixels timeline detailed timeline of the kane pixels universe focusing on async research, threshold, and the transition of the backrooms concept from corporate experiment to spatial, biological, and narrative disaster. resource uncanny / liminal x-files backrooms liminal-spaces kane-pixels timeline lore analog-horror",
     "title_norm": "backrooms kane pixels timeline",
     "summary_norm": "detailed timeline of the kane pixels universe focusing on async research, threshold, and the transition of the backrooms concept from corporate experiment to spatial, biological, and narrative disaster.",
     "tags_norm": "x-files backrooms liminal-spaces kane-pixels timeline lore analog-horror",
     "kind_norm": "resource",
-    "group_norm": "backrooms / liminal"
+    "group_norm": "uncanny / liminal"
   },
   {
     "title": "Backrooms and Liminal Spaces Deep Dive",
@@ -155,13 +155,13 @@
     "url": "backrooms-liminal-spaces-deep-dive.html",
     "updated": "2026-04-23",
     "kind": "resource",
-    "group": "Backrooms / Liminal",
-    "search": "backrooms and liminal spaces deep dive broad conceptual framework on what liminal spaces are, why they produce restlessness and nostalgia at the same time, how the backrooms crystallizes that aesthetic and why the phenomenon became a central mythology of rece resource backrooms / liminal x-files backrooms liminal-spaces aesthetics internet-culture psychology analog-horror",
+    "group": "Uncanny / Liminal",
+    "search": "backrooms and liminal spaces deep dive broad conceptual framework on what liminal spaces are, why they produce restlessness and nostalgia at the same time, how the backrooms crystallizes that aesthetic and why the phenomenon became a central mythology of rece resource uncanny / liminal x-files backrooms liminal-spaces aesthetics internet-culture psychology analog-horror",
     "title_norm": "backrooms and liminal spaces deep dive",
     "summary_norm": "broad conceptual framework on what liminal spaces are, why they produce restlessness and nostalgia at the same time, how the backrooms crystallizes that aesthetic and why the phenomenon became a central mythology of rece",
     "tags_norm": "x-files backrooms liminal-spaces aesthetics internet-culture psychology analog-horror",
     "kind_norm": "resource",
-    "group_norm": "backrooms / liminal"
+    "group_norm": "uncanny / liminal"
   },
   {
     "title": "CIA Mars Exploration 1984",
@@ -322,6 +322,31 @@
     "group_norm": "cia / remote viewing"
   },
   {
+    "title": "House of Leaves — Labyrinth, Uncanny Architecture and Impossible Evidence",
+    "summary": "*House of Leaves* by Mark Z. Danielewski is one of the strongest literary anchors for the [[resources/uncanny-liminal-research-map]] category. It turns a house into an impossible labyrinth, turns academic apparatus into ",
+    "tags": [
+      "x-files",
+      "house-of-leaves",
+      "uncanny",
+      "liminal-spaces",
+      "weird-fiction",
+      "ergodic-literature",
+      "haunted-house",
+      "labyrinths",
+      "metafiction"
+    ],
+    "url": "house-of-leaves-labyrinth-uncanny-architecture.html",
+    "updated": "2026-05-02",
+    "kind": "resource",
+    "group": "Uncanny / Liminal",
+    "search": "house of leaves — labyrinth, uncanny architecture and impossible evidence *house of leaves* by mark z. danielewski is one of the strongest literary anchors for the [[resources/uncanny-liminal-research-map]] category. it turns a house into an impossible labyrinth, turns academic apparatus into resource uncanny / liminal x-files house-of-leaves uncanny liminal-spaces weird-fiction ergodic-literature haunted-house labyrinths metafiction",
+    "title_norm": "house of leaves — labyrinth, uncanny architecture and impossible evidence",
+    "summary_norm": "*house of leaves* by mark z. danielewski is one of the strongest literary anchors for the [[resources/uncanny-liminal-research-map]] category. it turns a house into an impossible labyrinth, turns academic apparatus into",
+    "tags_norm": "x-files house-of-leaves uncanny liminal-spaces weird-fiction ergodic-literature haunted-house labyrinths metafiction",
+    "kind_norm": "resource",
+    "group_norm": "uncanny / liminal"
+  },
+  {
     "title": "How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 1 of 3)",
     "summary": "First part of the trilogy. Serves as a gateway to the Stargate universe: Cold War, Fear of Soviet Advantage, SRI, Ingo Swann, Joseph McMoneagle, Contemporary Training, and the Appearance of Ed Dames. It does not attempt ",
     "tags": [
@@ -425,7 +450,7 @@
       "internet-culture"
     ],
     "url": "latest-ufo-sightings-watch.html",
-    "updated": "2026-04-26",
+    "updated": "2026-04-29T23:10:44+00:00",
     "kind": "resource",
     "group": "UFO / UAP",
     "search": "latest ufo sightings watch follow `https://www.latest-ufo-sightings.net/` as a secondary source/aggregator of ufo-uap content to spot new articles worth referring to x files. resource ufo / uap x-files ufo uap watchlist internet-culture",
@@ -717,6 +742,31 @@
     "group_norm": "ufo / uap"
   },
   {
+    "title": "Uncanny / Liminal Research Map",
+    "summary": "This is the master category note for the **Uncanny / Liminal** lane inside [[areas/x-files]]. It connects anthropology, psychology, architecture, nostalgia, internet aesthetics, analog horror, haunted media and weird fic",
+    "tags": [
+      "x-files",
+      "uncanny",
+      "liminal-spaces",
+      "hauntology",
+      "nostalgia",
+      "non-places",
+      "internet-culture",
+      "psychology",
+      "weird-fiction"
+    ],
+    "url": "uncanny-liminal-research-map.html",
+    "updated": "2026-05-02",
+    "kind": "resource",
+    "group": "Uncanny / Liminal",
+    "search": "uncanny / liminal research map this is the master category note for the **uncanny / liminal** lane inside [[areas/x-files]]. it connects anthropology, psychology, architecture, nostalgia, internet aesthetics, analog horror, haunted media and weird fic resource uncanny / liminal x-files uncanny liminal-spaces hauntology nostalgia non-places internet-culture psychology weird-fiction",
+    "title_norm": "uncanny / liminal research map",
+    "summary_norm": "this is the master category note for the **uncanny / liminal** lane inside [[areas/x-files]]. it connects anthropology, psychology, architecture, nostalgia, internet aesthetics, analog horror, haunted media and weird fic",
+    "tags_norm": "x-files uncanny liminal-spaces hauntology nostalgia non-places internet-culture psychology weird-fiction",
+    "kind_norm": "resource",
+    "group_norm": "uncanny / liminal"
+  },
+  {
     "title": "Wiki Improvement Roadmap",
     "summary": "Elevate the entire vault from `useful index + base notes` to a more detailed, navigable and reusable system. The improvement rule will be simple: each important note must stop being a placeholder and become a serious ref",
     "tags": [
@@ -727,7 +777,7 @@
       "x-files"
     ],
     "url": "wiki-improvement-roadmap.html",
-    "updated": "2026-04-23",
+    "updated": "2026-05-02",
     "kind": "resource",
     "group": "Other",
     "search": "wiki improvement roadmap elevate the entire vault from `useful index + base notes` to a more detailed, navigable and reusable system. the improvement rule will be simple: each important note must stop being a placeholder and become a serious ref resource other wiki roadmap maintenance obsidian x-files",
