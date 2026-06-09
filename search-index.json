@@ -475,7 +475,7 @@
       "internet-culture"
     ],
     "url": "latest-ufo-sightings-watch.html",
-    "updated": "2026-05-08T23:16:12.146809+00:00",
+    "updated": "2026-06-08T22:57:02.715762+00:00",
     "kind": "resource",
     "group": "UFO / UAP",
     "search": "latest ufo sightings watch follow `https://www.latest-ufo-sightings.net/` as a secondary source/aggregator of ufo-uap content to spot new articles worth referring to x files. resource ufo / uap x-files ufo uap watchlist internet-culture",
@@ -709,7 +709,7 @@
       "jesse-michels"
     ],
     "url": "something-big-happened-in-12000-bc-matthew-lacroix.html",
-    "updated": "undated",
+    "updated": "2026-06-08",
     "kind": "resource",
     "group": "Ancient Civilizations",
     "search": "something big happened in 12,000 bc — matthew lacroix / jesse michels this interview is a high-density map of matthew lacroix's current ancient-civilization thesis: humanity may have inherited fragments of an older global sacred-science tradition, disrupted by late-pleistocene catastrophes resource ancient civilizations x-files ancient-civilizations younger-dryas plasma-events lost-civilization matthew-lacroix jesse-michels",
@@ -793,22 +793,23 @@
   },
   {
     "title": "Wiki Improvement Roadmap",
-    "summary": "Elevate the entire vault from `useful index + base notes` to a more detailed, navigable and reusable system. The improvement rule will be simple: each important note must stop being a placeholder and become a serious ref",
+    "summary": "Elevate the vault from useful notes into a maintained knowledge and publishing system. The standard is simple: important notes should become serious references with context, structure, critical reading, source separation",
     "tags": [
       "wiki",
       "roadmap",
       "maintenance",
       "obsidian",
-      "x-files"
+      "x-files",
+      "prometheus"
     ],
     "url": "wiki-improvement-roadmap.html",
-    "updated": "2026-05-02",
+    "updated": "2026-06-08",
     "kind": "resource",
     "group": "Other",
-    "search": "wiki improvement roadmap elevate the entire vault from `useful index + base notes` to a more detailed, navigable and reusable system. the improvement rule will be simple: each important note must stop being a placeholder and become a serious ref resource other wiki roadmap maintenance obsidian x-files",
+    "search": "wiki improvement roadmap elevate the vault from useful notes into a maintained knowledge and publishing system. the standard is simple: important notes should become serious references with context, structure, critical reading, source separation resource other wiki roadmap maintenance obsidian x-files prometheus",
     "title_norm": "wiki improvement roadmap",
-    "summary_norm": "elevate the entire vault from `useful index + base notes` to a more detailed, navigable and reusable system. the improvement rule will be simple: each important note must stop being a placeholder and become a serious ref",
-    "tags_norm": "wiki roadmap maintenance obsidian x-files",
+    "summary_norm": "elevate the vault from useful notes into a maintained knowledge and publishing system. the standard is simple: important notes should become serious references with context, structure, critical reading, source separation",
+    "tags_norm": "wiki roadmap maintenance obsidian x-files prometheus",
     "kind_norm": "resource",
     "group_norm": "other"
   },
