@@ -35,7 +35,7 @@
       "matthew-lacroix"
     ],
     "url": "ancient-civilizations-and-theories.html",
-    "updated": "2026-04-24",
+    "updated": "2026-06-15",
     "kind": "resource",
     "group": "Ancient Civilizations",
     "search": "ancient civilizations and alternative chronology **ancient civilizations is a major x files topic.** it is not “other”. it is a main lane alongside uap/nhi, mars anomalies, cia/stargate and consciousness/esoteric research. resource ancient civilizations x-files ancient-civilizations alternative-history younger-dryas megalithic-sites sacred-geometry flood-myths matthew-lacroix",
@@ -60,7 +60,7 @@
       "sacred-geometry"
     ],
     "url": "ancient-civilizations-research-map.html",
-    "updated": "2026-04-24",
+    "updated": "2026-06-15",
     "kind": "resource",
     "group": "Ancient Civilizations",
     "search": "ancient civilizations research map this is the master map for the **ancient civilizations** lane of the x files wiki. it is not a belief page. it is a research control layer for tracking claims about deep prehistory, catastrophe memory, megalithic archite resource ancient civilizations x-files ancient-civilizations alternative-history lost-civilization research-map younger-dryas mesopotamia megalithic-sites sacred-geometry",
@@ -538,6 +538,35 @@
     "group_norm": "ufo / uap"
   },
   {
+    "title": "Graham Hancock: Lost Civilization of the Ice Age & Ancient Human History | Lex Fridman Podcast #449",
+    "summary": "Source hub: [[resources/lex-fridman-podcast/index]]",
+    "tags": [
+      "x-files",
+      "lex-fridman-podcast",
+      "graham-hancock",
+      "ancient-civilizations",
+      "lost-civilization",
+      "alternative-history",
+      "younger-dryas",
+      "gobekli-tepe",
+      "giza",
+      "sphinx",
+      "sahara",
+      "amazon",
+      "shamanism"
+    ],
+    "url": "lex-fridman-podcast-graham-hancock-lost-civilization-ice-age-ancient-human-history-lex-fridman-449.html",
+    "updated": "2026-06-15",
+    "kind": "resource",
+    "group": "Ancient Civilizations",
+    "search": "graham hancock: lost civilization of the ice age & ancient human history | lex fridman podcast #449 source hub: [[resources/lex-fridman-podcast/index]] resource ancient civilizations x-files lex-fridman-podcast graham-hancock ancient-civilizations lost-civilization alternative-history younger-dryas gobekli-tepe giza sphinx sahara amazon shamanism",
+    "title_norm": "graham hancock: lost civilization of the ice age & ancient human history | lex fridman podcast #449",
+    "summary_norm": "source hub: [[resources/lex-fridman-podcast/index]]",
+    "tags_norm": "x-files lex-fridman-podcast graham-hancock ancient-civilizations lost-civilization alternative-history younger-dryas gobekli-tepe giza sphinx sahara amazon shamanism",
+    "kind_norm": "resource",
+    "group_norm": "ancient civilizations"
+  },
+  {
     "title": "Lex Fridman Podcast — X Files source folder",
     "summary": "Area: [[areas/x-files]]",
     "tags": [
@@ -547,7 +576,7 @@
       "source-index"
     ],
     "url": "lex-fridman-podcast-index.html",
-    "updated": "2026-04-28",
+    "updated": "2026-06-15",
     "kind": "resource-index",
     "group": "Other",
     "search": "lex fridman podcast — x files source folder area: [[areas/x-files]] resource-index other x-files lex-fridman-podcast podcasts source-index",
