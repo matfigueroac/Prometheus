@@ -117,16 +117,9 @@ function initSearch() {
       resultsNode.innerHTML = `
         <div class="empty-state empty-state-rich">
           <strong>Search ready.</strong>
-          <span>Type to search titles, summaries, tags, note type, and cluster.</span>
-          <div class="search-suggestions">
-            <button type="button" class="suggestion-chip" data-query="remote viewing">remote viewing</button>
-            <button type="button" class="suggestion-chip" data-query="mars">mars</button>
-            <button type="button" class="suggestion-chip" data-query="cia">cia</button>
-            <button type="button" class="suggestion-chip" data-query="uap">uap</button>
-          </div>
+          <span>Use the suggestions above or type a topic, source, tag, or dossier title.</span>
         </div>`;
       countNode.textContent = `${items.length} indexed notes`;
-      bindSuggestionChips();
       return;
     }
 
