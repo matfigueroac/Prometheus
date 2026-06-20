@@ -57,8 +57,8 @@ function initSearch() {
         return;
       }
 
-      quickSearchInput.value = query;
-      quickSearchForm.action = query ? `index.html?q=${encodeURIComponent(query)}#search` : homeSearchPath;
+      event.preventDefault();
+      window.location.href = query ? `index.html?q=${encodeURIComponent(query)}#search` : homeSearchPath;
     });
 
     quickSearchInput.addEventListener('input', () => {
@@ -417,89 +417,3 @@ initCommandPalette();
 initReadingProgress();
 initConstellationInteractions();
 initHeadingAnchors();
-
-// Prometheus Three.js background — progressive enhancement, safe fallback if CDN is unavailable.
-function initPrometheusThreeBackground() {
-  const canvas = document.getElementById('prometheus-three-bg');
-  if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  import('https://unpkg.com/three@0.160.0/build/three.module.js')
-    .then((THREE) => {
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 120);
-      camera.position.set(0, 0, 24);
-
-      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.7));
-
-      const group = new THREE.Group();
-      scene.add(group);
-
-      const colors = [0x67e8f9, 0xa78bfa, 0xfb923c, 0xfacc15, 0xf472b6];
-      const nodeGeometry = new THREE.IcosahedronGeometry(0.16, 1);
-      const lineMaterial = new THREE.LineBasicMaterial({ color: 0x67e8f9, transparent: true, opacity: 0.22 });
-      const points = [];
-
-      for (let i = 0; i < 90; i += 1) {
-        const radius = 4 + Math.random() * 8.5;
-        const angle = Math.random() * Math.PI * 2;
-        const z = (Math.random() - 0.5) * 6;
-        const point = new THREE.Vector3(Math.cos(angle) * radius, Math.sin(angle) * radius * 0.58, z);
-        points.push(point);
-        const material = new THREE.MeshBasicMaterial({ color: colors[i % colors.length], transparent: true, opacity: 0.72 });
-        const node = new THREE.Mesh(nodeGeometry, material);
-        node.position.copy(point);
-        group.add(node);
-      }
-
-      for (let i = 0; i < points.length; i += 1) {
-        for (let j = i + 1; j < points.length; j += 1) {
-          if (points[i].distanceTo(points[j]) < 2.35 && Math.random() > 0.38) {
-            const geometry = new THREE.BufferGeometry().setFromPoints([points[i], points[j]]);
-            group.add(new THREE.Line(geometry, lineMaterial));
-          }
-        }
-      }
-
-      const ringMaterial = new THREE.LineBasicMaterial({ color: 0xa78bfa, transparent: true, opacity: 0.28 });
-      for (let r = 3; r <= 11; r += 2) {
-        const curve = new THREE.EllipseCurve(0, 0, r, r * 0.58, 0, Math.PI * 2);
-        const geometry = new THREE.BufferGeometry().setFromPoints(curve.getPoints(160));
-        const ring = new THREE.LineLoop(geometry, ringMaterial);
-        ring.rotation.x = 0.18;
-        group.add(ring);
-      }
-
-      function resize() {
-        const rect = canvas.getBoundingClientRect();
-        const width = Math.max(1, Math.floor(rect.width));
-        const height = Math.max(1, Math.floor(rect.height));
-        renderer.setSize(width, height, false);
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-      }
-
-      let frame = 0;
-      function animate() {
-        frame = requestAnimationFrame(animate);
-        const t = performance.now() * 0.00012;
-        group.rotation.z = t;
-        group.rotation.y = Math.sin(t * 1.7) * 0.16;
-        renderer.render(scene, camera);
-      }
-
-      resize();
-      animate();
-      window.addEventListener('resize', resize, { passive: true });
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden && frame) cancelAnimationFrame(frame);
-        if (!document.hidden) animate();
-      });
-    })
-    .catch((error) => {
-      console.warn('Prometheus Three.js background unavailable', error);
-      canvas.classList.add('three-fallback');
-    });
-}
-
-initPrometheusThreeBackground();
