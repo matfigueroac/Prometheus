@@ -44,6 +44,7 @@ function initSearch() {
   const initialQuery = normalize(params.get('q') || '');
 
   syncInputs(initialQuery, { skip: null });
+  bindSuggestionChips();
 
   if (hasQuickSearch) {
     quickSearchForm.addEventListener('submit', (event) => {
@@ -77,6 +78,7 @@ function initSearch() {
     if (!matches.length) {
       resultsNode.innerHTML = `<div class="empty-state">No results for <strong>${escapeHtml(query)}</strong>. Try <code>mars</code>, <code>cia</code>, <code>remote viewing</code>, or <code>uap</code>.</div>`;
       countNode.textContent = '0 results';
+      updateSearchState(query, 0);
       return;
     }
 
@@ -98,6 +100,7 @@ function initSearch() {
       </a>
     `).join('');
     countNode.textContent = `${matches.length} result${matches.length === 1 ? '' : 's'}`;
+    updateSearchState(query, matches.length);
   };
 
   const searchItems = (query) => {
@@ -120,6 +123,7 @@ function initSearch() {
           <span>Use the suggestions above or type a topic, source, tag, or dossier title.</span>
         </div>`;
       countNode.textContent = `${items.length} indexed notes`;
+      updateSearchState('', items.length);
       return;
     }
 
@@ -148,16 +152,18 @@ function initSearch() {
 function initShortcuts() {
   document.addEventListener('keydown', (event) => {
     const activeSearch = searchInput || quickSearchInput;
-    if (event.key === '/' && document.activeElement !== activeSearch && activeSearch) {
+    const activeElement = document.activeElement;
+    const isTyping = activeElement?.matches?.('input, textarea, select, [contenteditable="true"]');
+    if (event.key === '/' && !isTyping && activeSearch) {
       event.preventDefault();
       activeSearch.focus();
       activeSearch.select();
     }
 
-    if (event.key === 'Escape' && activeSearch && document.activeElement === activeSearch) {
-      activeSearch.value = '';
-      activeSearch.dispatchEvent(new Event('input'));
-      activeSearch.blur();
+    if (event.key === 'Escape' && activeElement?.matches?.('#search-input, #quick-search-input')) {
+      activeElement.value = '';
+      activeElement.dispatchEvent(new Event('input'));
+      activeElement.blur();
     }
   });
 }
@@ -186,6 +192,17 @@ function bindSuggestionChips() {
       }
     });
   });
+}
+
+function updateSearchState(query, count) {
+  const shell = document.getElementById('search');
+  if (!shell) return;
+  shell.classList.toggle('has-query', !!query);
+  shell.classList.toggle('has-results', Number(count) > 0);
+  if (clearButton) {
+    clearButton.disabled = !query;
+    clearButton.setAttribute('aria-disabled', query ? 'false' : 'true');
+  }
 }
 
 function syncInputs(query, { skip } = {}) {
