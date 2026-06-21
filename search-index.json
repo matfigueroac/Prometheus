@@ -969,6 +969,29 @@
     "group_norm": "other"
   },
   {
+    "title": "X Files Dossier Method",
+    "summary": "This note defines the editorial contract for the public X Files wiki app.",
+    "tags": [
+      "x-files",
+      "methodology",
+      "evidence",
+      "source-quality",
+      "dossier"
+    ],
+    "url": "x-files-dossier-method.html",
+    "updated": "Jun 21, 2026",
+    "kind": "methodology",
+    "group": "Other",
+    "source_path": "resources/x-files-dossier-method.md",
+    "word_count": 238,
+    "search": "x files dossier method this note defines the editorial contract for the public x files wiki app. # x files dossier method this note defines the editorial contract for the public x files wiki app. ## purpose every public dossier should help a reader separate signal from mythology without deleting the weirdness that makes the material worth tracking. ## dossier fields use these fields when creating or upgrading notes: - **claim / object of study**: what is being examined, not what must be believed. - **what the source actually says**: concrete statements, dates, quotes, images, transcripts or documents. - **evidence type**: primary document, peer-reviewed paper, official statement, transcript, media analysis, folklore, testimony, speculation. - **source quality**: primary, secondary, tertiary, aggregator, unknown, or mixed. - **critical reading**: mundane explanations, methodological weaknesses, bias, uncertainty and counter-evidence. - **why it matters**: how it connects to uap, intelligence archives, mars, ancient civilizations, liminal media or other x files lanes. - **open questions**: what needs verification, comparison or future research. - **related notes**: internal links that let the public app build a graph. ## evidence ladder 1. primary documents, official datasets, original images, transcripts, papers. 2. reputable secondary analysis with citations. 3. interviews, podcasts and long-form expert claims. 4. aggregators and watchlists. 5. speculation, symbolic interpretation, folklore or internet culture. ## publishing rule the public site must be generated from obsidian source notes. do not manually edit generated html as the source of truth. ## template ```markdown ## summary ## claim / object of study ## what the source actually says ## evidence type ## source quality ## critical reading ## why it matters within x files ## open questions ## related ``` methodology other x-files methodology evidence source-quality dossier",
+    "title_norm": "x files dossier method",
+    "summary_norm": "this note defines the editorial contract for the public x files wiki app.",
+    "tags_norm": "x-files methodology evidence source-quality dossier",
+    "kind_norm": "methodology",
+    "group_norm": "other"
+  },
+  {
     "title": "Younger Dryas, Catastrophe and Civilization Memory",
     "summary": "The Younger Dryas was a real abrupt climate interval around 12,900–11,700 years before present. It involved rapid cooling in the Northern Hemisphere, especially around the North Atlantic and Greenland, followed by a rapi",
     "tags": [
