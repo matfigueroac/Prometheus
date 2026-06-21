@@ -93,6 +93,7 @@ function initSearch() {
           <div class="result-meta">
             <span class="result-pill">${escapeHtml(item.group || 'Archivo')}</span>
             <span class="result-pill result-pill-muted">${escapeHtml(item.kind || 'nota')}</span>
+            <span class="result-pill result-pill-muted">${escapeHtml(item.source_path || 'Obsidian')}</span>
           </div>
           <p>${highlightText(item.summary, query)}</p>
           <div class="card-tags">${item.tags.map((tag) => `<span>${highlightText(tag, query)}</span>`).join('')}</div>
