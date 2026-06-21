@@ -1,10 +1,10 @@
 {
   "source": "Obsidian vault",
-  "vault": "/mnt/c/Users/Mati/Documents/Obsidian/wiki",
+  "vault": "Obsidian Wiki",
   "area_note": "areas/x-files.md",
-  "generated_at": "2026-06-21T19:13:06",
-  "published_notes": 40,
-  "published_words": 37056,
+  "generated_at": "2026-06-21T19:28:48",
+  "published_notes": 39,
+  "published_words": 36576,
   "active_groups": 6,
   "groups": {
     "ufo-uap": 6,
@@ -12,7 +12,7 @@
     "marte": 7,
     "ancient-civilizations": 11,
     "uncanny-liminal": 5,
-    "otros": 4
+    "otros": 3
   },
   "files": [
     "resources/aaro-uap-workshop-2025.md",
@@ -52,7 +52,6 @@
     "resources/stargate-documentary-trilogy-index.md",
     "resources/uap-nuclear-sites-peer-reviewed-validation.md",
     "resources/uncanny-liminal-research-map.md",
-    "resources/wiki-improvement-roadmap.md",
     "resources/x-files-dossier-method.md",
     "resources/younger-dryas-catastrophe-and-civilization-memory.md"
   ]
