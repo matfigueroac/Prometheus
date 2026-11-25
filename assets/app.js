@@ -83,11 +83,11 @@ function initSearch() {
         <a class="result-card" href="${escapeHtml(item.url)}">
           <div class="result-body">
             <div class="result-meta">
-              <span class="result-pill">${escapeHtml(item.group || 'Archive')}</span>
+              <span class="result-pill">${escapeHtml(item.group === 'Other' ? 'Methods & media' : item.group || 'Archive')}</span>
               <span>${escapeHtml(item.updated)}</span>
             </div>
             <h3>${highlightText(item.title, query)}</h3>
-            <p>${highlightText(item.summary, query)}</p>
+            <p>${highlightText(formatExcerpt(item.summary), query)}</p>
           </div>
         </a>
       `).join('');
@@ -219,6 +219,12 @@ function scoreItem(item, query) {
   if (item.summary_norm?.includes(query)) score += 4;
   if (item.search?.includes(query)) score += 2;
   return score;
+}
+
+function formatExcerpt(value = '') {
+  if (value.length !== 220 || /[.!?…]$/.test(value)) return value;
+  // The exported search index caps summaries at 220 characters.
+  return `${value.replace(/\s+\S+$/, '').replace(/[,;:]$/, '')}…`;
 }
 
 function highlightText(value, query) {
