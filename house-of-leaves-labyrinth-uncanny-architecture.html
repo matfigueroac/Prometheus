@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>House of Leaves — Labyrinth, Uncanny Architecture and Impossible Evidence</title>
-  <link rel="stylesheet" href="assets/styles.css?v=8b1bf16">
-  <link rel="stylesheet" href="assets/library.css?v=65467dfb4e">
+  <link rel="stylesheet" href="assets/styles.css?v=9d918bb5d6">
+  <link rel="stylesheet" href="assets/library.css?v=8c8e125679">
 </head>
 <body data-view="dossier">
 
@@ -15,17 +15,18 @@
       <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span><span>X Files</span></a>
       <nav class="site-links" aria-label="Main navigation"><a class="nav-link" href="index.html#topic-hubs">Topics</a><a class="nav-link" href="search.html">Search</a><a class="nav-link" href="latest.html">Latest</a><a class="nav-link" href="x-files.html">Research map</a></nav>
       <div class="toolbar">
+        <button class="quick-links" data-open-commands type="button" aria-haspopup="dialog" aria-controls="command-palette">Quick links</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
       </div>
     </div>
   </header>
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <dialog class="mobile-drawer" id="mobile-drawer" aria-label="Explore the archive">
     <div class="mobile-drawer-panel">
       <div class="mobile-drawer-head"><strong>Explore the archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
       <nav aria-label="Archive collections"><a href="topic-uap.html">UFO / UAP</a><a href="topic-cia.html">CIA / Remote Viewing</a><a href="topic-mars.html">Mars</a><a href="topic-ancient.html">Ancient Civilizations</a><a href="topic-liminal.html">Uncanny / Liminal</a><a href="topic-methods.html">Methods &amp; media</a><a href="x-files.html">Research map</a><a href="x-files-dossier-method.html">Editorial method</a></nav>
       <button class="theme-toggle" type="button" data-drawer-theme>Theme</button>
     </div>
-  </div>
+  </dialog>
   <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
       <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
       <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
@@ -33,19 +34,19 @@
       <a href="latest.html"><span aria-hidden="true">◷</span><b>Latest</b></a>
       <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
   </nav>
-  <div id="command-palette" class="command-palette" aria-hidden="true" role="dialog" aria-label="Command palette">
+  <dialog id="command-palette" class="command-palette" aria-label="Quick links">
     <div class="command-backdrop" data-command-close></div>
     <div class="command-panel glass-panel">
-      <div class="command-head"><strong>Command palette</strong><button type="button" data-command-close aria-label="Close command palette">×</button></div>
+      <div class="command-head"><strong>Quick links</strong><button type="button" data-command-close aria-label="Close quick links">×</button></div>
       <div class="command-items">
-        <button type="button" class="command-item" data-command-href="index.html"><span>Home</span></button>
-        <button type="button" class="command-item" data-command-href="search.html"><span>Search archive</span><small>/</small></button>
+        <a class="command-item" href="index.html"><span>Home</span></a>
+        <a class="command-item" href="search.html"><span>Search archive</span><small>/</small></a>
         <button type="button" class="command-item" data-command-theme><span>Toggle theme</span><small>Dark / light</small></button>
         <button type="button" class="command-item" data-command-reading><span>Reading mode</span></button>
-        <button type="button" class="command-item" data-command-href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></button>
+        <a class="command-item" href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></a><a class="command-item" href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></a><a class="command-item" href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></a><a class="command-item" href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></a><a class="command-item" href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></a><a class="command-item" href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></a>
       </div>
     </div>
-  </div>
+  </dialog>
 <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
 <main id="main-content" class="shell library-shell" tabindex="-1">
 
@@ -59,13 +60,10 @@
       <div class="note-stats dossier-stats"><span>Updated: May 2, 2026</span>
               <span>8 min read</span></div>
     </div>
-    <figure class="dossier-figure">
-      <picture>
+    <figure class="dossier-figure"><a class="inspect-image" href="assets/visuals/dossiers/house-of-leaves-labyrinth-uncanny-architecture.jpg" aria-label="Open the full-size cover illustration"><picture>
   <source media="(max-width: 600px)" srcset="assets/visuals/dossiers/house-of-leaves-labyrinth-uncanny-architecture-thumb.jpg">
   <img src="assets/visuals/dossiers/house-of-leaves-labyrinth-uncanny-architecture.jpg" width="1152" height="768" alt="" fetchpriority="high">
-</picture>
-      <figcaption>Editorial illustration</figcaption>
-    </figure>
+</picture></a><figcaption>Editorial illustration</figcaption></figure>
   </header>
   <div class="dossier-toolbar" aria-label="Reading tools">
     <button id="reading-mode-toggle" type="button">Reading mode</button>
@@ -80,7 +78,7 @@
     <div class="dossier-main">
       <section class="note-body prose">
 <h2 id="summary">Summary</h2>
-<p><em>House of Leaves</em> by Mark Z. Danielewski is one of the strongest literary anchors for the <a href="uncanny-liminal-research-map.html">uncanny-liminal-research-map</a> category. It turns a house into an impossible labyrinth, turns academic apparatus into horror machinery, and turns reading itself into spatial navigation.</p>
+<p><em>House of Leaves</em> by Mark Z. Danielewski is one of the strongest literary anchors for the <a href="uncanny-liminal-research-map.html">Uncanny / Liminal Research Map</a> category. It turns a house into an impossible labyrinth, turns academic apparatus into horror machinery, and turns reading itself into spatial navigation.</p>
 <p>Inside the X Files wiki, its value is not that it is “true.” Its value is that it models how modern anomalous belief, weird archives, liminal architecture and documentary obsession can be built as a system.</p>
 <h2 id="what-it-actually-contains">What it actually contains</h2>
 <p>The novel is structured as nested documents:</p>
@@ -180,11 +178,11 @@
 <p>This makes it a useful bridge between literary horror and Kane Pixels / SCP / found-footage internet lore.</p>
 <h2 id="relation-to-the-wider-wiki">Relation to the wider wiki</h2>
 <h3 id="x-files-main-area">X Files main area</h3>
-<p><a href="x-files.html">x-files</a> uses this note as a major anchor for the Uncanny / Liminal category.</p>
+<p><a href="x-files.html">Research map</a> uses this note as a major anchor for the Uncanny / Liminal category.</p>
 <h3 id="uncanny-liminal-category">Uncanny / Liminal category</h3>
-<p><a href="uncanny-liminal-research-map.html">uncanny-liminal-research-map</a> provides the theory. This note provides the literary case study.</p>
+<p><a href="uncanny-liminal-research-map.html">Uncanny / Liminal Research Map</a> provides the theory. This note provides the literary case study.</p>
 <h3 id="backrooms">Backrooms</h3>
-<p><a href="backrooms-liminal-spaces-deep-dive.html">backrooms-liminal-spaces-deep-dive</a> and <a href="backrooms-kane-pixels-timeline.html">backrooms-kane-pixels-timeline</a> are internet-lore descendants/parallel cases.</p>
+<p><a href="backrooms-liminal-spaces-deep-dive.html">Backrooms and Liminal Spaces Deep Dive</a> and <a href="backrooms-kane-pixels-timeline.html">Backrooms Kane Pixels Timeline</a> are internet-lore descendants/parallel cases.</p>
 <h3 id="cia-remote-viewing">CIA / remote viewing</h3>
 <p>The relation is formal: both create a documentary interface with uncertain claims. Stargate files are real documents with controversial claims; <em>House of Leaves</em> is fictional documentation that teaches how evidence aesthetics seduce the reader.</p>
 <h3 id="mars-anomalies">Mars / anomalies</h3>
@@ -202,26 +200,13 @@
 <h2 id="source-notes">Source notes</h2>
 <p>Local extracts were preserved from source pages on <em>House of Leaves</em>, ergodic literature, the uncanny and liminality. These are orientation sources. Future deepening should add direct primary quotations from the novel and scholarly criticism.</p>
 <h2 id="related">Related</h2>
-<p><a href="x-files.html">x-files</a> <a href="uncanny-liminal-research-map.html">uncanny-liminal-research-map</a> <a href="backrooms-liminal-spaces-deep-dive.html">backrooms-liminal-spaces-deep-dive</a> <a href="backrooms-kane-pixels-timeline.html">backrooms-kane-pixels-timeline</a> <span class="dead-link">wiki-improvement-roadmap</span></p></section>
+<p><a href="x-files.html">Research map</a> <a href="uncanny-liminal-research-map.html">Uncanny / Liminal Research Map</a> <a href="backrooms-liminal-spaces-deep-dive.html">Backrooms and Liminal Spaces Deep Dive</a> <a href="backrooms-kane-pixels-timeline.html">Backrooms Kane Pixels Timeline</a></p></section>
       <nav class="dossier-neighbors" aria-label="More in this topic"><a rel="prev" href="backrooms-liminal-spaces-deep-dive.html"><small>Previous dossier</small><strong>Backrooms and Liminal Spaces Deep Dive</strong></a><a rel="next" href="uncanny-liminal-research-map.html"><small>Next dossier</small><strong>Uncanny / Liminal Research Map</strong></a></nav>
     </div>
     <aside class="dossier-context" aria-label="Dossier references">
       <details id="dossier-sources" class="dossier-sources">
       <summary>Sources and citations</summary>
-      <div class="dossier-source-content">
-    <div class="source-box">
-      <strong>Source context</strong>
-      <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
-      <div><span>No explicit external URL in note body</span></div>
-    </div>
-
-
-    <div class="citation-panel">
-      <strong>Citation panel</strong>
-      <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
-      <div><span>Obsidian source note only</span></div>
-    </div>
-      </div>
+      <div class="dossier-source-content"><p>This entry cites the archive notebook. Follow the linked dossiers for further context.</p><p class="dossier-source-path">Obsidian note · <code>resources/house-of-leaves-labyrinth-uncanny-architecture.md</code></p></div>
     </details>
       <section class="dossier-related" aria-labelledby="dossier-related-title">
         <h2 id="dossier-related-title">Related dossiers</h2>
@@ -238,36 +223,29 @@
       </section>
       <details class="dossier-extra">
         <summary>Research details</summary>
-        <p class="dossier-source-path">Obsidian note · <code>resources/house-of-leaves-labyrinth-uncanny-architecture.md</code></p>
         <div class="note-insights">
 
     <div class="dossier-matrix" id="dossier-method">
       <div class="diagram-head"><strong>Dossier method</strong><span>claim · evidence · uncertainty</span></div>
-      <div class="dossier-matrix-grid"><div><span>Source says</span><p>House of Leaves by Mark Z. Danielewski is one of the strongest literary anchors for the uncanny-liminal-research-map category. It turns a house into an impossible labyrinth, turns academic apparatus into horror machinery, and turns reading itself into spatial</p></div><div><span>Evidence type</span><p>media / internet-culture analysis</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Why it matters</span><p>The book belongs in X Files because it is a complete machine for producing anomalous interpretation: - impossible architecture - unreliable witnesses - fake scholarship - documentary traces - nested testimony - occult-style over-reading - trauma encoded as spa</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
+      <div class="dossier-matrix-grid"><div><span>From the notebook</span><p>Mark Z. Danielewski’s novel turns a house into an impossible space and its documentation into part of the story. Follow its layered narrators, contested evidence and links to contemporary liminal fiction.</p></div><div><span>Evidence type</span><p>media / internet-culture analysis</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Why it matters</span><p><a href="#why-it-matters-inside-x-files">Why it matters inside X Files</a></p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
       <a class="method-link" href="x-files-dossier-method.html">Open editorial method →</a>
     </div>
 
 
     <div class="related-evidence-map">
-      <div class="diagram-head"><strong>Related evidence map</strong><span>same-cluster paths + wikilinks</span></div>
+      <div class="diagram-head"><strong>Related evidence map</strong><span>Related topics and linked notes</span></div>
       <div class="evidence-grid"><a href="uncanny-liminal-research-map.html"><strong>Uncanny / Liminal Research Map</strong><span>Uncanny / Liminal</span></a><a href="backrooms-liminal-spaces-deep-dive.html"><strong>Backrooms and Liminal Spaces Deep Dive</strong><span>Uncanny / Liminal</span></a><a href="backrooms-kane-pixels-sun-alchemy.html"><strong>Backrooms Kane Pixels Sun and Alchemy Motif</strong><span>Uncanny / Liminal</span></a><a href="backrooms-kane-pixels-timeline.html"><strong>Backrooms Kane Pixels Timeline</strong><span>Uncanny / Liminal</span></a><a href="aaro-uap-workshop-2025.html"><strong>AARO UAP Workshop Paper (2025)</strong><span>UFO / UAP</span></a><a href="ancient-civilizations-and-theories.html"><strong>Ancient Civilizations and Alternative Chronology</strong><span>Ancient Civilizations</span></a><a href="uncanny-liminal-research-map.html"><strong>Uncanny Liminal Research Map</strong><span>wikilink</span></a><a href="x-files.html"><strong>X Files</strong><span>wikilink</span></a></div>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Topic constellation</strong><span>connected tags</span></div>
-      <svg viewBox="0 0 330 310" class="diagram-svg" role="img" aria-label="Tag constellation">
-        <line x1="168" y1="154" x2="110" y2="48" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="245" y2="72" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="290" y2="168" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="225" y2="260" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="90" y2="262" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="42" y2="148" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" />
-        <circle cx="168" cy="154" r="42" fill="rgba(103,232,249,0.12)" stroke="#67e8f9" stroke-width="1.5" />
-        <text x="168" y="148" text-anchor="middle" class="diagram-core">RESOURCE</text>
-        <text x="168" y="170" text-anchor="middle" class="diagram-label">Uncanny / Liminal</text>
-        <g><circle cx="110" cy="48" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="110" y="53" text-anchor="middle" class="diagram-mini">x-files</text></g><g><circle cx="245" cy="72" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="245" y="77" text-anchor="middle" class="diagram-mini">house-of-leave</text></g><g><circle cx="290" cy="168" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="290" y="173" text-anchor="middle" class="diagram-mini">uncanny</text></g><g><circle cx="225" cy="260" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="225" y="265" text-anchor="middle" class="diagram-mini">liminal-spaces</text></g><g><circle cx="90" cy="262" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="90" y="267" text-anchor="middle" class="diagram-mini">weird-fiction</text></g><g><circle cx="42" cy="148" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="42" y="153" text-anchor="middle" class="diagram-mini">ergodic-litera</text></g>
-      </svg>
+      <div class="diagram-head"><strong>Explore connected tags</strong></div>
+      <nav class="tag-tree" aria-label="Explore connected tags"><div class="tag-root"><a href="topic-liminal.html">Uncanny / Liminal</a></div><div class="tag-branches"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=house-of-leaves">house-of-leaves</a> <a href="search.html?q=uncanny">uncanny</a> <a href="search.html?q=liminal-spaces">liminal-spaces</a> <a href="search.html?q=weird-fiction">weird-fiction</a> <a href="search.html?q=ergodic-literature">ergodic-literature</a> <a href="search.html?q=haunted-house">haunted-house</a> <a href="search.html?q=labyrinths">labyrinths</a> <a href="search.html?q=metafiction">metafiction</a></div></nav>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Note density</strong><span>structure and weight</span></div>
+      <div class="diagram-head"><strong>Note density</strong><span>Article structure</span></div>
       <div class="metric-rows"><div class="metric-row"><span>sections</span><div class="metric-bar"><i style="width:10%; background:#67e8f9"></i></div><b>48</b></div><div class="metric-row"><span>bullets</span><div class="metric-bar"><i style="width:10%; background:#a78bfa"></i></div><b>81</b></div><div class="metric-row"><span>links</span><div class="metric-bar"><i style="width:10%; background:#fb923c"></i></div><b>10</b></div><div class="metric-row"><span>words</span><div class="metric-bar"><i style="width:100%; background:#34d399"></i></div><b>1869</b></div></div>
     </div>
 
@@ -301,6 +279,6 @@
 </footer>
 </main>
 
-<script src="assets/app.js?v=f51c6d33c9" defer></script>
+<script src="assets/app.js?v=9313a9e506" defer></script>
 </body>
 </html>

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Something Big Happened in 12,000 BC — Matthew LaCroix / Jesse Michels</title>
-  <link rel="stylesheet" href="assets/styles.css?v=8b1bf16">
-  <link rel="stylesheet" href="assets/library.css?v=65467dfb4e">
+  <link rel="stylesheet" href="assets/styles.css?v=9d918bb5d6">
+  <link rel="stylesheet" href="assets/library.css?v=8c8e125679">
 </head>
 <body data-view="dossier">
 
@@ -15,17 +15,18 @@
       <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span><span>X Files</span></a>
       <nav class="site-links" aria-label="Main navigation"><a class="nav-link" href="index.html#topic-hubs">Topics</a><a class="nav-link" href="search.html">Search</a><a class="nav-link" href="latest.html">Latest</a><a class="nav-link" href="x-files.html">Research map</a></nav>
       <div class="toolbar">
+        <button class="quick-links" data-open-commands type="button" aria-haspopup="dialog" aria-controls="command-palette">Quick links</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
       </div>
     </div>
   </header>
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <dialog class="mobile-drawer" id="mobile-drawer" aria-label="Explore the archive">
     <div class="mobile-drawer-panel">
       <div class="mobile-drawer-head"><strong>Explore the archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
       <nav aria-label="Archive collections"><a href="topic-uap.html">UFO / UAP</a><a href="topic-cia.html">CIA / Remote Viewing</a><a href="topic-mars.html">Mars</a><a href="topic-ancient.html">Ancient Civilizations</a><a href="topic-liminal.html">Uncanny / Liminal</a><a href="topic-methods.html">Methods &amp; media</a><a href="x-files.html">Research map</a><a href="x-files-dossier-method.html">Editorial method</a></nav>
       <button class="theme-toggle" type="button" data-drawer-theme>Theme</button>
     </div>
-  </div>
+  </dialog>
   <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
       <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
       <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
@@ -33,19 +34,19 @@
       <a href="latest.html"><span aria-hidden="true">◷</span><b>Latest</b></a>
       <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
   </nav>
-  <div id="command-palette" class="command-palette" aria-hidden="true" role="dialog" aria-label="Command palette">
+  <dialog id="command-palette" class="command-palette" aria-label="Quick links">
     <div class="command-backdrop" data-command-close></div>
     <div class="command-panel glass-panel">
-      <div class="command-head"><strong>Command palette</strong><button type="button" data-command-close aria-label="Close command palette">×</button></div>
+      <div class="command-head"><strong>Quick links</strong><button type="button" data-command-close aria-label="Close quick links">×</button></div>
       <div class="command-items">
-        <button type="button" class="command-item" data-command-href="index.html"><span>Home</span></button>
-        <button type="button" class="command-item" data-command-href="search.html"><span>Search archive</span><small>/</small></button>
+        <a class="command-item" href="index.html"><span>Home</span></a>
+        <a class="command-item" href="search.html"><span>Search archive</span><small>/</small></a>
         <button type="button" class="command-item" data-command-theme><span>Toggle theme</span><small>Dark / light</small></button>
         <button type="button" class="command-item" data-command-reading><span>Reading mode</span></button>
-        <button type="button" class="command-item" data-command-href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></button>
+        <a class="command-item" href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></a><a class="command-item" href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></a><a class="command-item" href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></a><a class="command-item" href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></a><a class="command-item" href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></a><a class="command-item" href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></a>
       </div>
     </div>
-  </div>
+  </dialog>
 <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
 <main id="main-content" class="shell library-shell" tabindex="-1">
 
@@ -59,12 +60,12 @@
       <div class="note-stats dossier-stats"><span>Updated: Jun 8, 2026</span>
               <span>7 min read</span></div>
     </div>
-    <figure class="dossier-figure">
-      <picture>
-  <source media="(max-width: 600px)" srcset="assets/visuals/dossiers/something-big-happened-in-12000-bc-matthew-lacroix-thumb.jpg">
-  <img src="assets/visuals/dossiers/something-big-happened-in-12000-bc-matthew-lacroix.jpg" width="1152" height="768" alt="" fetchpriority="high">
-</picture>
-      <figcaption>Editorial illustration</figcaption>
+    <figure class="dossier-figure video-source">
+      <a class="video-poster" href="https://www.youtube.com/watch?v=A_LsUSxTm7A&amp;t=3933s" aria-label="Play Something Big Happened In 12,000 BC... from 1:05:33">
+        <img src="assets/visuals/videos/A_LsUSxTm7A-800.jpg" srcset="assets/visuals/videos/A_LsUSxTm7A-400.jpg 400w, assets/visuals/videos/A_LsUSxTm7A-800.jpg 800w" sizes="(max-width: 760px) 100vw, 40vw" width="800" height="450" alt="" fetchpriority="high">
+        <span class="video-play" aria-hidden="true">▶</span>
+      </a>
+      <figcaption><span>Jesse Michels · 1:05:33</span><a href="https://www.youtube.com/watch?v=A_LsUSxTm7A&amp;t=3933s">Watch on YouTube ↗</a></figcaption>
     </figure>
   </header>
   <div class="dossier-toolbar" aria-label="Reading tools">
@@ -145,15 +146,15 @@
 <p>Transcript anchors:</p>
 <ul><li><code>3:04:15</code> — next big breakthrough.</li><li><code>3:05:45</code> — need for new dating methods.</li><li><code>3:06:10</code> — documentary/research effort in progress.</li></ul>
 <h2 id="claim-map">Claim map</h2>
-<p>| Claim | Status in wiki | Notes |</p>
-<p>|---|---|---|</p>
-<p>| Noah story derives from older Mesopotamian flood traditions | Strong comparative-textual lane | Needs source notes from translations of Atrahasis, Gilgamesh, Eridu Genesis |</p>
-<p>| Some sites preserve earlier sacred architecture under later reuse layers | Plausible research lane | Needs site-by-site stratigraphy |</p>
-<p>| Derinkuyu/Kaymakli as survival infrastructure | Plausible but interpretation-dependent | Conventional dating/use differs |</p>
-<p>| Vitrified basalt implies high-energy catastrophe | Needs verification | Requires geological papers or field reports |</p>
-<p>| Global recurrence of pine cone/tree/sun-cross/handbag motifs | Pattern lane | Needs anti-apophenia discipline |</p>
-<p>| Dead binary companion causes 12,500-year resets | Highly speculative | Needs astrophysics validation; keep separated from stronger archaeology/text claims |</p>
-<p>| Temples as consciousness/resonance technology | Esoteric hypothesis | Useful for X Files, not established archaeology |</p>
+<div class="table-scroll" role="region" aria-labelledby="claim-map" tabindex="0"><table><thead><tr><th scope="col">Claim</th><th scope="col">Status in wiki</th><th scope="col">Notes</th></tr></thead><tbody>
+<tr><td>Noah story derives from older Mesopotamian flood traditions</td><td>Strong comparative-textual lane</td><td>Needs source notes from translations of Atrahasis, Gilgamesh, Eridu Genesis</td></tr>
+<tr><td>Some sites preserve earlier sacred architecture under later reuse layers</td><td>Plausible research lane</td><td>Needs site-by-site stratigraphy</td></tr>
+<tr><td>Derinkuyu/Kaymakli as survival infrastructure</td><td>Plausible but interpretation-dependent</td><td>Conventional dating/use differs</td></tr>
+<tr><td>Vitrified basalt implies high-energy catastrophe</td><td>Needs verification</td><td>Requires geological papers or field reports</td></tr>
+<tr><td>Global recurrence of pine cone/tree/sun-cross/handbag motifs</td><td>Pattern lane</td><td>Needs anti-apophenia discipline</td></tr>
+<tr><td>Dead binary companion causes 12,500-year resets</td><td>Highly speculative</td><td>Needs astrophysics validation; keep separated from stronger archaeology/text claims</td></tr>
+<tr><td>Temples as consciousness/resonance technology</td><td>Esoteric hypothesis</td><td>Useful for X Files, not established archaeology</td></tr>
+</tbody></table></div>
 <h2 id="integration-notes">Integration notes</h2>
 <ul><li>Link this episode under <strong>Ancient Civilizations</strong> as a major X Files topic, not “Other”.</li><li>Link Matthew LaCroix as an entity/resource because he is a recurring source for this lane.</li><li>Treat the video as a synthesis node connecting: Younger Dryas, Mesopotamian flood texts, Lake Van/Turkey, megalithic stonework, underground cities, sacred geometry, consciousness studies and UFO/celestial-intelligence framing.</li></ul>
 <h2 id="follow-up-research-tasks">Follow-up research tasks</h2>
@@ -166,26 +167,13 @@
 <p>4. Verify named researchers and claimed documentary team:</p>
 <ul><li>Robert Schoch,</li><li>Robert Edward Grant,</li><li>Hans Orvim / Orheim? <em>(name needs verification from source)</em>,</li><li>Arturo Ponce de León,</li><li>Lydia Deon? <em>(name needs verification)</em>,</li><li>Paul Wallis.</li></ul>
 <h2 id="source">Source</h2>
-<ul><li>YouTube: [Something Big Happened in 12,000 BC — Matthew LaCroix / Jesse Michels](https://www.youtube.com/watch?v=A_LsUSxTm7A&amp;t=3933s)</li><li>Local transcript: <code>raw/articles/jesse-michels-something-big-happened-12000-bc-matthew-lacroix-transcript-2026-04-24.txt</code></li></ul></section>
+<ul><li>YouTube: <a href="https://www.youtube.com/watch?v=A_LsUSxTm7A&amp;t=3933s">Something Big Happened in 12,000 BC — Matthew LaCroix / Jesse Michels</a></li><li>Local transcript: <code>raw/articles/jesse-michels-something-big-happened-12000-bc-matthew-lacroix-transcript-2026-04-24.txt</code></li></ul></section>
       <nav class="dossier-neighbors" aria-label="More in this topic"><a rel="prev" href="sacred-geometry-and-recurring-symbol-systems.html"><small>Previous dossier</small><strong>Sacred Geometry and Recurring Symbol Systems</strong></a><a rel="next" href="younger-dryas-catastrophe-and-civilization-memory.html"><small>Next dossier</small><strong>Younger Dryas, Catastrophe and Civilization Memory</strong></a></nav>
     </div>
     <aside class="dossier-context" aria-label="Dossier references">
       <details id="dossier-sources" class="dossier-sources">
       <summary>Sources and citations</summary>
-      <div class="dossier-source-content">
-    <div class="source-box">
-      <strong>Source context</strong>
-      <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
-      <div><a href="https://www.youtube.com/watch?v=A_LsUSxTm7A&amp;t=3933s" target="_blank" rel="noopener">Open original source</a></div>
-    </div>
-
-
-    <div class="citation-panel">
-      <strong>Citation panel</strong>
-      <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
-      <div><a href="https://www.youtube.com/watch?v=A_LsUSxTm7A&amp;t=3933s" target="_blank" rel="noopener">Primary external source</a></div>
-    </div>
-      </div>
+      <div class="dossier-source-content"><p><a href="https://www.youtube.com/watch?v=A_LsUSxTm7A&amp;t=3933s" target="_blank" rel="noopener">Watch the cited video ↗</a></p><p class="dossier-source-path">Obsidian note · <code>resources/something-big-happened-in-12000-bc-matthew-lacroix.md</code></p></div>
     </details>
       <section class="dossier-related" aria-labelledby="dossier-related-title">
         <h2 id="dossier-related-title">Related dossiers</h2>
@@ -202,36 +190,29 @@
       </section>
       <details class="dossier-extra">
         <summary>Research details</summary>
-        <p class="dossier-source-path">Obsidian note · <code>resources/something-big-happened-in-12000-bc-matthew-lacroix.md</code></p>
         <div class="note-insights">
 
     <div class="dossier-matrix" id="dossier-method">
       <div class="diagram-head"><strong>Dossier method</strong><span>claim · evidence · uncertainty</span></div>
-      <div class="dossier-matrix-grid"><div><span>Evidence type</span><p>resource</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
+      <div class="dossier-matrix-grid"><div><span>Evidence type</span><p>Recorded interview</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
       <a class="method-link" href="x-files-dossier-method.html">Open editorial method →</a>
     </div>
 
 
     <div class="related-evidence-map">
-      <div class="diagram-head"><strong>Related evidence map</strong><span>same-cluster paths + wikilinks</span></div>
+      <div class="diagram-head"><strong>Related evidence map</strong><span>Related topics and linked notes</span></div>
       <div class="evidence-grid"><a href="younger-dryas-catastrophe-and-civilization-memory.html"><strong>Younger Dryas, Catastrophe and Civilization Memory</strong><span>Ancient Civilizations</span></a><a href="ancient-civilizations-and-theories.html"><strong>Ancient Civilizations and Alternative Chronology</strong><span>Ancient Civilizations</span></a><a href="ancient-civilizations-research-map.html"><strong>Ancient Civilizations Research Map</strong><span>Ancient Civilizations</span></a><a href="diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac.html"><strong>Graham Hancock: Archaeology Warning / Antarctica Maps | The Diary Of A CEO</strong><span>Ancient Civilizations</span></a><a href="lex-fridman-podcast-graham-hancock-lost-civilization-ice-age-ancient-human-history-lex-fridman-449.html"><strong>Graham Hancock: Lost Civilization of the Ice Age &amp; Ancient Human History | Lex Fridman Podcast #449</strong><span>Ancient Civilizations</span></a><a href="derinkuyu-kaymakli-underground-cities.html"><strong>Derinkuyu and Kaymakli Underground Cities</strong><span>Ancient Civilizations</span></a></div>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Topic constellation</strong><span>connected tags</span></div>
-      <svg viewBox="0 0 330 310" class="diagram-svg" role="img" aria-label="Tag constellation">
-        <line x1="168" y1="154" x2="110" y2="48" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="245" y2="72" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="290" y2="168" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="225" y2="260" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="90" y2="262" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="42" y2="148" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" />
-        <circle cx="168" cy="154" r="42" fill="rgba(103,232,249,0.12)" stroke="#67e8f9" stroke-width="1.5" />
-        <text x="168" y="148" text-anchor="middle" class="diagram-core">RESOURCE</text>
-        <text x="168" y="170" text-anchor="middle" class="diagram-label">Ancient Civilizations</text>
-        <g><circle cx="110" cy="48" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="110" y="53" text-anchor="middle" class="diagram-mini">x-files</text></g><g><circle cx="245" cy="72" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="245" y="77" text-anchor="middle" class="diagram-mini">ancient-civili</text></g><g><circle cx="290" cy="168" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="290" y="173" text-anchor="middle" class="diagram-mini">younger-dryas</text></g><g><circle cx="225" cy="260" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="225" y="265" text-anchor="middle" class="diagram-mini">plasma-events</text></g><g><circle cx="90" cy="262" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="90" y="267" text-anchor="middle" class="diagram-mini">lost-civilizat</text></g><g><circle cx="42" cy="148" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="42" y="153" text-anchor="middle" class="diagram-mini">matthew-lacroi</text></g>
-      </svg>
+      <div class="diagram-head"><strong>Explore connected tags</strong></div>
+      <nav class="tag-tree" aria-label="Explore connected tags"><div class="tag-root"><a href="topic-ancient.html">Ancient Civilizations</a></div><div class="tag-branches"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=ancient-civilizations">ancient-civilizations</a> <a href="search.html?q=younger-dryas">younger-dryas</a> <a href="search.html?q=plasma-events">plasma-events</a> <a href="search.html?q=lost-civilization">lost-civilization</a> <a href="search.html?q=matthew-lacroix">matthew-lacroix</a> <a href="search.html?q=jesse-michels">jesse-michels</a></div></nav>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Note density</strong><span>structure and weight</span></div>
+      <div class="diagram-head"><strong>Note density</strong><span>Article structure</span></div>
       <div class="metric-rows"><div class="metric-row"><span>sections</span><div class="metric-bar"><i style="width:10%; background:#67e8f9"></i></div><b>18</b></div><div class="metric-row"><span>bullets</span><div class="metric-bar"><i style="width:10%; background:#a78bfa"></i></div><b>99</b></div><div class="metric-row"><span>links</span><div class="metric-bar"><i style="width:10%; background:#fb923c"></i></div><b>1</b></div><div class="metric-row"><span>words</span><div class="metric-bar"><i style="width:100%; background:#34d399"></i></div><b>1444</b></div></div>
     </div>
 
@@ -265,6 +246,7 @@
 </footer>
 </main>
 
-<script src="assets/app.js?v=f51c6d33c9" defer></script>
+<script src="assets/app.js?v=9313a9e506" defer></script>
+<script src="assets/video.js?v=d76fd3b72f" defer></script>
 </body>
 </html>

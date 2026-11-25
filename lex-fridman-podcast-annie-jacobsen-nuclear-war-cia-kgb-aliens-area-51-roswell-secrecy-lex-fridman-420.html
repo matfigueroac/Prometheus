@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Annie Jacobsen: Nuclear War, CIA, KGB, Aliens, Area 51, Roswell &amp; Secrecy | Lex Fridman Podcast #420</title>
-  <link rel="stylesheet" href="assets/styles.css?v=8b1bf16">
-  <link rel="stylesheet" href="assets/library.css?v=65467dfb4e">
+  <link rel="stylesheet" href="assets/styles.css?v=9d918bb5d6">
+  <link rel="stylesheet" href="assets/library.css?v=8c8e125679">
 </head>
 <body data-view="dossier">
 
@@ -15,17 +15,18 @@
       <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span><span>X Files</span></a>
       <nav class="site-links" aria-label="Main navigation"><a class="nav-link" href="index.html#topic-hubs">Topics</a><a class="nav-link" href="search.html">Search</a><a class="nav-link" href="latest.html">Latest</a><a class="nav-link" href="x-files.html">Research map</a></nav>
       <div class="toolbar">
+        <button class="quick-links" data-open-commands type="button" aria-haspopup="dialog" aria-controls="command-palette">Quick links</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
       </div>
     </div>
   </header>
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <dialog class="mobile-drawer" id="mobile-drawer" aria-label="Explore the archive">
     <div class="mobile-drawer-panel">
       <div class="mobile-drawer-head"><strong>Explore the archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
       <nav aria-label="Archive collections"><a href="topic-uap.html">UFO / UAP</a><a href="topic-cia.html">CIA / Remote Viewing</a><a href="topic-mars.html">Mars</a><a href="topic-ancient.html">Ancient Civilizations</a><a href="topic-liminal.html">Uncanny / Liminal</a><a href="topic-methods.html">Methods &amp; media</a><a href="x-files.html">Research map</a><a href="x-files-dossier-method.html">Editorial method</a></nav>
       <button class="theme-toggle" type="button" data-drawer-theme>Theme</button>
     </div>
-  </div>
+  </dialog>
   <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
       <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
       <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
@@ -33,19 +34,19 @@
       <a href="latest.html"><span aria-hidden="true">◷</span><b>Latest</b></a>
       <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
   </nav>
-  <div id="command-palette" class="command-palette" aria-hidden="true" role="dialog" aria-label="Command palette">
+  <dialog id="command-palette" class="command-palette" aria-label="Quick links">
     <div class="command-backdrop" data-command-close></div>
     <div class="command-panel glass-panel">
-      <div class="command-head"><strong>Command palette</strong><button type="button" data-command-close aria-label="Close command palette">×</button></div>
+      <div class="command-head"><strong>Quick links</strong><button type="button" data-command-close aria-label="Close quick links">×</button></div>
       <div class="command-items">
-        <button type="button" class="command-item" data-command-href="index.html"><span>Home</span></button>
-        <button type="button" class="command-item" data-command-href="search.html"><span>Search archive</span><small>/</small></button>
+        <a class="command-item" href="index.html"><span>Home</span></a>
+        <a class="command-item" href="search.html"><span>Search archive</span><small>/</small></a>
         <button type="button" class="command-item" data-command-theme><span>Toggle theme</span><small>Dark / light</small></button>
         <button type="button" class="command-item" data-command-reading><span>Reading mode</span></button>
-        <button type="button" class="command-item" data-command-href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></button>
+        <a class="command-item" href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></a><a class="command-item" href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></a><a class="command-item" href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></a><a class="command-item" href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></a><a class="command-item" href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></a><a class="command-item" href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></a>
       </div>
     </div>
-  </div>
+  </dialog>
 <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
 <main id="main-content" class="shell library-shell" tabindex="-1">
 
@@ -59,12 +60,12 @@
       <div class="note-stats dossier-stats"><span>Updated: Apr 26, 2026</span>
               <span>10 min read</span></div>
     </div>
-    <figure class="dossier-figure">
-      <picture>
-  <source media="(max-width: 600px)" srcset="assets/visuals/dossiers/lex-fridman-podcast-annie-jacobsen-nuclear-war-cia-kgb-aliens-area-51-roswell-secrecy-lex-fridman-420-thumb.jpg">
-  <img src="assets/visuals/dossiers/lex-fridman-podcast-annie-jacobsen-nuclear-war-cia-kgb-aliens-area-51-roswell-secrecy-lex-fridman-420.jpg" width="1152" height="768" alt="" fetchpriority="high">
-</picture>
-      <figcaption>Editorial illustration</figcaption>
+    <figure class="dossier-figure video-source">
+      <a class="video-poster" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=1939s" aria-label="Play Annie Jacobsen: Nuclear War, CIA, KGB, Aliens, Area 51, Roswell &amp; Secrecy | Lex Fridman Podcast #420 from 32:19">
+        <img src="assets/visuals/videos/GXgGR8KxFao-800.jpg" srcset="assets/visuals/videos/GXgGR8KxFao-400.jpg 400w, assets/visuals/videos/GXgGR8KxFao-800.jpg 800w" sizes="(max-width: 760px) 100vw, 40vw" width="800" height="450" alt="" fetchpriority="high">
+        <span class="video-play" aria-hidden="true">▶</span>
+      </a>
+      <figcaption><span>Lex Fridman · 32:19</span><a href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=1939s">Watch on YouTube ↗</a></figcaption>
     </figure>
   </header>
   <div class="dossier-toolbar" aria-label="Reading tools">
@@ -79,46 +80,46 @@
     </aside>
     <div class="dossier-main">
       <section class="note-body prose">
-<p>Source hub: <a href="lex-fridman-podcast-index.html">index</a></p>
-<p>Area: <a href="x-files.html">x-files</a></p>
-<p>User-linked timestamp: [00:32:19](https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=1939s)</p>
+<p>Interview series: <a href="lex-fridman-podcast-index.html">Lex Fridman Podcast — X Files source folder</a></p>
+<p>Area: <a href="x-files.html">Research map</a></p>
+<p>Featured segment: <a href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=1939s">00:32:19</a></p>
 <h2 id="why-this-belongs-in-x-files">Why this belongs in X Files</h2>
 <p>This episode is a useful X Files source cluster because Annie Jacobsen connects national-security history, nuclear command systems, CIA secrecy, Area 51, UFO disinformation, ESP / psychical research, Roswell lore, KGB history and covert action. It is not a primary government document; it is a long-form interview with a journalist who has reported on classified programs, military secrecy and intelligence history.</p>
 <h2 id="what-it-contains">What it contains</h2>
 <ul><li>A nuclear-war systems discussion: launch procedure, deterrence, tactical nukes, submarines, missiles, football, interceptors and escalation scenarios.</li><li>A secrecy / intelligence-history layer: CIA covert action, assassination authorities, Cold War programs, KGB and information control.</li><li>A direct X Files layer: alien civilizations, ESP, Area 51, UFO narratives, Roswell and disinformation.</li><li>A methodological value: Jacobsen often separates what she has documentary/interview basis for from what remains belief, lore or unsupported extrapolation.</li></ul>
 <h2 id="chapter-map">Chapter map</h2>
-<p>| Time | Chapter |</p>
-<p>|---:|---|</p>
-<p>| 0:00 | Introduction |</p>
-<p>| 2:13 | Nuclear war |</p>
-<p>| 6:57 | Launch procedure |</p>
-<p>| 12:36 | Deterrence |</p>
-<p>| 16:09 | Tactical nukes |</p>
-<p>| 25:35 | Nuclear submarines |</p>
-<p>| 28:35 | Nuclear missiles |</p>
-<p>| 35:46 | Nuclear football |</p>
-<p>| 44:53 | Missile interceptor system |</p>
-<p>| 49:10 | North Korea |</p>
-<p>| 55:46 | Nuclear war scenarios |</p>
-<p>| 1:04:38 | Warmongers |</p>
-<p>| 1:09:06 | President’s cognitive ability |</p>
-<p>| 1:15:19 | Refusing orders |</p>
-<p>| 1:23:17 | Russia and Putin |</p>
-<p>| 1:28:23 | Cyberattack |</p>
-<p>| 1:29:45 | Ground zero of nuclear war |</p>
-<p>| 1:34:24 | Surviving nuclear war |</p>
-<p>| 1:38:42 | Nuclear winter |</p>
-<p>| 1:49:05 | Alien civilizations |</p>
-<p>| 1:54:40 | Extrasensory perception |</p>
-<p>| 2:08:25 | Area 51 |</p>
-<p>| 2:12:23 | UFOs and aliens |</p>
-<p>| 2:22:51 | Roswell incident |</p>
-<p>| 2:29:30 | CIA assassinations |</p>
-<p>| 2:48:23 | Navalny |</p>
-<p>| 2:50:48 | KGB |</p>
-<p>| 2:57:24 | Hitler and the atomic bomb |</p>
-<p>| 3:01:27 | War and human nature |</p>
-<p>| 3:04:53 | Hope |</p>
+<div class="table-scroll" role="region" aria-labelledby="chapter-map" tabindex="0"><table><thead><tr><th scope="col">Time</th><th scope="col">Chapter</th></tr></thead><tbody>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=0s" aria-label="Watch Introduction at 0:00">0:00</a></td><td>Introduction</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=133s" aria-label="Watch Nuclear war at 2:13">2:13</a></td><td>Nuclear war</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=417s" aria-label="Watch Launch procedure at 6:57">6:57</a></td><td>Launch procedure</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=756s" aria-label="Watch Deterrence at 12:36">12:36</a></td><td>Deterrence</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=969s" aria-label="Watch Tactical nukes at 16:09">16:09</a></td><td>Tactical nukes</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=1535s" aria-label="Watch Nuclear submarines at 25:35">25:35</a></td><td>Nuclear submarines</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=1715s" aria-label="Watch Nuclear missiles at 28:35">28:35</a></td><td>Nuclear missiles</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=2146s" aria-label="Watch Nuclear football at 35:46">35:46</a></td><td>Nuclear football</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=2693s" aria-label="Watch Missile interceptor system at 44:53">44:53</a></td><td>Missile interceptor system</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=2950s" aria-label="Watch North Korea at 49:10">49:10</a></td><td>North Korea</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=3346s" aria-label="Watch Nuclear war scenarios at 55:46">55:46</a></td><td>Nuclear war scenarios</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=3878s" aria-label="Watch Warmongers at 1:04:38">1:04:38</a></td><td>Warmongers</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=4146s" aria-label="Watch President’s cognitive ability at 1:09:06">1:09:06</a></td><td>President’s cognitive ability</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=4519s" aria-label="Watch Refusing orders at 1:15:19">1:15:19</a></td><td>Refusing orders</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=4997s" aria-label="Watch Russia and Putin at 1:23:17">1:23:17</a></td><td>Russia and Putin</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=5303s" aria-label="Watch Cyberattack at 1:28:23">1:28:23</a></td><td>Cyberattack</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=5385s" aria-label="Watch Ground zero of nuclear war at 1:29:45">1:29:45</a></td><td>Ground zero of nuclear war</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=5664s" aria-label="Watch Surviving nuclear war at 1:34:24">1:34:24</a></td><td>Surviving nuclear war</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=5922s" aria-label="Watch Nuclear winter at 1:38:42">1:38:42</a></td><td>Nuclear winter</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=6545s" aria-label="Watch Alien civilizations at 1:49:05">1:49:05</a></td><td>Alien civilizations</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=6880s" aria-label="Watch Extrasensory perception at 1:54:40">1:54:40</a></td><td>Extrasensory perception</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=7705s" aria-label="Watch Area 51 at 2:08:25">2:08:25</a></td><td>Area 51</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=7943s" aria-label="Watch UFOs and aliens at 2:12:23">2:12:23</a></td><td>UFOs and aliens</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=8571s" aria-label="Watch Roswell incident at 2:22:51">2:22:51</a></td><td>Roswell incident</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=8970s" aria-label="Watch CIA assassinations at 2:29:30">2:29:30</a></td><td>CIA assassinations</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=10103s" aria-label="Watch Navalny at 2:48:23">2:48:23</a></td><td>Navalny</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=10248s" aria-label="Watch KGB at 2:50:48">2:50:48</a></td><td>KGB</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=10644s" aria-label="Watch Hitler and the atomic bomb at 2:57:24">2:57:24</a></td><td>Hitler and the atomic bomb</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=10887s" aria-label="Watch War and human nature at 3:01:27">3:01:27</a></td><td>War and human nature</td></tr>
+<tr><td><a class="chapter-time" href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=11093s" aria-label="Watch Hope at 3:04:53">3:04:53</a></td><td>Hope</td></tr>
+</tbody></table></div>
 <h2 id="x-files-extraction">X Files extraction</h2>
 <h3 id="area-51">Area 51</h3>
 <p>Lex Fridman (02:08:26) You mentioned you wrote a book on Area 51. For people who don’t know, you’ve written a lot about security, the military, secrets, all of this kind of stuff. So Area 51 is one of the legendary centers of all of these kinds of topics. So high level first is what is Area 51, as you understand it, as you’ve written about the lore and the reality. Annie Jacobsen (02:09:01) I think everybody wants to know about Area 51, because it’s like this American enigma. It’s like to some people, it’s the Shangri-La of test bed aerospace programs, and to others, it’s the place of captured aliens and everything in between. I had the great fortune of interviewing 75 people who lived and worked at that base for extended periods of time, mostly leading up to the ’90s because everything since then is classified. So things get declassified after decades. Not everything but some. And that allows you to piece together stories. Lex Fridman (02:09:39) So you talked to a lot of people that worked there. What can you describe as the history of technological development that went on there? Annie Jacobsen (02:09:48) I mean, Area 51 is huge, by the way. It’s a top secret military facility in…</p>
@@ -144,36 +145,23 @@
 <h3 id="what-it-does-not-prove">What it does not prove</h3>
 <ul><li>It does not prove aliens visited Earth.</li><li>It does not verify Roswell as an operation or hoax by itself.</li><li>It does not provide primary-source evidence for each claim inside the interview.</li><li>It should not be treated as equivalent to declassified documents, official reports or peer-reviewed research.</li></ul>
 <h2 id="follow-up-research-queue">Follow-up research queue</h2>
-<ul><li>Compare with Jacobsen books: <code>Area 51</code>, <code>Phenomena</code>, <code>Surprise, Kill, Vanish</code>, <code>Nuclear War: A Scenario</code>.</li><li>Add official sources: CIA U-2 / Oxcart history, Air Force Roswell reports, CIA UFO disinformation references.</li><li>Cross-link with <a href="stargate-documentary-trilogy-index.html">stargate-documentary-trilogy-index</a> and future ESP / Phenomena notes.</li><li>Build a <code>Lex Fridman Podcast</code> source index as more episodes are ingested.</li></ul>
+<ul><li>Compare with Jacobsen books: <code>Area 51</code>, <code>Phenomena</code>, <code>Surprise, Kill, Vanish</code>, <code>Nuclear War: A Scenario</code>.</li><li>Add official sources: CIA U-2 / Oxcart history, Air Force Roswell reports, CIA UFO disinformation references.</li><li>Cross-link with <a href="stargate-documentary-trilogy-index.html">Stargate documentary trilogy index</a> and future ESP / Phenomena notes.</li><li>Build a <code>Lex Fridman Podcast</code> source index as the archive adds episodes.</li></ul>
 <h2 id="related">Related</h2>
-<ul><li><a href="x-files.html">x-files</a></li><li><a href="lex-fridman-podcast-index.html">index</a></li><li><a href="stargate-documentary-trilogy-index.html">stargate-documentary-trilogy-index</a></li><li><a href="cia-readingroom-record-1693729.html">cia-readingroom-record-1693729</a></li></ul></section>
+<ul><li><a href="x-files.html">Research map</a></li><li><a href="lex-fridman-podcast-index.html">Lex Fridman Podcast — X Files source folder</a></li><li><a href="stargate-documentary-trilogy-index.html">Stargate documentary trilogy index</a></li><li><a href="cia-readingroom-record-1693729.html">CIA Reading Room Record 1693729</a></li></ul></section>
       <nav class="dossier-neighbors" aria-label="More in this topic"><a rel="prev" href="latest-ufo-sightings-watch.html"><small>Previous dossier</small><strong>Latest UFO Sightings watch</strong></a><a rel="next" href="lex-fridman-podcast-garry-nolan-ufos-and-aliens-lex-fridman-262.html"><small>Next dossier</small><strong>Garry Nolan on UFOs and aliens</strong></a></nav>
     </div>
     <aside class="dossier-context" aria-label="Dossier references">
       <details id="dossier-sources" class="dossier-sources">
       <summary>Sources and citations</summary>
-      <div class="dossier-source-content">
-    <div class="source-box">
-      <strong>Source context</strong>
-      <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
-      <div><a href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=1939s" target="_blank" rel="noopener">Open original source</a></div>
-    </div>
-
-
-    <div class="citation-panel">
-      <strong>Citation panel</strong>
-      <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
-      <div><a href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=1939s" target="_blank" rel="noopener">Primary external source</a></div>
-    </div>
-      </div>
+      <div class="dossier-source-content"><p><a href="https://www.youtube.com/watch?v=GXgGR8KxFao&amp;t=1939s" target="_blank" rel="noopener">Watch the cited video ↗</a></p><p class="dossier-source-path">Obsidian note · <code>resources/lex-fridman-podcast/annie-jacobsen-nuclear-war-cia-kgb-aliens-area-51-roswell-secrecy-lex-fridman-420.md</code></p></div>
     </details>
       <section class="dossier-related" aria-labelledby="dossier-related-title">
         <h2 id="dossier-related-title">Related dossiers</h2>
         <a class="related-entry" href="lex-fridman-podcast-garry-nolan-ufos-and-aliens-lex-fridman-262.html">
-    <img src="assets/visuals/dossiers/lex-fridman-podcast-garry-nolan-ufos-and-aliens-lex-fridman-262-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
+    <img src="assets/visuals/videos/uTCc2-1tbBQ-400.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>Garry Nolan on UFOs and aliens</span>
   </a><a class="related-entry" href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-1.html">
-    <img src="assets/visuals/dossiers/how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-1-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
+    <img src="assets/visuals/videos/GkqFBqiGRQs-400.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>Project Stargate · Part 1</span>
   </a><a class="related-entry" href="cia-mars-exploration-1984.html">
     <img src="assets/visuals/dossiers/cia-mars-exploration-1984-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
@@ -182,36 +170,29 @@
       </section>
       <details class="dossier-extra">
         <summary>Research details</summary>
-        <p class="dossier-source-path">Obsidian note · <code>resources/lex-fridman-podcast/annie-jacobsen-nuclear-war-cia-kgb-aliens-area-51-roswell-secrecy-lex-fridman-420.md</code></p>
         <div class="note-insights">
 
     <div class="dossier-matrix" id="dossier-method">
       <div class="diagram-head"><strong>Dossier method</strong><span>claim · evidence · uncertainty</span></div>
-      <div class="dossier-matrix-grid"><div><span>Evidence type</span><p>declassified / intelligence-adjacent record</p></div><div><span>Source quality</span><p>- Mapping how intelligence secrecy and aerospace programs generate myths. - Capturing Jacobsen’s claims and narrative framing for later comparison. - Connecting Area 51, UFO lore, ESP, nuclear risk and CIA covert action in one reusable interview node.</p></div><div><span>Why it matters</span><p>This episode is a useful X Files source cluster because Annie Jacobsen connects national-security history, nuclear command systems, CIA secrecy, Area 51, UFO disinformation, ESP / psychical research, Roswell lore, KGB history and covert action. It is not a pri</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
+      <div class="dossier-matrix-grid"><div><span>Evidence type</span><p>Recorded interview</p></div><div><span>Source quality</span><p><a href="#what-this-source-is-good-for">What this source is good for</a></p></div><div><span>Why it matters</span><p><a href="#why-this-belongs-in-x-files">Why this belongs in X Files</a></p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
       <a class="method-link" href="x-files-dossier-method.html">Open editorial method →</a>
     </div>
 
 
     <div class="related-evidence-map">
-      <div class="diagram-head"><strong>Related evidence map</strong><span>same-cluster paths + wikilinks</span></div>
+      <div class="diagram-head"><strong>Related evidence map</strong><span>Related topics and linked notes</span></div>
       <div class="evidence-grid"><a href="lex-fridman-podcast-garry-nolan-ufos-and-aliens-lex-fridman-262.html"><strong>Garry Nolan: UFOs and Aliens | Lex Fridman Podcast #262</strong><span>UFO / UAP</span></a><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-1.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 1 of 3)</strong><span>UFO / UAP</span></a><a href="cia-mars-exploration-1984.html"><strong>CIA Mars Exploration 1984</strong><span>CIA / Remote Viewing</span></a><a href="cia-readingroom-record-1693729.html"><strong>CIA Reading Room Record 1693729</strong><span>CIA / Remote Viewing</span></a><a href="cia-readingroom-record-273505.html"><strong>CIA Reading Room Record 273505</strong><span>CIA / Remote Viewing</span></a><a href="gondola-wish.html"><strong>GONDOLA WISH</strong><span>CIA / Remote Viewing</span></a><a href="index.html"><strong>Index</strong><span>wikilink</span></a><a href="x-files.html"><strong>X Files</strong><span>wikilink</span></a></div>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Topic constellation</strong><span>connected tags</span></div>
-      <svg viewBox="0 0 330 310" class="diagram-svg" role="img" aria-label="Tag constellation">
-        <line x1="168" y1="154" x2="110" y2="48" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="245" y2="72" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="290" y2="168" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="225" y2="260" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="90" y2="262" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="42" y2="148" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" />
-        <circle cx="168" cy="154" r="42" fill="rgba(103,232,249,0.12)" stroke="#67e8f9" stroke-width="1.5" />
-        <text x="168" y="148" text-anchor="middle" class="diagram-core">RESOURCE</text>
-        <text x="168" y="170" text-anchor="middle" class="diagram-label">UFO / UAP</text>
-        <g><circle cx="110" cy="48" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="110" y="53" text-anchor="middle" class="diagram-mini">x-files</text></g><g><circle cx="245" cy="72" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="245" y="77" text-anchor="middle" class="diagram-mini">lex-fridman-po</text></g><g><circle cx="290" cy="168" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="290" y="173" text-anchor="middle" class="diagram-mini">cia</text></g><g><circle cx="225" cy="260" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="225" y="265" text-anchor="middle" class="diagram-mini">nuclear-war</text></g><g><circle cx="90" cy="262" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="90" y="267" text-anchor="middle" class="diagram-mini">area-51</text></g><g><circle cx="42" cy="148" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="42" y="153" text-anchor="middle" class="diagram-mini">roswell</text></g>
-      </svg>
+      <div class="diagram-head"><strong>Explore connected tags</strong></div>
+      <nav class="tag-tree" aria-label="Explore connected tags"><div class="tag-root"><a href="topic-uap.html">UFO / UAP</a></div><div class="tag-branches"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=lex-fridman-podcast">lex-fridman-podcast</a> <a href="search.html?q=cia">cia</a> <a href="search.html?q=nuclear-war">nuclear-war</a> <a href="search.html?q=area-51">area-51</a> <a href="search.html?q=roswell">roswell</a> <a href="search.html?q=ufo">ufo</a> <a href="search.html?q=esp">esp</a> <a href="search.html?q=intelligence-history">intelligence-history</a></div></nav>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Note density</strong><span>structure and weight</span></div>
+      <div class="diagram-head"><strong>Note density</strong><span>Article structure</span></div>
       <div class="metric-rows"><div class="metric-row"><span>sections</span><div class="metric-bar"><i style="width:10%; background:#67e8f9"></i></div><b>16</b></div><div class="metric-row"><span>bullets</span><div class="metric-bar"><i style="width:10%; background:#a78bfa"></i></div><b>19</b></div><div class="metric-row"><span>links</span><div class="metric-bar"><i style="width:10%; background:#fb923c"></i></div><b>8</b></div><div class="metric-row"><span>words</span><div class="metric-bar"><i style="width:100%; background:#34d399"></i></div><b>2266</b></div></div>
     </div>
 
@@ -245,6 +226,7 @@
 </footer>
 </main>
 
-<script src="assets/app.js?v=f51c6d33c9" defer></script>
+<script src="assets/app.js?v=9313a9e506" defer></script>
+<script src="assets/video.js?v=d76fd3b72f" defer></script>
 </body>
 </html>

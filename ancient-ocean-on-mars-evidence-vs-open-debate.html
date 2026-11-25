@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ancient Ocean on Mars: Evidence vs Open Debate</title>
-  <link rel="stylesheet" href="assets/styles.css?v=8b1bf16">
-  <link rel="stylesheet" href="assets/library.css?v=65467dfb4e">
+  <link rel="stylesheet" href="assets/styles.css?v=9d918bb5d6">
+  <link rel="stylesheet" href="assets/library.css?v=8c8e125679">
 </head>
 <body data-view="dossier">
 
@@ -15,17 +15,18 @@
       <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span><span>X Files</span></a>
       <nav class="site-links" aria-label="Main navigation"><a class="nav-link" href="index.html#topic-hubs">Topics</a><a class="nav-link" href="search.html">Search</a><a class="nav-link" href="latest.html">Latest</a><a class="nav-link" href="x-files.html">Research map</a></nav>
       <div class="toolbar">
+        <button class="quick-links" data-open-commands type="button" aria-haspopup="dialog" aria-controls="command-palette">Quick links</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
       </div>
     </div>
   </header>
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <dialog class="mobile-drawer" id="mobile-drawer" aria-label="Explore the archive">
     <div class="mobile-drawer-panel">
       <div class="mobile-drawer-head"><strong>Explore the archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
       <nav aria-label="Archive collections"><a href="topic-uap.html">UFO / UAP</a><a href="topic-cia.html">CIA / Remote Viewing</a><a href="topic-mars.html">Mars</a><a href="topic-ancient.html">Ancient Civilizations</a><a href="topic-liminal.html">Uncanny / Liminal</a><a href="topic-methods.html">Methods &amp; media</a><a href="x-files.html">Research map</a><a href="x-files-dossier-method.html">Editorial method</a></nav>
       <button class="theme-toggle" type="button" data-drawer-theme>Theme</button>
     </div>
-  </div>
+  </dialog>
   <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
       <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
       <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
@@ -33,19 +34,19 @@
       <a href="latest.html"><span aria-hidden="true">◷</span><b>Latest</b></a>
       <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
   </nav>
-  <div id="command-palette" class="command-palette" aria-hidden="true" role="dialog" aria-label="Command palette">
+  <dialog id="command-palette" class="command-palette" aria-label="Quick links">
     <div class="command-backdrop" data-command-close></div>
     <div class="command-panel glass-panel">
-      <div class="command-head"><strong>Command palette</strong><button type="button" data-command-close aria-label="Close command palette">×</button></div>
+      <div class="command-head"><strong>Quick links</strong><button type="button" data-command-close aria-label="Close quick links">×</button></div>
       <div class="command-items">
-        <button type="button" class="command-item" data-command-href="index.html"><span>Home</span></button>
-        <button type="button" class="command-item" data-command-href="search.html"><span>Search archive</span><small>/</small></button>
+        <a class="command-item" href="index.html"><span>Home</span></a>
+        <a class="command-item" href="search.html"><span>Search archive</span><small>/</small></a>
         <button type="button" class="command-item" data-command-theme><span>Toggle theme</span><small>Dark / light</small></button>
         <button type="button" class="command-item" data-command-reading><span>Reading mode</span></button>
-        <button type="button" class="command-item" data-command-href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></button>
+        <a class="command-item" href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></a><a class="command-item" href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></a><a class="command-item" href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></a><a class="command-item" href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></a><a class="command-item" href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></a><a class="command-item" href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></a>
       </div>
     </div>
-  </div>
+  </dialog>
 <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
 <main id="main-content" class="shell library-shell" tabindex="-1">
 
@@ -59,13 +60,10 @@
       <div class="note-stats dossier-stats"><span>Updated: Apr 23, 2026</span>
               <span>4 min read</span></div>
     </div>
-    <figure class="dossier-figure">
-      <picture>
+    <figure class="dossier-figure"><a class="inspect-image" href="assets/visuals/dossiers/ancient-ocean-on-mars-evidence-vs-open-debate.jpg" aria-label="Open the full-size cover illustration"><picture>
   <source media="(max-width: 600px)" srcset="assets/visuals/dossiers/ancient-ocean-on-mars-evidence-vs-open-debate-thumb.jpg">
   <img src="assets/visuals/dossiers/ancient-ocean-on-mars-evidence-vs-open-debate.jpg" width="1152" height="768" alt="" fetchpriority="high">
-</picture>
-      <figcaption>Editorial illustration</figcaption>
-    </figure>
+</picture></a><figcaption>Editorial illustration</figcaption></figure>
   </header>
   <div class="dossier-toolbar" aria-label="Reading tools">
     <button id="reading-mode-toggle" type="button">Reading mode</button>
@@ -104,12 +102,12 @@
 <h3 id="tectonic-volcanic-deformational-history">Tectonic/volcanic/deformational history</h3>
 <p>Part of the debate remains whether later processes altered the terrain so much that today we see a signature mixed between original signal and subsequent geological rewriting.</p>
 <h2 id="practical-reading-table">Practical reading table</h2>
-<p>| Layer | What it holds | Useful level |</p>
-<p>|---|---|---|</p>
-<p>| Ancient water on Mars | very likely | high |</p>
-<p>| Ancient coastal/marine environments in the north | plausible and reinforced | medium-high |</p>
-<p>| Stable large-scale ocean already demonstrated without discussion | not yet | medium |</p>
-<p>| Ocean = life/civilization | illegitimate jump | low |</p>
+<div class="table-scroll" role="region" aria-labelledby="practical-reading-table" tabindex="0"><table><thead><tr><th scope="col">Layer</th><th scope="col">What it holds</th><th scope="col">Useful level</th></tr></thead><tbody>
+<tr><td>Ancient water on Mars</td><td>very likely</td><td>high</td></tr>
+<tr><td>Ancient coastal/marine environments in the north</td><td>plausible and reinforced</td><td>medium-high</td></tr>
+<tr><td>Stable large-scale ocean already demonstrated without discussion</td><td>not yet</td><td>medium</td></tr>
+<tr><td>Ocean = life/civilization</td><td>illegitimate jump</td><td>low</td></tr>
+</tbody></table></div>
 <h2 id="why-it-matters-within-x-files">Why it matters within X Files</h2>
 <ul><li>because it is one of the few routes where <code>ancient Mars</code> touches relatively strong scientific evidence</li><li>because it reduces the temptation to turn the entire Mars subdomain into pure pareidolia</li><li>because it offers a serious basis for talking about habitability, paleogeography and complex conditions without resorting to folklore</li><li>because it forces us to better distinguish between <strong>environmentally rich planet</strong> and <strong>planet with engineering or civilization</strong></li></ul>
 <h2 id="critical-reading-x-files">Critical reading X Files</h2>
@@ -118,31 +116,18 @@
 <h3 id="the-easiest-thing-to-overextend">The easiest thing to overextend</h3>
 <ul><li>convert <code>signature compatible with an ocean</code> to <code>proven global ocean</code></li><li>convert <code>potencial de habitabilidad</code> to <code>vida compleja</code></li><li>convert <code>rich hydrological history</code> to <code>architectural Mars</code></li></ul>
 <h2 id="relationship-to-other-package-notes">Relationship to other package notes</h2>
-<ul><li><a href="ancient-water-on-mars-and-climate-loss.html">ancient-water-on-mars-and-climate-loss</a> sets the general climatic basis</li><li><a href="mars-canals-schiaparelli-lowell-and-the-interpretive-error.html">mars-canals-schiaparelli-lowell-and-the-interpretive-error</a> shows how poor reading can be culturally deformed</li><li><a href="face-on-mars-official-image-reanalysis.html">face-on-mars-official-image-reanalysis</a> serves as a contrast to visual pareidolia</li><li><a href="mars-x-files-anomalies-vs-official-readings.html">mars-x-files-anomalies-vs-official-readings</a> is the bridge node that decides what remains on the science side, what remains on the anomaly side, and what remains on the myth side.</li></ul>
+<ul><li><a href="ancient-water-on-mars-and-climate-loss.html">Ancient Water on Mars and Climate Loss</a> sets the general climatic basis</li><li><a href="mars-canals-schiaparelli-lowell-and-the-interpretive-error.html">Mars Canals: Schiaparelli, Lowell, and the Interpretive Error</a> shows how poor reading can be culturally deformed</li><li><a href="face-on-mars-official-image-reanalysis.html">Face on Mars: Official Image Reanalysis</a> serves as a contrast to visual pareidolia</li><li><a href="mars-x-files-anomalies-vs-official-readings.html">Mars X Files: Anomalies vs Official Readings</a> is the bridge node that decides what remains on the science side, what remains on the anomaly side, and what remains on the myth side.</li></ul>
 <h2 id="operating-rule">Operating rule</h2>
 <p>The best reading of this note is:</p>
 <ul><li><strong>yes</strong>: there is serious reason to treat ancient Mars as a world with complex hydrology</li><li><strong>not yet</strong>: no complete closure on ocean size, duration and geometry</li><li><strong>no</strong>: this line does not by itself validate theories of ruins, artificial canals or lost civilization</li></ul>
 <h2 id="related">Related</h2>
-<p><a href="ancient-water-on-mars-and-climate-loss.html">ancient-water-on-mars-and-climate-loss</a> <a href="mars-x-files-anomalies-vs-official-readings.html">mars-x-files-anomalies-vs-official-readings</a> <a href="mars-canals-schiaparelli-lowell-and-the-interpretive-error.html">mars-canals-schiaparelli-lowell-and-the-interpretive-error</a> <a href="face-on-mars-official-image-reanalysis.html">face-on-mars-official-image-reanalysis</a> <a href="cydonia-martian-mystery-region.html">cydonia-martian-mystery-region</a> <a href="x-files.html">x-files</a> <a href="index.html">index</a></p></section>
+<p><a href="ancient-water-on-mars-and-climate-loss.html">Ancient Water on Mars and Climate Loss</a> <a href="mars-x-files-anomalies-vs-official-readings.html">Mars X Files: Anomalies vs Official Readings</a> <a href="mars-canals-schiaparelli-lowell-and-the-interpretive-error.html">Mars Canals: Schiaparelli, Lowell, and the Interpretive Error</a> <a href="face-on-mars-official-image-reanalysis.html">Face on Mars: Official Image Reanalysis</a> <a href="cydonia-martian-mystery-region.html">Cydonia: Martian Mystery Region</a> <a href="x-files.html">Research map</a> <a href="index.html">Archive home</a></p></section>
       <nav class="dossier-neighbors" aria-label="More in this topic"><a rel="next" href="ancient-water-on-mars-and-climate-loss.html"><small>Next dossier</small><strong>Ancient Water on Mars and Climate Loss</strong></a></nav>
     </div>
     <aside class="dossier-context" aria-label="Dossier references">
       <details id="dossier-sources" class="dossier-sources">
       <summary>Sources and citations</summary>
-      <div class="dossier-source-content">
-    <div class="source-box">
-      <strong>Source context</strong>
-      <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
-      <div><span>No explicit external URL in note body</span></div>
-    </div>
-
-
-    <div class="citation-panel">
-      <strong>Citation panel</strong>
-      <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
-      <div><span>Obsidian source note only</span></div>
-    </div>
-      </div>
+      <div class="dossier-source-content"><p>This entry cites the archive notebook. Follow the linked dossiers for further context.</p><p class="dossier-source-path">Obsidian note · <code>resources/ancient-ocean-on-mars-evidence-vs-open-debate.md</code></p></div>
     </details>
       <section class="dossier-related" aria-labelledby="dossier-related-title">
         <h2 id="dossier-related-title">Related dossiers</h2>
@@ -159,36 +144,29 @@
       </section>
       <details class="dossier-extra">
         <summary>Research details</summary>
-        <p class="dossier-source-path">Obsidian note · <code>resources/ancient-ocean-on-mars-evidence-vs-open-debate.md</code></p>
         <div class="note-insights">
 
     <div class="dossier-matrix" id="dossier-method">
       <div class="diagram-head"><strong>Dossier method</strong><span>claim · evidence · uncertainty</span></div>
-      <div class="dossier-matrix-grid"><div><span>Source says</span><p>Within the Mars package, this is the note that goes up one step compared to there was water. The hypothesis here is no longer just paleolakes or local rivers, but the possibility of an ancient ocean in the northern hemisphere. The real interest of the paper an</p></div><div><span>Evidence type</span><p>paper / research literature</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Why it matters</span><p>- because it is one of the few routes where ancient Mars touches relatively strong scientific evidence - because it reduces the temptation to turn the entire Mars subdomain into pure pareidolia - because it offers a serious basis for talking about habitability</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
+      <div class="dossier-matrix-grid"><div><span>Dossier overview</span><p>Could an ocean once have occupied Mars’s northern lowlands? This dossier reviews what supports the hypothesis and which parts of the shoreline and climate story are still debated.</p></div><div><span>Evidence type</span><p>paper / research literature</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Why it matters</span><p><a href="#why-it-matters-within-x-files">Why it matters within X Files</a></p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
       <a class="method-link" href="x-files-dossier-method.html">Open editorial method →</a>
     </div>
 
 
     <div class="related-evidence-map">
-      <div class="diagram-head"><strong>Related evidence map</strong><span>same-cluster paths + wikilinks</span></div>
+      <div class="diagram-head"><strong>Related evidence map</strong><span>Related topics and linked notes</span></div>
       <div class="evidence-grid"><a href="ancient-water-on-mars-and-climate-loss.html"><strong>Ancient Water on Mars and Climate Loss</strong><span>Mars</span></a><a href="cydonia-martian-mystery-region.html"><strong>Cydonia: Martian Mystery Region</strong><span>Mars</span></a><a href="mars-x-files-anomalies-vs-official-readings.html"><strong>Mars X Files: Anomalies vs Official Readings</strong><span>Mars</span></a><a href="cia-mars-exploration-1984.html"><strong>CIA Mars Exploration 1984</strong><span>CIA / Remote Viewing</span></a><a href="face-on-mars-official-image-reanalysis.html"><strong>Face on Mars: Official Image Reanalysis</strong><span>Mars</span></a><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-3.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 3 of 3)</strong><span>CIA / Remote Viewing</span></a><a href="ancient-water-on-mars-and-climate-loss.html"><strong>Ancient Water On Mars And Climate Loss</strong><span>wikilink</span></a><a href="mars-canals-schiaparelli-lowell-and-the-interpretive-error.html"><strong>Mars Canals Schiaparelli Lowell And The Interpretive Error</strong><span>wikilink</span></a></div>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Topic constellation</strong><span>connected tags</span></div>
-      <svg viewBox="0 0 330 310" class="diagram-svg" role="img" aria-label="Tag constellation">
-        <line x1="168" y1="154" x2="110" y2="48" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="245" y2="72" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="290" y2="168" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="225" y2="260" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="90" y2="262" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="42" y2="148" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" />
-        <circle cx="168" cy="154" r="42" fill="rgba(103,232,249,0.12)" stroke="#67e8f9" stroke-width="1.5" />
-        <text x="168" y="148" text-anchor="middle" class="diagram-core">RESOURCE</text>
-        <text x="168" y="170" text-anchor="middle" class="diagram-label">Mars</text>
-        <g><circle cx="110" cy="48" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="110" y="53" text-anchor="middle" class="diagram-mini">x-files</text></g><g><circle cx="245" cy="72" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="245" y="77" text-anchor="middle" class="diagram-mini">mars</text></g><g><circle cx="290" cy="168" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="290" y="173" text-anchor="middle" class="diagram-mini">ocean</text></g><g><circle cx="225" cy="260" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="225" y="265" text-anchor="middle" class="diagram-mini">nasa</text></g><g><circle cx="90" cy="262" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="90" y="267" text-anchor="middle" class="diagram-mini">caltech</text></g><g><circle cx="42" cy="148" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="42" y="153" text-anchor="middle" class="diagram-mini">nature</text></g>
-      </svg>
+      <div class="diagram-head"><strong>Explore connected tags</strong></div>
+      <nav class="tag-tree" aria-label="Explore connected tags"><div class="tag-root"><a href="topic-mars.html">Mars</a></div><div class="tag-branches"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=mars">mars</a> <a href="search.html?q=ocean">ocean</a> <a href="search.html?q=nasa">nasa</a> <a href="search.html?q=caltech">caltech</a> <a href="search.html?q=nature">nature</a> <a href="search.html?q=ancient-mars">ancient-mars</a> <a href="search.html?q=theories">theories</a></div></nav>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Note density</strong><span>structure and weight</span></div>
+      <div class="diagram-head"><strong>Note density</strong><span>Article structure</span></div>
       <div class="metric-rows"><div class="metric-row"><span>sections</span><div class="metric-bar"><i style="width:10%; background:#67e8f9"></i></div><b>21</b></div><div class="metric-row"><span>bullets</span><div class="metric-bar"><i style="width:10%; background:#a78bfa"></i></div><b>23</b></div><div class="metric-row"><span>links</span><div class="metric-bar"><i style="width:10%; background:#fb923c"></i></div><b>11</b></div><div class="metric-row"><span>words</span><div class="metric-bar"><i style="width:100%; background:#34d399"></i></div><b>796</b></div></div>
     </div>
 
@@ -222,6 +200,6 @@
 </footer>
 </main>
 
-<script src="assets/app.js?v=f51c6d33c9" defer></script>
+<script src="assets/app.js?v=9313a9e506" defer></script>
 </body>
 </html>

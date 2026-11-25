@@ -643,7 +643,7 @@ a.card .card-tags { display: none; }
   background: rgba(0,0,0,0.58);
   backdrop-filter: blur(8px);
 }
-.mobile-drawer.is-open { display: block; }
+.mobile-drawer[open] { display: block; }
 .mobile-drawer-panel {
   position: absolute;
   left: 12px;
@@ -689,7 +689,13 @@ a.card .card-tags { display: none; }
   place-items: start center;
   padding: 10vh 18px 18px;
 }
-.command-palette.is-open { display: grid; }
+.command-palette[open] { display: grid; }
+.mobile-drawer, .command-palette {
+  width: 100%; height: 100%; max-width: none; max-height: none;
+  margin: 0; border: 0; color: var(--text);
+}
+.command-palette { background: transparent; overflow-y: auto; }
+.command-palette::backdrop, .mobile-drawer::backdrop { background: transparent; }
 .command-backdrop {
   position: absolute;
   inset: 0;

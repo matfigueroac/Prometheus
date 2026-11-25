@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ancient Civilizations Research Map</title>
-  <link rel="stylesheet" href="assets/styles.css?v=8b1bf16">
-  <link rel="stylesheet" href="assets/library.css?v=65467dfb4e">
+  <link rel="stylesheet" href="assets/styles.css?v=9d918bb5d6">
+  <link rel="stylesheet" href="assets/library.css?v=8c8e125679">
 </head>
 <body data-view="dossier">
 
@@ -15,17 +15,18 @@
       <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span><span>X Files</span></a>
       <nav class="site-links" aria-label="Main navigation"><a class="nav-link" href="index.html#topic-hubs">Topics</a><a class="nav-link" href="search.html">Search</a><a class="nav-link" href="latest.html">Latest</a><a class="nav-link" href="x-files.html">Research map</a></nav>
       <div class="toolbar">
+        <button class="quick-links" data-open-commands type="button" aria-haspopup="dialog" aria-controls="command-palette">Quick links</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
       </div>
     </div>
   </header>
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <dialog class="mobile-drawer" id="mobile-drawer" aria-label="Explore the archive">
     <div class="mobile-drawer-panel">
       <div class="mobile-drawer-head"><strong>Explore the archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
       <nav aria-label="Archive collections"><a href="topic-uap.html">UFO / UAP</a><a href="topic-cia.html">CIA / Remote Viewing</a><a href="topic-mars.html">Mars</a><a href="topic-ancient.html">Ancient Civilizations</a><a href="topic-liminal.html">Uncanny / Liminal</a><a href="topic-methods.html">Methods &amp; media</a><a href="x-files.html">Research map</a><a href="x-files-dossier-method.html">Editorial method</a></nav>
       <button class="theme-toggle" type="button" data-drawer-theme>Theme</button>
     </div>
-  </div>
+  </dialog>
   <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
       <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
       <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
@@ -33,19 +34,19 @@
       <a href="latest.html"><span aria-hidden="true">◷</span><b>Latest</b></a>
       <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
   </nav>
-  <div id="command-palette" class="command-palette" aria-hidden="true" role="dialog" aria-label="Command palette">
+  <dialog id="command-palette" class="command-palette" aria-label="Quick links">
     <div class="command-backdrop" data-command-close></div>
     <div class="command-panel glass-panel">
-      <div class="command-head"><strong>Command palette</strong><button type="button" data-command-close aria-label="Close command palette">×</button></div>
+      <div class="command-head"><strong>Quick links</strong><button type="button" data-command-close aria-label="Close quick links">×</button></div>
       <div class="command-items">
-        <button type="button" class="command-item" data-command-href="index.html"><span>Home</span></button>
-        <button type="button" class="command-item" data-command-href="search.html"><span>Search archive</span><small>/</small></button>
+        <a class="command-item" href="index.html"><span>Home</span></a>
+        <a class="command-item" href="search.html"><span>Search archive</span><small>/</small></a>
         <button type="button" class="command-item" data-command-theme><span>Toggle theme</span><small>Dark / light</small></button>
         <button type="button" class="command-item" data-command-reading><span>Reading mode</span></button>
-        <button type="button" class="command-item" data-command-href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></button>
+        <a class="command-item" href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></a><a class="command-item" href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></a><a class="command-item" href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></a><a class="command-item" href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></a><a class="command-item" href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></a><a class="command-item" href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></a>
       </div>
     </div>
-  </div>
+  </dialog>
 <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
 <main id="main-content" class="shell library-shell" tabindex="-1">
 
@@ -59,13 +60,10 @@
       <div class="note-stats dossier-stats"><span>Updated: Jun 15, 2026</span>
               <span>4 min read</span></div>
     </div>
-    <figure class="dossier-figure">
-      <picture>
+    <figure class="dossier-figure"><a class="inspect-image" href="assets/visuals/dossiers/ancient-civilizations-research-map.jpg" aria-label="Open the full-size cover illustration"><picture>
   <source media="(max-width: 600px)" srcset="assets/visuals/dossiers/ancient-civilizations-research-map-thumb.jpg">
   <img src="assets/visuals/dossiers/ancient-civilizations-research-map.jpg" width="1152" height="768" alt="" fetchpriority="high">
-</picture>
-      <figcaption>Editorial illustration</figcaption>
-    </figure>
+</picture></a><figcaption>Editorial illustration</figcaption></figure>
   </header>
   <div class="dossier-toolbar" aria-label="Reading tools">
     <button id="reading-mode-toggle" type="button">Reading mode</button>
@@ -82,27 +80,27 @@
 <h2 id="purpose">Purpose</h2>
 <p>This is the master map for the <strong>Ancient Civilizations</strong> lane of the X Files wiki. It is not a belief page. It is a research control layer for tracking claims about deep prehistory, catastrophe memory, megalithic architecture, Mesopotamian flood traditions, symbolic recurrence and alternative chronology.</p>
 <p>The operating question is:</p>
-<p>&gt; Did later historical civilizations inherit, reuse or reinterpret older knowledge systems from late-Pleistocene or early-Holocene cultures, and if so, what evidence can actually be tested?</p>
+<blockquote><p>Did later historical civilizations inherit, reuse or reinterpret older knowledge systems from late-Pleistocene or early-Holocene cultures, and if so, what evidence can actually be tested?</p></blockquote>
 <h2 id="position-inside-x-files">Position inside X Files</h2>
 <p>Ancient Civilizations is a major topic, equal in weight to UAP/NHI, Mars anomalies, CIA/Stargate and liminal/internet folklore. It should never be buried in “Other”.</p>
 <h2 id="evidence-ladder">Evidence ladder</h2>
-<p>| Level | Evidence type | Wiki treatment |</p>
-<p>|---|---|---|</p>
-<p>| A | Excavation reports, stratigraphy, direct dating, peer-reviewed geology, primary inscriptions/tablets | Baseline evidence |</p>
-<p>| B | Reliable translations, museum records, strongly documented site features | Strong research lane |</p>
-<p>| C | Cross-cultural parallels with chronology and context | Pattern lane; anti-apophenia checks required |</p>
-<p>| D | Field observations without independent publication | Preserve but mark as verification needed |</p>
-<p>| E | Cosmological, esoteric or consciousness-technology synthesis | X Files speculation; keep separated from A/B claims |</p>
+<div class="table-scroll" role="region" aria-labelledby="evidence-ladder" tabindex="0"><table><thead><tr><th scope="col">Level</th><th scope="col">Evidence type</th><th scope="col">Wiki treatment</th></tr></thead><tbody>
+<tr><td>A</td><td>Excavation reports, stratigraphy, direct dating, peer-reviewed geology, primary inscriptions/tablets</td><td>Baseline evidence</td></tr>
+<tr><td>B</td><td>Reliable translations, museum records, strongly documented site features</td><td>Strong research lane</td></tr>
+<tr><td>C</td><td>Cross-cultural parallels with chronology and context</td><td>Pattern lane; anti-apophenia checks required</td></tr>
+<tr><td>D</td><td>Field observations without independent publication</td><td>Preserve but mark as verification needed</td></tr>
+<tr><td>E</td><td>Cosmological, esoteric or consciousness-technology synthesis</td><td>X Files speculation; keep separated from A/B claims</td></tr>
+</tbody></table></div>
 <h2 id="core-research-axes">Core research axes</h2>
 <h3 id="1-catastrophe-and-cultural-discontinuity">1. Catastrophe and cultural discontinuity</h3>
 <p>The Younger Dryas, roughly 12,900–11,700 years BP, is a real abrupt climate episode. The impact interpretation remains highly disputed and should be treated as contested, not settled. For the wiki, the useful question is not only “was there an impact?” but:</p>
 <ul><li>What abrupt environmental transitions are securely documented?</li><li>Which cultures or oral/textual traditions preserve catastrophe memory?</li><li>Can flood, fire, darkness or sky-war motifs be correlated with local geological events without forcing a global explanation?</li><li>Which claims require extraordinary evidence?</li></ul>
-<p>Linked dossier: <a href="younger-dryas-catastrophe-and-civilization-memory.html">younger-dryas-catastrophe-and-civilization-memory</a>.</p>
+<p>Linked dossier: <a href="younger-dryas-catastrophe-and-civilization-memory.html">Younger Dryas, Catastrophe and Civilization Memory</a>.</p>
 <h3 id="2-mesopotamian-flood-textual-lineage">2. Mesopotamian flood textual lineage</h3>
 <p>This is one of the strongest lanes because it rests on actual ancient texts. The relevant chain includes <strong>Eridu Genesis</strong>, <strong>Atrahasis</strong>, <strong>Epic of Gilgamesh Tablet XI</strong>, <strong>Sumerian King List</strong>, <strong>Ziusudra</strong>, <strong>Utnapishtim</strong> and later biblical Noah traditions.</p>
 <p>Strong claim: the Hebrew flood narrative has older Mesopotamian analogues.</p>
 <p>Open claim: whether those stories preserve memory of a late-Pleistocene or early-Holocene catastrophe rather than regional river flooding, mythic kingship ideology or theological narrative.</p>
-<p>Linked dossier: <a href="mesopotamian-flood-texts-and-noah-lineage.html">mesopotamian-flood-texts-and-noah-lineage</a>.</p>
+<p>Linked dossier: <a href="mesopotamian-flood-texts-and-noah-lineage.html">Mesopotamian Flood Texts and the Noah Lineage</a>.</p>
 <h3 id="3-megalithic-and-early-monumental-architecture">3. Megalithic and early monumental architecture</h3>
 <p>The key pattern is not “all megaliths are impossible”. The stronger frame is <strong>construction layer vs reuse layer</strong>:</p>
 <ul><li>original quarrying / foundation / ritual layout,</li><li>later occupation and repair,</li><li>later militarization,</li><li>later naming by modern archaeologists,</li><li>modern tourist simplification.</li></ul>
@@ -119,21 +117,21 @@
 <p>6. similarity strength,</p>
 <p>7. plausible independent explanation,</p>
 <p>8. possible transmission route.</p>
-<p>Linked dossier: <a href="sacred-geometry-and-recurring-symbol-systems.html">sacred-geometry-and-recurring-symbol-systems</a>.</p>
+<p>Linked dossier: <a href="sacred-geometry-and-recurring-symbol-systems.html">Sacred Geometry and Recurring Symbol Systems</a>.</p>
 <h3 id="5-survival-infrastructure">5. Survival infrastructure</h3>
 <p>Underground complexes such as Derinkuyu and Kaymakli are useful because they are real, physical and complex. The dispute is interpretation:</p>
 <ul><li>conventional: refuge, storage, defense, seasonal or religious use across historic periods;</li><li>alternative: long-duration survival infrastructure after catastrophic sky/climate events.</li></ul>
-<p>Linked dossier: <a href="derinkuyu-kaymakli-underground-cities.html">derinkuyu-kaymakli-underground-cities</a>.</p>
+<p>Linked dossier: <a href="derinkuyu-kaymakli-underground-cities.html">Derinkuyu and Kaymakli Underground Cities</a>.</p>
 <h3 id="6-lake-van-eastern-anatolia-as-symbolic-source-zone">6. Lake Van / Eastern Anatolia as symbolic source zone</h3>
 <p>Matthew LaCroix frames Lake Van, Ayanis, Kef Kalesi, Çavuştepe and surrounding sites as a possible “old Holy Land” with recurring sacred geometry and symbolic programs later echoed elsewhere. The baseline archaeology identifies Urartian/Iron Age contexts for several sites. The X Files question is whether Urartian layers reused older sacred architecture or encoded older motifs.</p>
-<p>Linked dossier: <a href="lake-van-urartu-and-old-holy-land-thesis.html">lake-van-urartu-and-old-holy-land-thesis</a>.</p>
+<p>Linked dossier: <a href="lake-van-urartu-and-old-holy-land-thesis.html">Lake Van, Urartu and the Old Holy Land Thesis</a>.</p>
 <h3 id="7-consciousness-technology-temple-function">7. Consciousness technology / temple function</h3>
 <p>This is the most speculative but important X Files lane. Claims include temples as initiatory devices, resonance chambers, astronomical machines, healing environments or consciousness-training architectures. This should be tracked as a cultural/esoteric interpretation, not as established archaeology unless supported by physical acoustics, ethnography, inscriptions, ritual texts or experimental data.</p>
 <h2 id="matthew-lacroix-as-source-node">Matthew LaCroix as source node</h2>
-<p>Main profile: <a href="matthew-lacroix.html">matthew-lacroix</a>.</p>
-<p>Key ingested source: <a href="something-big-happened-in-12000-bc-matthew-lacroix.html">something-big-happened-in-12000-bc-matthew-lacroix</a>.</p>
-<p>Comparative source: <a href="lex-fridman-podcast-graham-hancock-lost-civilization-ice-age-ancient-human-history-lex-fridman-449.html">graham-hancock-lost-civilization-ice-age-ancient-human-history-lex-fridman-449</a>.</p>
-<p>Comparative source: <a href="diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac.html">graham-hancock-archaeology-warning-antarctica-lost-civilization-doac</a>.</p>
+<p>Main profile: <a href="matthew-lacroix.html">Matthew LaCroix</a>.</p>
+<p>Featured source: <a href="something-big-happened-in-12000-bc-matthew-lacroix.html">Something Big Happened in 12,000 BC — Matthew LaCroix / Jesse Michels</a>.</p>
+<p>Comparative source: <a href="lex-fridman-podcast-graham-hancock-lost-civilization-ice-age-ancient-human-history-lex-fridman-449.html">Graham Hancock: Lost Civilization of the Ice Age &amp; Ancient Human History | Lex Fridman Podcast #449</a>.</p>
+<p>Comparative source: <a href="diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac.html">Graham Hancock: Archaeology Warning / Antarctica Maps | The Diary Of A CEO</a>.</p>
 <h2 id="priority-research-backlog">Priority research backlog</h2>
 <h3 id="immediate">Immediate</h3>
 <ul><li>Build source notes for the four core flood texts.</li><li>Build visual artifact table for sacred geometry motifs.</li><li>Verify Lake Van site names, dates and conventional excavation context.</li><li>Verify the “vitrified basalt” claim independently.</li></ul>
@@ -142,26 +140,13 @@
 <h3 id="later">Later</h3>
 <ul><li>Build a comparative flood-myth database.</li><li>Build a motif atlas with images and source links.</li><li>Build a skepticism page: common failure modes in ancient-civilization arguments.</li></ul>
 <h2 id="related">Related</h2>
-<ul><li><a href="ancient-civilizations-and-theories.html">ancient-civilizations-and-theories</a></li><li><a href="matthew-lacroix.html">matthew-lacroix</a></li><li><a href="something-big-happened-in-12000-bc-matthew-lacroix.html">something-big-happened-in-12000-bc-matthew-lacroix</a></li><li><a href="lex-fridman-podcast-graham-hancock-lost-civilization-ice-age-ancient-human-history-lex-fridman-449.html">graham-hancock-lost-civilization-ice-age-ancient-human-history-lex-fridman-449</a></li><li><a href="diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac.html">graham-hancock-archaeology-warning-antarctica-lost-civilization-doac</a></li><li><a href="x-files.html">x-files</a></li></ul></section>
+<ul><li><a href="ancient-civilizations-and-theories.html">Ancient Civilizations and Alternative Chronology</a></li><li><a href="matthew-lacroix.html">Matthew LaCroix</a></li><li><a href="something-big-happened-in-12000-bc-matthew-lacroix.html">Something Big Happened in 12,000 BC — Matthew LaCroix / Jesse Michels</a></li><li><a href="lex-fridman-podcast-graham-hancock-lost-civilization-ice-age-ancient-human-history-lex-fridman-449.html">Graham Hancock: Lost Civilization of the Ice Age &amp; Ancient Human History | Lex Fridman Podcast #449</a></li><li><a href="diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac.html">Graham Hancock: Archaeology Warning / Antarctica Maps | The Diary Of A CEO</a></li><li><a href="x-files.html">Research map</a></li></ul></section>
       <nav class="dossier-neighbors" aria-label="More in this topic"><a rel="prev" href="ancient-civilizations-and-theories.html"><small>Previous dossier</small><strong>Ancient Civilizations and Alternative Chronology</strong></a><a rel="next" href="derinkuyu-kaymakli-underground-cities.html"><small>Next dossier</small><strong>Derinkuyu and Kaymakli Underground Cities</strong></a></nav>
     </div>
     <aside class="dossier-context" aria-label="Dossier references">
       <details id="dossier-sources" class="dossier-sources">
       <summary>Sources and citations</summary>
-      <div class="dossier-source-content">
-    <div class="source-box">
-      <strong>Source context</strong>
-      <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
-      <div><span>No explicit external URL in note body</span></div>
-    </div>
-
-
-    <div class="citation-panel">
-      <strong>Citation panel</strong>
-      <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
-      <div><span>Obsidian source note only</span></div>
-    </div>
-      </div>
+      <div class="dossier-source-content"><p>This entry cites the archive notebook. Follow the linked dossiers for further context.</p><p class="dossier-source-path">Obsidian note · <code>resources/ancient-civilizations-research-map.md</code></p></div>
     </details>
       <section class="dossier-related" aria-labelledby="dossier-related-title">
         <h2 id="dossier-related-title">Related dossiers</h2>
@@ -169,45 +154,38 @@
     <img src="assets/visuals/dossiers/ancient-civilizations-and-theories-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>Ancient Civilizations and Alternative Chronology</span>
   </a><a class="related-entry" href="diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac.html">
-    <img src="assets/visuals/dossiers/diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
+    <img src="assets/visuals/videos/Xs94KBeIiAo-400.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>Graham Hancock on archaeology and Antarctica</span>
   </a><a class="related-entry" href="lex-fridman-podcast-graham-hancock-lost-civilization-ice-age-ancient-human-history-lex-fridman-449.html">
-    <img src="assets/visuals/dossiers/lex-fridman-podcast-graham-hancock-lost-civilization-ice-age-ancient-human-history-lex-fridman-449-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
+    <img src="assets/visuals/videos/NMHiLvirCb0-400.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>Graham Hancock on lost Ice Age civilizations</span>
   </a>
       </section>
       <details class="dossier-extra">
         <summary>Research details</summary>
-        <p class="dossier-source-path">Obsidian note · <code>resources/ancient-civilizations-research-map.md</code></p>
         <div class="note-insights">
 
     <div class="dossier-matrix" id="dossier-method">
       <div class="diagram-head"><strong>Dossier method</strong><span>claim · evidence · uncertainty</span></div>
-      <div class="dossier-matrix-grid"><div><span>Claim</span><p>This is the master map for the Ancient Civilizations lane of the X Files wiki. It is not a belief page. It is a research control layer for tracking claims about deep prehistory, catastrophe memory, megalithic architecture, Mesopotamian flood traditions, symbol</p></div><div><span>Evidence type</span><p>| Level | Evidence type | Wiki treatment | |---|---|---| | A | Excavation reports, stratigraphy, direct dating, peer-reviewed geology, primary inscriptions/tablets | Baseline evidence | | B | Reliable translations, museum records, strongly documented site feat</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
+      <div class="dossier-matrix-grid"><div><span>Claim</span><p>Follow research paths through deep prehistory, catastrophe memory and megalithic construction. The evidence ladder and research backlog show where the questions can be tested next.</p></div><div><span>Evidence type</span><p><a href="#evidence-ladder">View the evidence table</a></p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
       <a class="method-link" href="x-files-dossier-method.html">Open editorial method →</a>
     </div>
 
 
     <div class="related-evidence-map">
-      <div class="diagram-head"><strong>Related evidence map</strong><span>same-cluster paths + wikilinks</span></div>
+      <div class="diagram-head"><strong>Related evidence map</strong><span>Related topics and linked notes</span></div>
       <div class="evidence-grid"><a href="ancient-civilizations-and-theories.html"><strong>Ancient Civilizations and Alternative Chronology</strong><span>Ancient Civilizations</span></a><a href="diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac.html"><strong>Graham Hancock: Archaeology Warning / Antarctica Maps | The Diary Of A CEO</strong><span>Ancient Civilizations</span></a><a href="lex-fridman-podcast-graham-hancock-lost-civilization-ice-age-ancient-human-history-lex-fridman-449.html"><strong>Graham Hancock: Lost Civilization of the Ice Age &amp; Ancient Human History | Lex Fridman Podcast #449</strong><span>Ancient Civilizations</span></a><a href="matthew-lacroix.html"><strong>Matthew LaCroix</strong><span>Ancient Civilizations</span></a><a href="something-big-happened-in-12000-bc-matthew-lacroix.html"><strong>Something Big Happened in 12,000 BC — Matthew LaCroix / Jesse Michels</strong><span>Ancient Civilizations</span></a><a href="younger-dryas-catastrophe-and-civilization-memory.html"><strong>Younger Dryas, Catastrophe and Civilization Memory</strong><span>Ancient Civilizations</span></a><a href="younger-dryas-catastrophe-and-civilization-memory.html"><strong>Younger Dryas Catastrophe And Civilization Memory</strong><span>wikilink</span></a><a href="mesopotamian-flood-texts-and-noah-lineage.html"><strong>Mesopotamian Flood Texts And Noah Lineage</strong><span>wikilink</span></a></div>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Topic constellation</strong><span>connected tags</span></div>
-      <svg viewBox="0 0 330 310" class="diagram-svg" role="img" aria-label="Tag constellation">
-        <line x1="168" y1="154" x2="110" y2="48" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="245" y2="72" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="290" y2="168" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="225" y2="260" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="90" y2="262" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="42" y2="148" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" />
-        <circle cx="168" cy="154" r="42" fill="rgba(103,232,249,0.12)" stroke="#67e8f9" stroke-width="1.5" />
-        <text x="168" y="148" text-anchor="middle" class="diagram-core">RESOURCE</text>
-        <text x="168" y="170" text-anchor="middle" class="diagram-label">Ancient Civilizations</text>
-        <g><circle cx="110" cy="48" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="110" y="53" text-anchor="middle" class="diagram-mini">x-files</text></g><g><circle cx="245" cy="72" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="245" y="77" text-anchor="middle" class="diagram-mini">ancient-civili</text></g><g><circle cx="290" cy="168" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="290" y="173" text-anchor="middle" class="diagram-mini">alternative-hi</text></g><g><circle cx="225" cy="260" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="225" y="265" text-anchor="middle" class="diagram-mini">lost-civilizat</text></g><g><circle cx="90" cy="262" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="90" y="267" text-anchor="middle" class="diagram-mini">research-map</text></g><g><circle cx="42" cy="148" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="42" y="153" text-anchor="middle" class="diagram-mini">younger-dryas</text></g>
-      </svg>
+      <div class="diagram-head"><strong>Explore connected tags</strong></div>
+      <nav class="tag-tree" aria-label="Explore connected tags"><div class="tag-root"><a href="topic-ancient.html">Ancient Civilizations</a></div><div class="tag-branches"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=ancient-civilizations">ancient-civilizations</a> <a href="search.html?q=alternative-history">alternative-history</a> <a href="search.html?q=lost-civilization">lost-civilization</a> <a href="search.html?q=research-map">research-map</a> <a href="search.html?q=younger-dryas">younger-dryas</a> <a href="search.html?q=mesopotamia">mesopotamia</a> <a href="search.html?q=megalithic-sites">megalithic-sites</a> <a href="search.html?q=sacred-geometry">sacred-geometry</a></div></nav>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Note density</strong><span>structure and weight</span></div>
+      <div class="diagram-head"><strong>Note density</strong><span>Article structure</span></div>
       <div class="metric-rows"><div class="metric-row"><span>sections</span><div class="metric-bar"><i style="width:10%; background:#67e8f9"></i></div><b>18</b></div><div class="metric-row"><span>bullets</span><div class="metric-bar"><i style="width:10%; background:#a78bfa"></i></div><b>34</b></div><div class="metric-row"><span>links</span><div class="metric-bar"><i style="width:10%; background:#fb923c"></i></div><b>15</b></div><div class="metric-row"><span>words</span><div class="metric-bar"><i style="width:100%; background:#34d399"></i></div><b>974</b></div></div>
     </div>
 
@@ -241,6 +219,6 @@
 </footer>
 </main>
 
-<script src="assets/app.js?v=f51c6d33c9" defer></script>
+<script src="assets/app.js?v=9313a9e506" defer></script>
 </body>
 </html>

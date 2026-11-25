@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Latest UFO Sightings watch</title>
-  <link rel="stylesheet" href="assets/styles.css?v=8b1bf16">
-  <link rel="stylesheet" href="assets/library.css?v=65467dfb4e">
+  <link rel="stylesheet" href="assets/styles.css?v=9d918bb5d6">
+  <link rel="stylesheet" href="assets/library.css?v=8c8e125679">
 </head>
 <body data-view="dossier">
 
@@ -15,17 +15,18 @@
       <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span><span>X Files</span></a>
       <nav class="site-links" aria-label="Main navigation"><a class="nav-link" href="index.html#topic-hubs">Topics</a><a class="nav-link" href="search.html">Search</a><a class="nav-link" href="latest.html">Latest</a><a class="nav-link" href="x-files.html">Research map</a></nav>
       <div class="toolbar">
+        <button class="quick-links" data-open-commands type="button" aria-haspopup="dialog" aria-controls="command-palette">Quick links</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
       </div>
     </div>
   </header>
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <dialog class="mobile-drawer" id="mobile-drawer" aria-label="Explore the archive">
     <div class="mobile-drawer-panel">
       <div class="mobile-drawer-head"><strong>Explore the archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
       <nav aria-label="Archive collections"><a href="topic-uap.html">UFO / UAP</a><a href="topic-cia.html">CIA / Remote Viewing</a><a href="topic-mars.html">Mars</a><a href="topic-ancient.html">Ancient Civilizations</a><a href="topic-liminal.html">Uncanny / Liminal</a><a href="topic-methods.html">Methods &amp; media</a><a href="x-files.html">Research map</a><a href="x-files-dossier-method.html">Editorial method</a></nav>
       <button class="theme-toggle" type="button" data-drawer-theme>Theme</button>
     </div>
-  </div>
+  </dialog>
   <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
       <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
       <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
@@ -33,19 +34,19 @@
       <a href="latest.html"><span aria-hidden="true">◷</span><b>Latest</b></a>
       <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
   </nav>
-  <div id="command-palette" class="command-palette" aria-hidden="true" role="dialog" aria-label="Command palette">
+  <dialog id="command-palette" class="command-palette" aria-label="Quick links">
     <div class="command-backdrop" data-command-close></div>
     <div class="command-panel glass-panel">
-      <div class="command-head"><strong>Command palette</strong><button type="button" data-command-close aria-label="Close command palette">×</button></div>
+      <div class="command-head"><strong>Quick links</strong><button type="button" data-command-close aria-label="Close quick links">×</button></div>
       <div class="command-items">
-        <button type="button" class="command-item" data-command-href="index.html"><span>Home</span></button>
-        <button type="button" class="command-item" data-command-href="search.html"><span>Search archive</span><small>/</small></button>
+        <a class="command-item" href="index.html"><span>Home</span></a>
+        <a class="command-item" href="search.html"><span>Search archive</span><small>/</small></a>
         <button type="button" class="command-item" data-command-theme><span>Toggle theme</span><small>Dark / light</small></button>
         <button type="button" class="command-item" data-command-reading><span>Reading mode</span></button>
-        <button type="button" class="command-item" data-command-href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></button>
+        <a class="command-item" href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></a><a class="command-item" href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></a><a class="command-item" href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></a><a class="command-item" href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></a><a class="command-item" href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></a><a class="command-item" href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></a>
       </div>
     </div>
-  </div>
+  </dialog>
 <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
 <main id="main-content" class="shell library-shell" tabindex="-1">
 
@@ -59,13 +60,10 @@
       <div class="note-stats dossier-stats"><span>Updated: Jun 20, 2026</span>
               <span>4 min read</span></div>
     </div>
-    <figure class="dossier-figure">
-      <picture>
+    <figure class="dossier-figure"><a class="inspect-image" href="assets/visuals/dossiers/latest-ufo-sightings-watch.jpg" aria-label="Open the full-size cover illustration"><picture>
   <source media="(max-width: 600px)" srcset="assets/visuals/dossiers/latest-ufo-sightings-watch-thumb.jpg">
   <img src="assets/visuals/dossiers/latest-ufo-sightings-watch.jpg" width="1152" height="768" alt="" fetchpriority="high">
-</picture>
-      <figcaption>Editorial illustration</figcaption>
-    </figure>
+</picture></a><figcaption>Editorial illustration</figcaption></figure>
   </header>
   <div class="dossier-toolbar" aria-label="Reading tools">
     <button id="reading-mode-toggle" type="button">Reading mode</button>
@@ -80,11 +78,11 @@
     <div class="dossier-main">
       <section class="note-body prose">
 <h2 id="aim">Aim</h2>
-<p>Follow <code>https://www.latest-ufo-sightings.net/</code> as a secondary source/aggregator of UFO-UAP content to spot new articles worth referring to X Files.</p>
+<p>Follow <a href="https://www.latest-ufo-sightings.net/">latest-ufo-sightings.net</a> as a secondary source/aggregator of UFO-UAP content to spot new articles worth referring to X Files.</p>
 <h2 id="critical-reading">Critical reading</h2>
 <ul><li>Useful source for narrative discovery and monitoring</li><li>do not treat as primary evidence</li><li>separate sightings, whistleblower claims, folklore, clickbait and coverage from real documents</li><li>prioritize posts connected to documents, historical incidents, identifiable witnesses or intersections with primary sources</li></ul>
 <h2 id="snapshot-inicial">Snapshot inicial</h2>
-<p>Source local: <span class="dead-link">latest-ufo-sightings-homepage-2026-04-17.txt</span></p>
+<p>Source local: <span class="archive-filename">latest-ufo-sightings-homepage-2026-04-17.txt <small>(not published here)</small></span></p>
 <p>Items visible when tracking starts:</p>
 <ul><li>Triangle UFO Formation Spooted During Thunderstorm Over Doha – March 25, 2026</li><li>New Details Emerge About Jimmy Carter’s Alleged 1977 UFO Briefing</li><li>Congressman Eric Burlison Questions Alleged Massive Overseas UAP Structure</li><li>VIDEO: Eyewitness Report UFO Triangle Captured on Night Vision in Northern California</li><li>Something Is Moving Under the Oceans – and Navies Know It</li><li>Another Whistleblower Claims Deeper Layers of UFO Secrecy Inside Intelligence Agencies</li><li>Spanish Soldiers Fired on a Tall Humanoid After a UFO Landed Near Their Base (1971)</li><li>An Area 51 Worker, an Underground Encounter, and the Question We Can’t Ignore</li><li>The Mantis Beings: Guardians, Overlords, or Earthly Teachers?</li><li>CIA Time Travel Secret: The Grays Are Future Humans</li></ul>
 <h2 id="review-rule">Review rule</h2>
@@ -92,21 +90,21 @@
 <ul><li>what seems like a useful sign</li><li>what does noise/recycling look like?</li><li>which ones are worth ingesting as their own note in X Files</li></ul>
 <h2 id="new-entries-detected">New entries detected</h2>
 <p>Review 2026-04-20. Secondary discovery: useful for narrative monitoring, not as primary evidence.</p>
-<ul><li>Mantis Overlords: Ancient Aliens or Earth&#x27;s Hidden Rulers? — https://www.latest-ufo-sightings.net/2025/05/mantis-overlords-ancient-aliens-or-earths-hidden-rulers.html — <strong>noise</strong>: folklore / strong speculation without visible documentary anchor</li><li>BREAKING: UFO CRASHES in Colombia! Man Captures It on Video and Recovers Alien Object. You Have to See This! 👽🚨 #UFOSightings — https://www.latest-ufo-sightings.net/2025/04/breaking-ufo-crashes-in-colombia-man-captures-it-on-video-and-recovers-alien-object-you-have-to-see-this-%f0%9f%91%bd%f0%9f%9a%a8-ufosightings.html — <strong>review</strong>: possible specific media case; requires contrasting video and external coverage</li><li>Presidential Insider Reveals: “I Handled Real UFO Material” — Malmgren’s Stunning Confession — https://www.latest-ufo-sightings.net/2025/04/presidential-insider-reveals-i-handled-real-ufo-material-malmgrens-stunning-confession.html — <strong>useful sign</strong>: identifiable name and traceable claim; it is advisable to contrast with interviews / primary sources</li><li>Shapeshifters and Ancient Aliens: Unraveling Humanity’s Mysterious Origins — https://www.latest-ufo-sightings.net/2025/01/shapeshifters-and-ancient-aliens-unraveling-humanitys-mysterious-origins.html — <strong>noise</strong>: mythological clickbait with no clear documentary value</li><li>They Walk Among Us: The Secret Human–Alien Hybrid Program — https://www.latest-ufo-sightings.net/2025/12/they-walk-among-us-the-secret-human-alien-hybrid-program.html — <strong>noise</strong>: broad conspiracy narrative with no apparent primary evidence</li><li>World-Changing Confession: Brazilian Doctor Says He Studied and Spoke With a Live Alien — https://www.latest-ufo-sightings.net/2025/11/36471.html — <strong>review</strong>: extreme claim with possible name / testimony; requires external verification before ingesting</li></ul>
-<h3 id="ingestion-suggestion">Ingestion suggestion</h3>
+<ul><li>Mantis Overlords: Ancient Aliens or Earth&#x27;s Hidden Rulers? — <a href="https://www.latest-ufo-sightings.net/2025/05/mantis-overlords-ancient-aliens-or-earths-hidden-rulers.html">latest-ufo-sightings.net</a> — <strong>noise</strong>: folklore / strong speculation without visible documentary anchor</li><li>BREAKING: UFO CRASHES in Colombia! Man Captures It on Video and Recovers Alien Object. You Have to See This! 👽🚨 #UFOSightings — <a href="https://www.latest-ufo-sightings.net/2025/04/breaking-ufo-crashes-in-colombia-man-captures-it-on-video-and-recovers-alien-object-you-have-to-see-this-%f0%9f%91%bd%f0%9f%9a%a8-ufosightings.html">latest-ufo-sightings.net</a> — <strong>review</strong>: possible specific media case; requires contrasting video and external coverage</li><li>Presidential Insider Reveals: “I Handled Real UFO Material” — Malmgren’s Stunning Confession — <a href="https://www.latest-ufo-sightings.net/2025/04/presidential-insider-reveals-i-handled-real-ufo-material-malmgrens-stunning-confession.html">latest-ufo-sightings.net</a> — <strong>useful sign</strong>: identifiable name and traceable claim; it is advisable to contrast with interviews / primary sources</li><li>Shapeshifters and Ancient Aliens: Unraveling Humanity’s Mysterious Origins — <a href="https://www.latest-ufo-sightings.net/2025/01/shapeshifters-and-ancient-aliens-unraveling-humanitys-mysterious-origins.html">latest-ufo-sightings.net</a> — <strong>noise</strong>: mythological clickbait with no clear documentary value</li><li>They Walk Among Us: The Secret Human–Alien Hybrid Program — <a href="https://www.latest-ufo-sightings.net/2025/12/they-walk-among-us-the-secret-human-alien-hybrid-program.html">latest-ufo-sightings.net</a> — <strong>noise</strong>: broad conspiracy narrative with no apparent primary evidence</li><li>World-Changing Confession: Brazilian Doctor Says He Studied and Spoke With a Live Alien — <a href="https://www.latest-ufo-sightings.net/2025/11/36471.html">latest-ufo-sightings.net</a> — <strong>review</strong>: extreme claim with possible name / testimony; requires external verification before ingesting</li></ul>
+<h3 id="ingestion-suggestion">What to document</h3>
 <ul><li>Priority: “Presidential Insider Reveals: &quot;I Handled Real UFO Material&quot; — Malmgren’s Stunning Confession.” Reason: nominal and traceable claim, potentially connectable with interviews, transcripts or journalistic coverage outside the aggregator.</li></ul>
 <h2 id="related">Related</h2>
-<p><a href="x-files.html">x-files</a> <a href="index.html">index</a></p>
+<p><a href="x-files.html">Research map</a> <a href="index.html">Archive home</a></p>
 <p>Review 2026-04-23: no new relevant entries detected in this pass.</p>
 <p>Review 2026-04-26: no new relevant entries detected in this pass.</p>
 <ul><li>2026-04-29: Revisión sin nuevas entradas relevantes en Latest UFO Sightings.</li></ul>
 <ul><li>2026-05-02: Revisión Latest UFO Sightings sin nuevas entradas relevantes respecto de <code>seen-urls</code>.</li></ul>
 <h2 id="nuevas-entradas-detectadas-2026-05-05">Nuevas entradas detectadas — 2026-05-05</h2>
 <p>Lectura crítica: latest-ufo-sightings.net funciona como discovery secundario; no se considera evidencia primaria. Priorizar únicamente si permite rastrear documentos, testimonios originales, videos fuente o actores verificables.</p>
-<ul><li><strong>The Serpo Mission: Inside One of the Most Controversial UFO Conspiracy Stories Ever Told</strong> — https://www.latest-ufo-sightings.net/2026/05/the-serpo-mission-inside-one-of-the-most-controversial-ufo-conspiracy-stories-ever-told.html</li><li>Evaluación: ruido — narrativa/conspiración secundaria sin evidencia primaria</li></ul>
+<ul><li><strong>The Serpo Mission: Inside One of the Most Controversial UFO Conspiracy Stories Ever Told</strong> — <a href="https://www.latest-ufo-sightings.net/2026/05/the-serpo-mission-inside-one-of-the-most-controversial-ufo-conspiracy-stories-ever-told.html">latest-ufo-sightings.net</a></li><li>Evaluación: ruido — narrativa/conspiración secundaria sin evidencia primaria</li></ul>
 <h2 id="nuevas-entradas-detectadas-2026-05-08">Nuevas entradas detectadas — 2026-05-08</h2>
 <p>Lectura crítica: discovery secundario; no usar como evidencia primaria sin fuente original, documento, video bruto o registro oficial.</p>
-<ul><li>[Bob Lazar Documentary Director Claims Key Parts of the S4 Story May Still Be Missing](https://www.latest-ufo-sightings.net/2026/05/bob-lazar-documentary-director-claims-key-parts-of-the-s4-story-may-still-be-missing.html) — ruido — recirculación Lazar/S4; bajo valor sin documentación nueva.</li></ul>
+<ul><li><a href="https://www.latest-ufo-sightings.net/2026/05/bob-lazar-documentary-director-claims-key-parts-of-the-s4-story-may-still-be-missing.html">Bob Lazar Documentary Director Claims Key Parts of the S4 Story May Still Be Missing</a> — ruido — recirculación Lazar/S4; bajo valor sin documentación nueva.</li></ul>
 <ul><li>2026-05-14: Revisión Latest UFO Sightings sin nuevas entradas relevantes respecto de <code>seen-urls</code>.</li></ul>
 <ul><li>2026-05-17: Revisión Latest UFO Sightings sin nuevas entradas relevantes; snapshot del homepage sin ítems detectados.</li></ul>
 <ul><li>May 20, 2026 23:21 UTC: revisión sin nuevas entradas relevantes en el snapshot del homepage (0 ítems detectados por el pre-run).</li></ul>
@@ -120,29 +118,16 @@
     <aside class="dossier-context" aria-label="Dossier references">
       <details id="dossier-sources" class="dossier-sources">
       <summary>Sources and citations</summary>
-      <div class="dossier-source-content">
-    <div class="source-box">
-      <strong>Source context</strong>
-      <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
-      <div><a href="https://www.latest-ufo-sightings.net/`" target="_blank" rel="noopener">Open original source</a></div>
-    </div>
-
-
-    <div class="citation-panel">
-      <strong>Citation panel</strong>
-      <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
-      <div><a href="https://www.latest-ufo-sightings.net/`" target="_blank" rel="noopener">Primary external source</a></div>
-    </div>
-      </div>
+      <div class="dossier-source-content"><p><a href="https://www.latest-ufo-sightings.net/`" target="_blank" rel="noopener">Read the cited source ↗</a></p><p class="dossier-source-path">Obsidian note · <code>resources/latest-ufo-sightings-watch.md</code></p></div>
     </details>
       <section class="dossier-related" aria-labelledby="dossier-related-title">
         <h2 id="dossier-related-title">Related dossiers</h2>
         <a class="related-entry" href="lex-fridman-podcast-garry-nolan-ufos-and-aliens-lex-fridman-262.html">
-    <img src="assets/visuals/dossiers/lex-fridman-podcast-garry-nolan-ufos-and-aliens-lex-fridman-262-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
+    <img src="assets/visuals/videos/uTCc2-1tbBQ-400.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>Garry Nolan on UFOs and aliens</span>
   </a><a class="related-entry" href="uap-nuclear-sites-peer-reviewed-validation.html">
     <img src="assets/visuals/dossiers/uap-nuclear-sites-peer-reviewed-validation-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
-    <span>UAP Nuclear Sites Peer Reviewed Validation</span>
+    <span>Palomar sky plates, nuclear tests and UAP reports</span>
   </a><a class="related-entry" href="aaro-uap-workshop-2025.html">
     <img src="assets/visuals/dossiers/aaro-uap-workshop-2025-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>AARO UAP Workshop Paper (2025)</span>
@@ -150,36 +135,29 @@
       </section>
       <details class="dossier-extra">
         <summary>Research details</summary>
-        <p class="dossier-source-path">Obsidian note · <code>resources/latest-ufo-sightings-watch.md</code></p>
         <div class="note-insights">
 
     <div class="dossier-matrix" id="dossier-method">
       <div class="diagram-head"><strong>Dossier method</strong><span>claim · evidence · uncertainty</span></div>
-      <div class="dossier-matrix-grid"><div><span>Claim</span><p>Follow as a secondary source/aggregator of UFO-UAP content to spot new articles worth referring to X Files.</p></div><div><span>Evidence type</span><p>watchlist / secondary aggregator</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Critical reading</span><p>- Useful source for narrative discovery and monitoring - do not treat as primary evidence - separate sightings, whistleblower claims, folklore, clickbait and coverage from real documents - prioritize posts connected to documents, historical incidents, identifi</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
+      <div class="dossier-matrix-grid"><div><span>Claim</span><p>A dated watchlist for UFO and UAP reports surfaced by a secondary aggregator. It records newly spotted leads and the checks needed before adding them to the archive.</p></div><div><span>Evidence type</span><p>watchlist / secondary aggregator</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Critical reading</span><p><a href="#critical-reading">Critical reading</a></p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
       <a class="method-link" href="x-files-dossier-method.html">Open editorial method →</a>
     </div>
 
 
     <div class="related-evidence-map">
-      <div class="diagram-head"><strong>Related evidence map</strong><span>same-cluster paths + wikilinks</span></div>
-      <div class="evidence-grid"><a href="lex-fridman-podcast-garry-nolan-ufos-and-aliens-lex-fridman-262.html"><strong>Garry Nolan: UFOs and Aliens | Lex Fridman Podcast #262</strong><span>UFO / UAP</span></a><a href="uap-nuclear-sites-peer-reviewed-validation.html"><strong>UAP Nuclear Sites Peer Reviewed Validation</strong><span>UFO / UAP</span></a><a href="aaro-uap-workshop-2025.html"><strong>AARO UAP Workshop Paper (2025)</strong><span>UFO / UAP</span></a><a href="lex-fridman-podcast-annie-jacobsen-nuclear-war-cia-kgb-aliens-area-51-roswell-secrecy-lex-fridman-420.html"><strong>Annie Jacobsen: Nuclear War, CIA, KGB, Aliens, Area 51, Roswell &amp; Secrecy | Lex Fridman Podcast #420</strong><span>UFO / UAP</span></a><a href="backrooms-liminal-spaces-deep-dive.html"><strong>Backrooms and Liminal Spaces Deep Dive</strong><span>Uncanny / Liminal</span></a><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-1.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 1 of 3)</strong><span>UFO / UAP</span></a><a href="x-files.html"><strong>X Files</strong><span>wikilink</span></a><a href="index.html"><strong>Index</strong><span>wikilink</span></a></div>
+      <div class="diagram-head"><strong>Related evidence map</strong><span>Related topics and linked notes</span></div>
+      <div class="evidence-grid"><a href="lex-fridman-podcast-garry-nolan-ufos-and-aliens-lex-fridman-262.html"><strong>Garry Nolan: UFOs and Aliens | Lex Fridman Podcast #262</strong><span>UFO / UAP</span></a><a href="uap-nuclear-sites-peer-reviewed-validation.html"><strong>Palomar sky plates, nuclear tests and UAP reports</strong><span>UFO / UAP</span></a><a href="aaro-uap-workshop-2025.html"><strong>AARO UAP Workshop Paper (2025)</strong><span>UFO / UAP</span></a><a href="lex-fridman-podcast-annie-jacobsen-nuclear-war-cia-kgb-aliens-area-51-roswell-secrecy-lex-fridman-420.html"><strong>Annie Jacobsen: Nuclear War, CIA, KGB, Aliens, Area 51, Roswell &amp; Secrecy | Lex Fridman Podcast #420</strong><span>UFO / UAP</span></a><a href="backrooms-liminal-spaces-deep-dive.html"><strong>Backrooms and Liminal Spaces Deep Dive</strong><span>Uncanny / Liminal</span></a><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-1.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 1 of 3)</strong><span>UFO / UAP</span></a><a href="x-files.html"><strong>X Files</strong><span>wikilink</span></a><a href="index.html"><strong>Index</strong><span>wikilink</span></a></div>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Topic constellation</strong><span>connected tags</span></div>
-      <svg viewBox="0 0 330 310" class="diagram-svg" role="img" aria-label="Tag constellation">
-        <line x1="168" y1="154" x2="110" y2="48" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="245" y2="72" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="290" y2="168" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="225" y2="260" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="90" y2="262" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" />
-        <circle cx="168" cy="154" r="42" fill="rgba(103,232,249,0.12)" stroke="#67e8f9" stroke-width="1.5" />
-        <text x="168" y="148" text-anchor="middle" class="diagram-core">RESOURCE</text>
-        <text x="168" y="170" text-anchor="middle" class="diagram-label">UFO / UAP</text>
-        <g><circle cx="110" cy="48" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="110" y="53" text-anchor="middle" class="diagram-mini">x-files</text></g><g><circle cx="245" cy="72" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="245" y="77" text-anchor="middle" class="diagram-mini">ufo</text></g><g><circle cx="290" cy="168" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="290" y="173" text-anchor="middle" class="diagram-mini">uap</text></g><g><circle cx="225" cy="260" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="225" y="265" text-anchor="middle" class="diagram-mini">watchlist</text></g><g><circle cx="90" cy="262" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="90" y="267" text-anchor="middle" class="diagram-mini">internet-cultu</text></g>
-      </svg>
+      <div class="diagram-head"><strong>Explore connected tags</strong></div>
+      <nav class="tag-tree" aria-label="Explore connected tags"><div class="tag-root"><a href="topic-uap.html">UFO / UAP</a></div><div class="tag-branches"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=ufo">ufo</a> <a href="search.html?q=uap">uap</a> <a href="search.html?q=watchlist">watchlist</a> <a href="search.html?q=internet-culture">internet-culture</a></div></nav>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Note density</strong><span>structure and weight</span></div>
+      <div class="diagram-head"><strong>Note density</strong><span>Article structure</span></div>
       <div class="metric-rows"><div class="metric-row"><span>sections</span><div class="metric-bar"><i style="width:10%; background:#67e8f9"></i></div><b>10</b></div><div class="metric-row"><span>bullets</span><div class="metric-bar"><i style="width:10%; background:#a78bfa"></i></div><b>37</b></div><div class="metric-row"><span>links</span><div class="metric-bar"><i style="width:10%; background:#fb923c"></i></div><b>12</b></div><div class="metric-row"><span>words</span><div class="metric-bar"><i style="width:100%; background:#34d399"></i></div><b>912</b></div></div>
     </div>
 
@@ -189,7 +167,7 @@
 
     <div class="diagram-card related-card">
       <div class="diagram-head"><strong>Related paths</strong><span>topic continuity</span></div>
-      <div class="related-list"><a class="related-link" href="lex-fridman-podcast-garry-nolan-ufos-and-aliens-lex-fridman-262.html"><strong>Garry Nolan: UFOs and Aliens | Lex Fridman Podcast #262</strong><span>UFO / UAP</span></a><a class="related-link" href="uap-nuclear-sites-peer-reviewed-validation.html"><strong>UAP Nuclear Sites Peer Reviewed Validation</strong><span>UFO / UAP</span></a><a class="related-link" href="aaro-uap-workshop-2025.html"><strong>AARO UAP Workshop Paper (2025)</strong><span>UFO / UAP</span></a><a class="related-link" href="lex-fridman-podcast-annie-jacobsen-nuclear-war-cia-kgb-aliens-area-51-roswell-secrecy-lex-fridman-420.html"><strong>Annie Jacobsen: Nuclear War, CIA, KGB, Aliens, Area 51, Roswell &amp; Secrecy | Lex Fridman Podcast #420</strong><span>UFO / UAP</span></a></div>
+      <div class="related-list"><a class="related-link" href="lex-fridman-podcast-garry-nolan-ufos-and-aliens-lex-fridman-262.html"><strong>Garry Nolan: UFOs and Aliens | Lex Fridman Podcast #262</strong><span>UFO / UAP</span></a><a class="related-link" href="uap-nuclear-sites-peer-reviewed-validation.html"><strong>Palomar sky plates, nuclear tests and UAP reports</strong><span>UFO / UAP</span></a><a class="related-link" href="aaro-uap-workshop-2025.html"><strong>AARO UAP Workshop Paper (2025)</strong><span>UFO / UAP</span></a><a class="related-link" href="lex-fridman-podcast-annie-jacobsen-nuclear-war-cia-kgb-aliens-area-51-roswell-secrecy-lex-fridman-420.html"><strong>Annie Jacobsen: Nuclear War, CIA, KGB, Aliens, Area 51, Roswell &amp; Secrecy | Lex Fridman Podcast #420</strong><span>UFO / UAP</span></a></div>
     </div>
 
 
@@ -213,6 +191,6 @@
 </footer>
 </main>
 
-<script src="assets/app.js?v=f51c6d33c9" defer></script>
+<script src="assets/app.js?v=9313a9e506" defer></script>
 </body>
 </html>

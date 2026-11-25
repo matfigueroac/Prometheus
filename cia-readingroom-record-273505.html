@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CIA Reading Room Record 273505</title>
-  <link rel="stylesheet" href="assets/styles.css?v=8b1bf16">
-  <link rel="stylesheet" href="assets/library.css?v=65467dfb4e">
+  <link rel="stylesheet" href="assets/styles.css?v=9d918bb5d6">
+  <link rel="stylesheet" href="assets/library.css?v=8c8e125679">
 </head>
 <body data-view="dossier">
 
@@ -15,17 +15,18 @@
       <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span><span>X Files</span></a>
       <nav class="site-links" aria-label="Main navigation"><a class="nav-link" href="index.html#topic-hubs">Topics</a><a class="nav-link" href="search.html">Search</a><a class="nav-link" href="latest.html">Latest</a><a class="nav-link" href="x-files.html">Research map</a></nav>
       <div class="toolbar">
+        <button class="quick-links" data-open-commands type="button" aria-haspopup="dialog" aria-controls="command-palette">Quick links</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
       </div>
     </div>
   </header>
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <dialog class="mobile-drawer" id="mobile-drawer" aria-label="Explore the archive">
     <div class="mobile-drawer-panel">
       <div class="mobile-drawer-head"><strong>Explore the archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
       <nav aria-label="Archive collections"><a href="topic-uap.html">UFO / UAP</a><a href="topic-cia.html">CIA / Remote Viewing</a><a href="topic-mars.html">Mars</a><a href="topic-ancient.html">Ancient Civilizations</a><a href="topic-liminal.html">Uncanny / Liminal</a><a href="topic-methods.html">Methods &amp; media</a><a href="x-files.html">Research map</a><a href="x-files-dossier-method.html">Editorial method</a></nav>
       <button class="theme-toggle" type="button" data-drawer-theme>Theme</button>
     </div>
-  </div>
+  </dialog>
   <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
       <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
       <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
@@ -33,19 +34,19 @@
       <a href="latest.html"><span aria-hidden="true">◷</span><b>Latest</b></a>
       <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
   </nav>
-  <div id="command-palette" class="command-palette" aria-hidden="true" role="dialog" aria-label="Command palette">
+  <dialog id="command-palette" class="command-palette" aria-label="Quick links">
     <div class="command-backdrop" data-command-close></div>
     <div class="command-panel glass-panel">
-      <div class="command-head"><strong>Command palette</strong><button type="button" data-command-close aria-label="Close command palette">×</button></div>
+      <div class="command-head"><strong>Quick links</strong><button type="button" data-command-close aria-label="Close quick links">×</button></div>
       <div class="command-items">
-        <button type="button" class="command-item" data-command-href="index.html"><span>Home</span></button>
-        <button type="button" class="command-item" data-command-href="search.html"><span>Search archive</span><small>/</small></button>
+        <a class="command-item" href="index.html"><span>Home</span></a>
+        <a class="command-item" href="search.html"><span>Search archive</span><small>/</small></a>
         <button type="button" class="command-item" data-command-theme><span>Toggle theme</span><small>Dark / light</small></button>
         <button type="button" class="command-item" data-command-reading><span>Reading mode</span></button>
-        <button type="button" class="command-item" data-command-href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></button>
+        <a class="command-item" href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></a><a class="command-item" href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></a><a class="command-item" href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></a><a class="command-item" href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></a><a class="command-item" href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></a><a class="command-item" href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></a>
       </div>
     </div>
-  </div>
+  </dialog>
 <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
 <main id="main-content" class="shell library-shell" tabindex="-1">
 
@@ -59,23 +60,20 @@
       <div class="note-stats dossier-stats"><span>Updated: Apr 23, 2026</span>
               <span>2 min read</span></div>
     </div>
-    <figure class="dossier-figure">
-      <picture>
+    <figure class="dossier-figure"><a class="inspect-image" href="assets/visuals/dossiers/cia-readingroom-record-273505.jpg" aria-label="Open the full-size cover illustration"><picture>
   <source media="(max-width: 600px)" srcset="assets/visuals/dossiers/cia-readingroom-record-273505-thumb.jpg">
   <img src="assets/visuals/dossiers/cia-readingroom-record-273505.jpg" width="1152" height="768" alt="" fetchpriority="high">
-</picture>
-      <figcaption>Editorial illustration</figcaption>
-    </figure>
+</picture></a><figcaption>Editorial illustration</figcaption></figure>
   </header>
   <div class="dossier-toolbar" aria-label="Reading tools">
     <button id="reading-mode-toggle" type="button">Reading mode</button>
     <a href="#dossier-sources">Sources and citations <span aria-hidden="true">↘</span></a>
     <details class="dossier-tags-menu"><summary>Tags</summary><div class="dossier-tags"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=cia">cia</a> <a href="search.html?q=document">document</a> <a href="search.html?q=reading-room">reading-room</a> <a href="search.html?q=stargate">stargate</a> <a href="search.html?q=remote-viewing">remote-viewing</a></div></details>
   </div>
-  <details class="dossier-mobile-outline"><summary>On this page</summary><nav aria-label="Sections"><a href="#summary">Summary</a><a href="#what-does-it-represent-inside-the-vault">What does it represent inside the vault?</a><a href="#primary-relationship">Primary relationship</a><a href="#what-do-we-know">What do we know</a><a href="#what-we-don-t-know-yet">What we don&#x27;t know yet</a><a href="#value-for-x-files">Value for X Files</a><a href="#ingestion-status">Ingestion status</a><a href="#fountain">Fountain</a><a href="#related">Related</a></nav></details>
+  <details class="dossier-mobile-outline"><summary>On this page</summary><nav aria-label="Sections"><a href="#summary">Summary</a><a href="#what-does-it-represent-inside-the-vault">What does it represent inside the vault?</a><a href="#primary-relationship">Primary relationship</a><a href="#what-do-we-know">What do we know</a><a href="#what-we-don-t-know-yet">What we don&#x27;t know yet</a><a href="#value-for-x-files">Value for X Files</a><a href="#ingestion-status">Document access</a><a href="#fountain">Source</a><a href="#related">Related</a></nav></details>
   <div class="dossier-layout">
     <aside class="dossier-outline">
-      <nav aria-label="On this page"><h2>On this page</h2><a href="#summary">Summary</a><a href="#what-does-it-represent-inside-the-vault">What does it represent inside the vault?</a><a href="#primary-relationship">Primary relationship</a><a href="#what-do-we-know">What do we know</a><a href="#what-we-don-t-know-yet">What we don&#x27;t know yet</a><a href="#value-for-x-files">Value for X Files</a><a href="#ingestion-status">Ingestion status</a><a href="#fountain">Fountain</a><a href="#related">Related</a></nav>
+      <nav aria-label="On this page"><h2>On this page</h2><a href="#summary">Summary</a><a href="#what-does-it-represent-inside-the-vault">What does it represent inside the vault?</a><a href="#primary-relationship">Primary relationship</a><a href="#what-do-we-know">What do we know</a><a href="#what-we-don-t-know-yet">What we don&#x27;t know yet</a><a href="#value-for-x-files">Value for X Files</a><a href="#ingestion-status">Document access</a><a href="#fountain">Source</a><a href="#related">Related</a></nav>
     </aside>
     <div class="dossier-main">
       <section class="note-body prose">
@@ -86,41 +84,28 @@
 <h2 id="primary-relationship">Primary relationship</h2>
 <h3 id="associated-node-gondola-wish">Associated node: GONDOLA WISH</h3>
 <p>Within this wiki, the most valuable use of the <code>273505</code> record is to link it to:</p>
-<ul><li><a href="gondola-wish.html">gondola-wish</a></li></ul>
+<ul><li><a href="gondola-wish.html">GONDOLA WISH</a></li></ul>
 <p>This allows us to distinguish two layers:</p>
 <p>1. <code>record 273505</code> = archival identifier / Reading Room access</p>
 <p>2. <code>GONDOLA WISH</code> = content, claims and critical reading of the related document</p>
 <h2 id="what-do-we-know">What do we know</h2>
-<ul><li>the exact URL of the Reading Room is stable: <code>https://www.cia.gov/readingroom/print/273505</code></li><li>access from this environment redirects to a general page with <code>Access Denied</code></li><li>the same document node is related to the line <code>CIA-RDP96-00788R002000160011-2</code></li><li>There is already a useful transcript/note in the vault to work on the content without depending on the official website</li></ul>
+<ul><li>the exact URL of the Reading Room is stable: <a href="https://www.cia.gov/readingroom/print/273505">CIA document</a></li><li>access from this environment redirects to a general page with <code>Access Denied</code></li><li>the same document node is related to the line <code>CIA-RDP96-00788R002000160011-2</code></li><li>There is already a useful transcript/note in the vault to work on the content without depending on the official website</li></ul>
 <h2 id="what-we-don-t-know-yet">What we don&#x27;t know yet</h2>
 <ul><li>the exact format that the <code>print</code> view displays if accessed from a non-locked environment</li><li>if that view contains additional useful metadata not captured yet</li><li>if there are cataloging variants or archival fields that should be preserved later</li></ul>
 <h2 id="value-for-x-files">Value for X Files</h2>
 <ul><li>avoid losing the link between <code>narrated document</code> and <code>archival record</code></li><li>tightens traceability of Stargate/CIA package</li><li>allows for future finer documentary review when there is full access to the official view</li></ul>
-<h2 id="ingestion-status">Ingestion status</h2>
+<h2 id="ingestion-status">Document access</h2>
 <ul><li>Original URL preserved</li><li>local reference saved in <code>raw/articles/cia-readingroom-print-273505.txt</code></li><li>relationship with <a href="gondola-wish.html">GONDOLA WISH</a> made explicit</li><li>note converted from placeholder to document traceability node</li></ul>
-<h2 id="fountain">Fountain</h2>
-<ul><li>CIA Reading Room URL: https://www.cia.gov/readingroom/print/273505</li><li>associated document: https://www.cia.gov/readingroom/document/cia-rdp96-00788r002000160011-2</li><li>Associated direct PDF: https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R002000160011-2.pdf</li><li>local record reference: <span class="dead-link">cia-readingroom-print-273505.txt</span></li><li>associated operational transcript: <span class="dead-link">gondola-wish.txt</span></li></ul>
+<h2 id="fountain">Source</h2>
+<ul><li>CIA Reading Room URL: <a href="https://www.cia.gov/readingroom/print/273505">CIA document</a></li><li>associated document: <a href="https://www.cia.gov/readingroom/document/cia-rdp96-00788r002000160011-2">CIA document</a></li><li>Associated direct PDF: <a href="https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R002000160011-2.pdf">CIA document</a></li><li>local record reference: <span class="archive-filename">cia-readingroom-print-273505.txt <small>(not published here)</small></span></li><li>associated operational transcript: <a href="gondola-wish.html#useful-structural-excerpt-from-local-transcription">Read the archived memo excerpt</a></li></ul>
 <h2 id="related">Related</h2>
-<p><a href="x-files.html">x-files</a> <a href="index.html">index</a> <a href="gondola-wish.html">gondola-wish</a> <a href="cia-mars-exploration-1984.html">cia-mars-exploration-1984</a></p></section>
+<p><a href="x-files.html">Research map</a> <a href="index.html">Archive home</a> <a href="gondola-wish.html">GONDOLA WISH</a> <a href="cia-mars-exploration-1984.html">CIA Mars Exploration 1984</a></p></section>
       <nav class="dossier-neighbors" aria-label="More in this topic"><a rel="prev" href="cia-readingroom-record-1693729.html"><small>Previous dossier</small><strong>CIA Reading Room Record 1693729</strong></a><a rel="next" href="gondola-wish.html"><small>Next dossier</small><strong>GONDOLA WISH</strong></a></nav>
     </div>
     <aside class="dossier-context" aria-label="Dossier references">
       <details id="dossier-sources" class="dossier-sources">
       <summary>Sources and citations</summary>
-      <div class="dossier-source-content">
-    <div class="source-box">
-      <strong>Source context</strong>
-      <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
-      <div><a href="https://www.cia.gov/readingroom/print/273505`" target="_blank" rel="noopener">Open original source</a></div>
-    </div>
-
-
-    <div class="citation-panel">
-      <strong>Citation panel</strong>
-      <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
-      <div><a href="https://www.cia.gov/readingroom/print/273505`" target="_blank" rel="noopener">Primary external source</a></div>
-    </div>
-      </div>
+      <div class="dossier-source-content"><p><a href="https://www.cia.gov/readingroom/print/273505`" target="_blank" rel="noopener">Read the cited source ↗</a></p><p class="dossier-source-path">Obsidian note · <code>resources/cia-readingroom-record-273505.md</code></p></div>
     </details>
       <section class="dossier-related" aria-labelledby="dossier-related-title">
         <h2 id="dossier-related-title">Related dossiers</h2>
@@ -137,36 +122,29 @@
       </section>
       <details class="dossier-extra">
         <summary>Research details</summary>
-        <p class="dossier-source-path">Obsidian note · <code>resources/cia-readingroom-record-273505.md</code></p>
         <div class="note-insights">
 
     <div class="dossier-matrix" id="dossier-method">
       <div class="diagram-head"><strong>Dossier method</strong><span>claim · evidence · uncertainty</span></div>
-      <div class="dossier-matrix-grid"><div><span>Source says</span><p>This CIA Reading Room record should no longer be read as an isolated placeholder: within the vault, its main importance is that it is directly connected to GONDOLA WISH. Although the print view is blocked from this environment, the 273505 identifier was preserved a</p></div><div><span>Evidence type</span><p>declassified / intelligence-adjacent record</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
+      <div class="dossier-matrix-grid"><div><span>From the notebook</span><p>Trace CIA Reading Room record 273505 to the GONDOLA WISH file and its analysis. This entry records the official identifier, the access limitation and the related dossier to read next.</p></div><div><span>Evidence type</span><p>declassified / intelligence-adjacent record</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
       <a class="method-link" href="x-files-dossier-method.html">Open editorial method →</a>
     </div>
 
 
     <div class="related-evidence-map">
-      <div class="diagram-head"><strong>Related evidence map</strong><span>same-cluster paths + wikilinks</span></div>
+      <div class="diagram-head"><strong>Related evidence map</strong><span>Related topics and linked notes</span></div>
       <div class="evidence-grid"><a href="cia-readingroom-record-1693729.html"><strong>CIA Reading Room Record 1693729</strong><span>CIA / Remote Viewing</span></a><a href="gondola-wish.html"><strong>GONDOLA WISH</strong><span>CIA / Remote Viewing</span></a><a href="cia-mars-exploration-1984.html"><strong>CIA Mars Exploration 1984</strong><span>CIA / Remote Viewing</span></a><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-1.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 1 of 3)</strong><span>UFO / UAP</span></a><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-2.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 2 of 3)</strong><span>CIA / Remote Viewing</span></a><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-3.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 3 of 3)</strong><span>CIA / Remote Viewing</span></a><a href="gondola-wish.html"><strong>Gondola Wish</strong><span>wikilink</span></a><a href="x-files.html"><strong>X Files</strong><span>wikilink</span></a></div>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Topic constellation</strong><span>connected tags</span></div>
-      <svg viewBox="0 0 330 310" class="diagram-svg" role="img" aria-label="Tag constellation">
-        <line x1="168" y1="154" x2="110" y2="48" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="245" y2="72" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="290" y2="168" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="225" y2="260" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="90" y2="262" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="42" y2="148" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" />
-        <circle cx="168" cy="154" r="42" fill="rgba(103,232,249,0.12)" stroke="#67e8f9" stroke-width="1.5" />
-        <text x="168" y="148" text-anchor="middle" class="diagram-core">RESOURCE</text>
-        <text x="168" y="170" text-anchor="middle" class="diagram-label">CIA / Remote Viewing</text>
-        <g><circle cx="110" cy="48" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="110" y="53" text-anchor="middle" class="diagram-mini">x-files</text></g><g><circle cx="245" cy="72" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="245" y="77" text-anchor="middle" class="diagram-mini">cia</text></g><g><circle cx="290" cy="168" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="290" y="173" text-anchor="middle" class="diagram-mini">document</text></g><g><circle cx="225" cy="260" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="225" y="265" text-anchor="middle" class="diagram-mini">reading-room</text></g><g><circle cx="90" cy="262" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="90" y="267" text-anchor="middle" class="diagram-mini">stargate</text></g><g><circle cx="42" cy="148" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="42" y="153" text-anchor="middle" class="diagram-mini">remote-viewing</text></g>
-      </svg>
+      <div class="diagram-head"><strong>Explore connected tags</strong></div>
+      <nav class="tag-tree" aria-label="Explore connected tags"><div class="tag-root"><a href="topic-cia.html">CIA / Remote Viewing</a></div><div class="tag-branches"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=cia">cia</a> <a href="search.html?q=document">document</a> <a href="search.html?q=reading-room">reading-room</a> <a href="search.html?q=stargate">stargate</a> <a href="search.html?q=remote-viewing">remote-viewing</a></div></nav>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Note density</strong><span>structure and weight</span></div>
+      <div class="diagram-head"><strong>Note density</strong><span>Article structure</span></div>
       <div class="metric-rows"><div class="metric-row"><span>sections</span><div class="metric-bar"><i style="width:10%; background:#67e8f9"></i></div><b>11</b></div><div class="metric-row"><span>bullets</span><div class="metric-bar"><i style="width:10%; background:#a78bfa"></i></div><b>23</b></div><div class="metric-row"><span>links</span><div class="metric-bar"><i style="width:10%; background:#fb923c"></i></div><b>11</b></div><div class="metric-row"><span>words</span><div class="metric-bar"><i style="width:100%; background:#34d399"></i></div><b>409</b></div></div>
     </div>
 
@@ -200,6 +178,6 @@
 </footer>
 </main>
 
-<script src="assets/app.js?v=f51c6d33c9" defer></script>
+<script src="assets/app.js?v=9313a9e506" defer></script>
 </body>
 </html>

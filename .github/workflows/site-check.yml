@@ -25,6 +25,16 @@ jobs:
           grep -q 'assets/app.js' index.html
           grep -q 'id="search-input"' index.html
 
+      - name: Verify generated search catalog
+        run: python3 scripts/build_search.py --check
+
+      - name: Check local links and section anchors
+        run: python3 scripts/check_links.py
+
+      - name: Verify search page references its runtime
+        run: |
+          grep -q 'assets/search.js' search.html
+
       - name: Basic HTML smoke check
         run: |
           python3 - <<'PY'

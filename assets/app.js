@@ -1,13 +1,8 @@
 const root = document.documentElement;
-const searchInput = document.querySelector('[data-view="search"] #search-input');
-const resultsNode = document.getElementById('search-results');
-const countNode = document.getElementById('search-count');
-const clearButton = document.getElementById('search-clear');
 const themeToggles = [...document.querySelectorAll('#theme-toggle, [data-drawer-theme]')];
 
 initLegacyRoutes();
 initTheme();
-initSearch();
 initShortcuts();
 
 function initLegacyRoutes() {
@@ -46,104 +41,9 @@ function applyTheme(theme) {
   });
 }
 
-function initSearch() {
-  if (!searchInput || !resultsNode || !countNode || !clearButton) return;
-  const form = document.getElementById('library-search-form');
-  const pager = document.getElementById('search-pager');
-  const previous = document.getElementById('previous-results');
-  const next = document.getElementById('next-results');
-  const pageCount = document.getElementById('search-page-count');
-  const resultsTitle = document.getElementById('search-results-title');
-  const resultsPerPage = 12;
-  const params = new URLSearchParams(window.location.search);
-  let page = Math.max(1, Number.parseInt(params.get('page'), 10) || 1);
-  searchInput.value = params.get('q') || '';
-  let items = null;
-
-  function updateSearch() {
-    if (!items) return;
-    const query = normalize(searchInput.value);
-    const matches = query ? items
-      .map((item) => ({ item, score: scoreItem(item, query) }))
-      .filter(({ score }) => score > 0)
-      .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title, 'en'))
-      .map(({ item }) => item) : items;
-    const pages = Math.max(1, Math.ceil(matches.length / resultsPerPage));
-    page = Math.min(page, pages);
-    const start = (page - 1) * resultsPerPage;
-    resultsNode.innerHTML = matches.length
-      ? matches.slice(start, start + resultsPerPage).map((item) => renderSearchCard(item, query)).join('')
-      : '<p class="empty-state">No dossiers match <strong>' + escapeHtml(query)
-        + '</strong>. Try a different topic or clear the search.</p>';
-    countNode.textContent = matches.length + (query ? (matches.length === 1 ? ' result' : ' results') : ' dossiers');
-    clearButton.disabled = !searchInput.value;
-    pager.hidden = pages === 1;
-    previous.disabled = page === 1;
-    next.disabled = page === pages;
-    pageCount.textContent = 'Page ' + page + ' of ' + pages;
-    updateSearchUrl(searchInput.value.trim(), page);
-  }
-
-  hydrateItems()
-    .then((data) => {
-      if (!Array.isArray(data)) throw new Error('Invalid search index');
-      items = data.sort((a, b) => a.title.localeCompare(b.title, 'en'));
-      updateSearch();
-    })
-    .catch((error) => {
-      console.error('Could not hydrate the search index', error);
-      resultsNode.innerHTML = '<p class="empty-state">Could not load search. <a href="index.html#topic-hubs">Browse by topic</a>.</p>';
-      countNode.textContent = 'Search unavailable';
-    });
-
-  const startSearch = () => {
-    page = 1;
-    updateSearch();
-  };
-  searchInput.addEventListener('input', startSearch);
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    startSearch();
-  });
-  clearButton.addEventListener('click', () => {
-    searchInput.value = '';
-    startSearch();
-    searchInput.focus();
-  });
-  document.querySelectorAll('.suggestion-chip').forEach((button) => {
-    button.addEventListener('click', () => {
-      searchInput.value = button.dataset.query || '';
-      startSearch();
-      searchInput.focus();
-    });
-  });
-
-  const changePage = (step) => {
-    page += step;
-    updateSearch();
-    resultsTitle.focus();
-  };
-  previous.addEventListener('click', () => changePage(-1));
-  next.addEventListener('click', () => changePage(1));
-}
-
-function renderSearchCard(item, query) {
-  const topic = item.group === 'Other' ? 'Methods & media' : item.group;
-  return `
-    <a class="library-card" href="${escapeHtml(item.url)}">
-      <img class="library-card-image" src="${escapeHtml(item.thumbnail)}" width="480" height="320" loading="lazy" decoding="async" alt="">
-      <div class="library-card-body">
-        <div class="library-card-meta"><span>${escapeHtml(topic)}</span><span>${escapeHtml(item.updated)}</span></div>
-        <h3>${highlightText(item.title, query)}</h3>
-        <p>${highlightText(item.summary, query)}</p>
-      </div>
-    </a>
-  `;
-}
-
 function initShortcuts() {
   const activeSearch = document.getElementById('search-input');
-  if (searchInput && new URLSearchParams(window.location.search).has('focus')) searchInput.focus();
+  if (document.body.dataset.view === 'search' && new URLSearchParams(location.search).has('focus')) activeSearch?.focus();
 
   document.addEventListener('keydown', (event) => {
     const activeElement = document.activeElement;
@@ -166,72 +66,6 @@ function initShortcuts() {
   });
 }
 
-async function hydrateItems() {
-  const embedded = document.getElementById('search-data');
-  if (embedded?.textContent) return JSON.parse(embedded.textContent);
-  const response = await fetch('search-index.json');
-  if (!response.ok) throw new Error('HTTP ' + response.status);
-  return response.json();
-}
-
-function updateSearchUrl(query, page) {
-  const url = new URL(window.location.href);
-  if (query) url.searchParams.set('q', query);
-  else url.searchParams.delete('q');
-  if (page > 1) url.searchParams.set('page', page);
-  else url.searchParams.delete('page');
-  url.searchParams.delete('focus');
-  if (url.href !== window.location.href) window.history.replaceState({}, '', url);
-}
-
-function scoreItem(item, query) {
-  let score = 0;
-  if (item.title_norm?.includes(query)) score += 16;
-  if (item.tags_norm?.includes(query)) score += 10;
-  if (item.kind_norm?.includes(query)) score += 7;
-  if (item.group_norm?.includes(query)) score += 6;
-  if (item.summary_norm?.includes(query)) score += 4;
-  if (item.search?.includes(query)) score += 2;
-  return score;
-}
-
-function highlightText(value, query) {
-  const source = String(value || '');
-  if (!query) return escapeHtml(source);
-
-  const terms = [...new Set(query.split(' ').filter(Boolean))]
-    .sort((first, second) => second.length - first.length)
-    .map(escapeRegex);
-  if (!terms.length) return escapeHtml(source);
-
-  return source.split(new RegExp(`(${terms.join('|')})`, 'gi'))
-    .map((part, index) => index % 2 ? `<mark>${escapeHtml(part)}</mark>` : escapeHtml(part))
-    .join('');
-}
-
-function normalize(value) {
-  return (value || '')
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-function escapeRegex(value) {
-  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;');
-}
-
-
 function initMobileNavigation() {
   const drawer = document.getElementById('mobile-drawer');
   const toggle = document.getElementById('mobile-menu-toggle');
@@ -240,22 +74,26 @@ function initMobileNavigation() {
   if (!drawer || !toggle) return;
 
   const setOpen = (open) => {
-    if (drawer.classList.contains('is-open') === open) return;
-    if (!open) toggle.focus();
-    drawer.classList.toggle('is-open', open);
-    drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (drawer.open === open) return;
+    if (open) {
+      drawer.showModal();
+      close.focus();
+    } else drawer.close();
+    toggle.setAttribute('aria-expanded', String(open));
     document.body.classList.toggle('drawer-open', open);
-    if (open) close?.focus();
   };
 
-  toggle.addEventListener('click', () => setOpen(!drawer.classList.contains('is-open')));
+  toggle.addEventListener('click', () => setOpen(!drawer.open));
   if (close) close.addEventListener('click', () => setOpen(false));
   drawer.addEventListener('click', (event) => {
     if (event.target === drawer || event.target.closest('a')) setOpen(false);
   });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') setOpen(false);
+  drawer.addEventListener('close', () => {
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('drawer-open');
+  });
+  window.matchMedia('(min-width: 761px)').addEventListener('change', (event) => {
+    if (event.matches) setOpen(false);
   });
 
   const markCurrent = () => {
@@ -295,29 +133,24 @@ function initCommandPalette() {
   const palette = document.getElementById('command-palette');
   if (!palette) return;
   const open = () => {
-    palette.classList.add('is-open');
-    palette.setAttribute('aria-hidden', 'false');
+    if (document.querySelector('dialog[open]')) return;
+    palette.showModal();
     palette.querySelector('.command-item')?.focus();
   };
   const close = () => {
-    palette.classList.remove('is-open');
-    palette.setAttribute('aria-hidden', 'true');
+    palette.close();
   };
   document.addEventListener('keydown', (event) => {
     const commandKey = event.metaKey || event.ctrlKey;
     if (commandKey && event.key.toLowerCase() === 'k') {
       event.preventDefault();
-      palette.classList.contains('is-open') ? close() : open();
+      palette.open ? close() : open();
     }
-    if (event.key === 'Escape') close();
   });
+  document.querySelector('[data-open-commands]')?.addEventListener('click', open);
   palette.querySelectorAll('[data-command-close]').forEach((node) => node.addEventListener('click', close));
-  palette.querySelectorAll('[data-command-href]').forEach((node) => {
-    node.addEventListener('click', () => {
-      const href = node.getAttribute('data-command-href');
-      if (href) window.location.href = href;
-      close();
-    });
+  palette.addEventListener('click', (event) => {
+    if (event.target.closest('a[href]') && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) close();
   });
   palette.querySelector('[data-command-theme]')?.addEventListener('click', () => {
     document.getElementById('theme-toggle')?.click();
@@ -340,15 +173,6 @@ function initReadingProgress() {
   update();
   document.addEventListener('scroll', update, { passive: true });
   window.addEventListener('resize', update);
-}
-
-function initConstellationInteractions() {
-  document.querySelectorAll('.constellation-node, .diagram-link').forEach((node) => {
-    node.addEventListener('mouseenter', () => node.classList.add('is-focused'));
-    node.addEventListener('mouseleave', () => node.classList.remove('is-focused'));
-    node.addEventListener('focus', () => node.classList.add('is-focused'));
-    node.addEventListener('blur', () => node.classList.remove('is-focused'));
-  });
 }
 
 function initHeadingAnchors() {
@@ -410,6 +234,5 @@ initMobileNavigation();
 initReadingMode();
 initCommandPalette();
 initReadingProgress();
-initConstellationInteractions();
 initHeadingAnchors();
 initDossierNavigation();

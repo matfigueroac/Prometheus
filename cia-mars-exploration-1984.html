@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CIA Mars Exploration 1984</title>
-  <link rel="stylesheet" href="assets/styles.css?v=8b1bf16">
-  <link rel="stylesheet" href="assets/library.css?v=65467dfb4e">
+  <link rel="stylesheet" href="assets/styles.css?v=9d918bb5d6">
+  <link rel="stylesheet" href="assets/library.css?v=8c8e125679">
 </head>
 <body data-view="dossier">
 
@@ -15,17 +15,18 @@
       <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span><span>X Files</span></a>
       <nav class="site-links" aria-label="Main navigation"><a class="nav-link" href="index.html#topic-hubs">Topics</a><a class="nav-link" href="search.html">Search</a><a class="nav-link" href="latest.html">Latest</a><a class="nav-link" href="x-files.html">Research map</a></nav>
       <div class="toolbar">
+        <button class="quick-links" data-open-commands type="button" aria-haspopup="dialog" aria-controls="command-palette">Quick links</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
       </div>
     </div>
   </header>
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <dialog class="mobile-drawer" id="mobile-drawer" aria-label="Explore the archive">
     <div class="mobile-drawer-panel">
       <div class="mobile-drawer-head"><strong>Explore the archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
       <nav aria-label="Archive collections"><a href="topic-uap.html">UFO / UAP</a><a href="topic-cia.html">CIA / Remote Viewing</a><a href="topic-mars.html">Mars</a><a href="topic-ancient.html">Ancient Civilizations</a><a href="topic-liminal.html">Uncanny / Liminal</a><a href="topic-methods.html">Methods &amp; media</a><a href="x-files.html">Research map</a><a href="x-files-dossier-method.html">Editorial method</a></nav>
       <button class="theme-toggle" type="button" data-drawer-theme>Theme</button>
     </div>
-  </div>
+  </dialog>
   <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
       <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
       <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
@@ -33,19 +34,19 @@
       <a href="latest.html"><span aria-hidden="true">◷</span><b>Latest</b></a>
       <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
   </nav>
-  <div id="command-palette" class="command-palette" aria-hidden="true" role="dialog" aria-label="Command palette">
+  <dialog id="command-palette" class="command-palette" aria-label="Quick links">
     <div class="command-backdrop" data-command-close></div>
     <div class="command-panel glass-panel">
-      <div class="command-head"><strong>Command palette</strong><button type="button" data-command-close aria-label="Close command palette">×</button></div>
+      <div class="command-head"><strong>Quick links</strong><button type="button" data-command-close aria-label="Close quick links">×</button></div>
       <div class="command-items">
-        <button type="button" class="command-item" data-command-href="index.html"><span>Home</span></button>
-        <button type="button" class="command-item" data-command-href="search.html"><span>Search archive</span><small>/</small></button>
+        <a class="command-item" href="index.html"><span>Home</span></a>
+        <a class="command-item" href="search.html"><span>Search archive</span><small>/</small></a>
         <button type="button" class="command-item" data-command-theme><span>Toggle theme</span><small>Dark / light</small></button>
         <button type="button" class="command-item" data-command-reading><span>Reading mode</span></button>
-        <button type="button" class="command-item" data-command-href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></button>
+        <a class="command-item" href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></a><a class="command-item" href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></a><a class="command-item" href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></a><a class="command-item" href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></a><a class="command-item" href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></a><a class="command-item" href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></a>
       </div>
     </div>
-  </div>
+  </dialog>
 <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
 <main id="main-content" class="shell library-shell" tabindex="-1">
 
@@ -59,23 +60,20 @@
       <div class="note-stats dossier-stats"><span>Updated: Apr 23, 2026</span>
               <span>12 min read</span></div>
     </div>
-    <figure class="dossier-figure">
-      <picture>
+    <figure class="dossier-figure"><a class="inspect-image" href="assets/visuals/dossiers/cia-mars-exploration-1984.jpg" aria-label="Open the full-size cover illustration"><picture>
   <source media="(max-width: 600px)" srcset="assets/visuals/dossiers/cia-mars-exploration-1984-thumb.jpg">
   <img src="assets/visuals/dossiers/cia-mars-exploration-1984.jpg" width="1152" height="768" alt="" fetchpriority="high">
-</picture>
-      <figcaption>Editorial illustration</figcaption>
-    </figure>
+</picture></a><figcaption>Editorial illustration</figcaption></figure>
   </header>
   <div class="dossier-toolbar" aria-label="Reading tools">
     <button id="reading-mode-toggle" type="button">Reading mode</button>
     <a href="#dossier-sources">Sources and citations <span aria-hidden="true">↘</span></a>
     <details class="dossier-tags-menu"><summary>Tags</summary><div class="dossier-tags"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=cia">cia</a> <a href="search.html?q=remote-viewing">remote-viewing</a> <a href="search.html?q=mars">mars</a> <a href="search.html?q=stargate">stargate</a> <a href="search.html?q=theories">theories</a></div></details>
   </div>
-  <details class="dossier-mobile-outline"><summary>On this page</summary><nav aria-label="Sections"><a href="#summary">Summary</a><a href="#what-does-it-actually-contain">What does it actually contain?</a><a href="#why-it-matters-within-x-files">Why it matters within X Files</a><a href="#story-structure">Story structure</a><a href="#coordinates-and-associated-perceptions">Coordinates and associated perceptions</a><a href="#critical-reading">Critical reading</a><a href="#complete-session-dialogue">Complete session dialogue</a><a href="#core-phrases-of-the-document">Core phrases of the document</a><a href="#relationship-with-other-lines-in-the-vault">Relationship with other lines in the vault</a><a href="#fountain">Fountain</a><a href="#related">Related</a></nav></details>
+  <details class="dossier-mobile-outline"><summary>On this page</summary><nav aria-label="Sections"><a href="#summary">Summary</a><a href="#what-does-it-actually-contain">What does it actually contain?</a><a href="#why-it-matters-within-x-files">Why it matters within X Files</a><a href="#story-structure">Story structure</a><a href="#coordinates-and-associated-perceptions">Coordinates and associated perceptions</a><a href="#critical-reading">Critical reading</a><a href="#complete-session-dialogue">Complete session dialogue</a><a href="#core-phrases-of-the-document">Core phrases of the document</a><a href="#relationship-with-other-lines-in-the-vault">Connections to other dossiers</a><a href="#fountain">Source</a><a href="#related">Related</a></nav></details>
   <div class="dossier-layout">
     <aside class="dossier-outline">
-      <nav aria-label="On this page"><h2>On this page</h2><a href="#summary">Summary</a><a href="#what-does-it-actually-contain">What does it actually contain?</a><a href="#why-it-matters-within-x-files">Why it matters within X Files</a><a href="#story-structure">Story structure</a><a href="#coordinates-and-associated-perceptions">Coordinates and associated perceptions</a><a href="#critical-reading">Critical reading</a><a href="#complete-session-dialogue">Complete session dialogue</a><a href="#core-phrases-of-the-document">Core phrases of the document</a><a href="#relationship-with-other-lines-in-the-vault">Relationship with other lines in the vault</a><a href="#fountain">Fountain</a><a href="#related">Related</a></nav>
+      <nav aria-label="On this page"><h2>On this page</h2><a href="#summary">Summary</a><a href="#what-does-it-actually-contain">What does it actually contain?</a><a href="#why-it-matters-within-x-files">Why it matters within X Files</a><a href="#story-structure">Story structure</a><a href="#coordinates-and-associated-perceptions">Coordinates and associated perceptions</a><a href="#critical-reading">Critical reading</a><a href="#complete-session-dialogue">Complete session dialogue</a><a href="#core-phrases-of-the-document">Core phrases of the document</a><a href="#relationship-with-other-lines-in-the-vault">Connections to other dossiers</a><a href="#fountain">Source</a><a href="#related">Related</a></nav>
     </aside>
     <div class="dossier-main">
       <section class="note-body prose">
@@ -100,16 +98,16 @@
 <h3 id="6-migration">6) Migration</h3>
 <p>The session ends with the idea of ​​an exodus: some would have left in a ship or closed metal structure towards another world or area with volcanoes, gases and vegetation, also hostile.</p>
 <h2 id="coordinates-and-associated-perceptions">Coordinates and associated perceptions</h2>
-<p>| Coordinates | Main perception |</p>
-<p>|---|---|</p>
-<p>| <code>40.89 N, 9.55 W</code> | tall pyramid, ocher color, depressed area |</p>
-<p>| <code>46.45 N, 353.22 E</code> | canyon/caverns, smooth walls, giant rooms |</p>
-<p>| <code>45.86 N, 354.1 E</code> | end of a great road, obelisk-type marker |</p>
-<p>| <code>35.26 N, 213.24 E</code> | gigantic circular basin surrounded by mountains |</p>
-<p>| <code>34.6 N, 213.09 E</code> | cluster of connected squares, reflective surface |</p>
-<p>| <code>34.57 N, 212.22 E</code> | radial pattern and deep channels |</p>
-<p>| <code>15 N, 198 E</code> | aqueduct-type channels, points on the horizon |</p>
-<p>| <code>80 S, 64 E</code> | giant pyramids used as shelters |</p>
+<div class="table-scroll" role="region" aria-labelledby="coordinates-and-associated-perceptions" tabindex="0"><table><thead><tr><th scope="col">Coordinates</th><th scope="col">Main perception</th></tr></thead><tbody>
+<tr><td><code>40.89 N, 9.55 W</code></td><td>tall pyramid, ocher color, depressed area</td></tr>
+<tr><td><code>46.45 N, 353.22 E</code></td><td>canyon/caverns, smooth walls, giant rooms</td></tr>
+<tr><td><code>45.86 N, 354.1 E</code></td><td>end of a great road, obelisk-type marker</td></tr>
+<tr><td><code>35.26 N, 213.24 E</code></td><td>gigantic circular basin surrounded by mountains</td></tr>
+<tr><td><code>34.6 N, 213.09 E</code></td><td>cluster of connected squares, reflective surface</td></tr>
+<tr><td><code>34.57 N, 212.22 E</code></td><td>radial pattern and deep channels</td></tr>
+<tr><td><code>15 N, 198 E</code></td><td>aqueduct-type channels, points on the horizon</td></tr>
+<tr><td><code>80 S, 64 E</code></td><td>giant pyramids used as shelters</td></tr>
+</tbody></table></div>
 <h2 id="critical-reading">Critical reading</h2>
 <h3 id="what-it-does-show">What it does show</h3>
 <ul><li>that this text was archived and declassified</li><li>that there was bureaucratic/operational interest in recording remote viewing sessions</li><li>that the document is part of the authentic cultural corpus of Stargate</li></ul>
@@ -121,9 +119,9 @@
 <p>2. Paranormal Cold War Narrative Artifact</p>
 <p>3. central input of the modern conspiratorial imaginary about Mars, lost civilizations and psi programs</p>
 <h2 id="complete-session-dialogue">Complete session dialogue</h2>
-<p>&gt; Source: <a href="#dossier-sources">CIA Reading Room document</a></p>
+<blockquote><p>Source: <a href="#dossier-sources">CIA Reading Room document</a></p></blockquote>
 <h3 id="previous-protocol">Previous protocol</h3>
-<p>&gt; Method of site acquisition: Sealed envelope coupled with geographic coordinates. The sealed envelope was given to the subject immediately prior to the interview. The envelope was not opened until after the interview. In the envelope was a 3 x 5 card with the following information: The planet Mars. Time of interest approximately 1 million years B.C.</p>
+<blockquote><p>Method of site acquisition: Sealed envelope coupled with geographic coordinates. The sealed envelope was given to the subject immediately prior to the interview. The envelope was not opened until after the interview. In the envelope was a 3 x 5 card with the following information: The planet Mars. Time of interest approximately 1 million years B.C.</p></blockquote>
 <h3 id="full-transcript">Full transcript</h3>
 <p><strong>MON:</strong> All right now, using the information in the envelope I&#x27;ve provided, exclusively focusing your attention now, using the information in the envelope, focus on:</p>
 <p><code>40.89 degrees north</code></p>
@@ -225,77 +223,57 @@
 <p><strong>MON:</strong> All right it&#x27;s time to come back now to the sound of my voice into present time to right now the 22nd of May 1984, the sound of my voice. Move now back to the room, back to the sound of my voice, back further now to the sound of my voice on the 22nd of May 1984.</p>
 <h2 id="core-phrases-of-the-document">Core phrases of the document</h2>
 <ul><li><code>pyramid or pyramid form</code></li><li><code>very large people... thin and tall</code></li><li><code>huge sections of smooth stone</code></li><li><code>like a rabbit warren</code></li><li><code>Washington Monument overlay</code></li><li><code>aqueduct type things</code></li><li><code>They&#x27;re like shelters from storms</code></li><li><code>They&#x27;re ancient people... they&#x27;re dying</code></li><li><code>a globe that goes through a comet&#x27;s tail</code></li><li><code>inside of a larger boat... rounded walls and shiny metal</code></li></ul>
-<h2 id="relationship-with-other-lines-in-the-vault">Relationship with other lines in the vault</h2>
+<h2 id="relationship-with-other-lines-in-the-vault">Connections to other dossiers</h2>
 <ul><li><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-3.html">Project Stargate · Part 3</a> expands the modern cultural reception of the case</li><li>connect with future notes on <code>Joseph McMoneagle</code>, <code>Project Stargate</code>, <code>Monroe Institute</code>, <code>remote viewing protocols</code> and <code>Mars as archaeological / esoteric myth</code></li><li>It is also convenient to link it later with NASA/JPL material on Cydonia, the face of Mars and Martian geology to contrast folklore vs scientific evidence</li></ul>
-<h2 id="fountain">Fountain</h2>
-<ul><li>CIA URL: https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001900760001-9.pdf</li><li>CIA Reading Room record (print): https://www.cia.gov/readingroom/print/273085</li><li>usable mirror: https://documents2.theblackvault.com/documents/cia/CIA-RDP96-00788R001900760001-9.pdf</li><li>local snapshot: <span class="dead-link">cia-rdp96-00788r001900760001-9.pdf</span></li><li>local print record reference: <span class="dead-link">cia-readingroom-print-273085.txt</span></li><li>full local transcript: <span class="dead-link">cia-mars-exploration-1984-transcript</span></li></ul>
+<h2 id="fountain">Source</h2>
+<ul><li>CIA URL: <a href="https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001900760001-9.pdf">CIA document</a></li><li>CIA Reading Room record (print): <a href="https://www.cia.gov/readingroom/print/273085">CIA document</a></li><li>usable mirror: <a href="https://documents2.theblackvault.com/documents/cia/CIA-RDP96-00788R001900760001-9.pdf">documents2.theblackvault.com</a></li><li>local snapshot: <span class="archive-filename">cia-rdp96-00788r001900760001-9.pdf <small>(not published here)</small></span></li><li>local print record reference: <span class="archive-filename">cia-readingroom-print-273085.txt <small>(not published here)</small></span></li><li>full local transcript: <a href="#full-transcript">Read the session transcript</a></li></ul>
 <h2 id="related">Related</h2>
-<p><a href="x-files.html">x-files</a> <a href="index.html">index</a> <span class="dead-link">personal</span></p></section>
+<p><a href="x-files.html">Research map</a> <a href="index.html">Archive home</a></p></section>
       <nav class="dossier-neighbors" aria-label="More in this topic"><a rel="next" href="cia-readingroom-record-1693729.html"><small>Next dossier</small><strong>CIA Reading Room Record 1693729</strong></a></nav>
     </div>
     <aside class="dossier-context" aria-label="Dossier references">
       <details id="dossier-sources" class="dossier-sources">
       <summary>Sources and citations</summary>
-      <div class="dossier-source-content">
-    <div class="source-box">
-      <strong>Source context</strong>
-      <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
-      <div><a href="https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001900760001-9.pdf" target="_blank" rel="noopener">Open original source</a></div>
-    </div>
-
-
-    <div class="citation-panel">
-      <strong>Citation panel</strong>
-      <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
-      <div><a href="https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001900760001-9.pdf" target="_blank" rel="noopener">Primary external source</a></div>
-    </div>
-      </div>
+      <div class="dossier-source-content"><p><a href="https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001900760001-9.pdf" target="_blank" rel="noopener">Read the cited source ↗</a></p><p class="dossier-source-path">Obsidian note · <code>resources/cia-mars-exploration-1984.md</code></p></div>
     </details>
       <section class="dossier-related" aria-labelledby="dossier-related-title">
         <h2 id="dossier-related-title">Related dossiers</h2>
         <a class="related-entry" href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-3.html">
-    <img src="assets/visuals/dossiers/how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-3-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
+    <img src="assets/visuals/videos/f9UKPfL59x4-400.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>Project Stargate · Part 3</span>
   </a><a class="related-entry" href="gondola-wish.html">
     <img src="assets/visuals/dossiers/gondola-wish-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>GONDOLA WISH</span>
   </a><a class="related-entry" href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-1.html">
-    <img src="assets/visuals/dossiers/how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-1-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
+    <img src="assets/visuals/videos/GkqFBqiGRQs-400.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>Project Stargate · Part 1</span>
   </a>
       </section>
       <details class="dossier-extra">
         <summary>Research details</summary>
-        <p class="dossier-source-path">Obsidian note · <code>resources/cia-mars-exploration-1984.md</code></p>
         <div class="note-insights">
 
     <div class="dossier-matrix" id="dossier-method">
       <div class="diagram-head"><strong>Dossier method</strong><span>claim · evidence · uncertainty</span></div>
-      <div class="dossier-matrix-grid"><div><span>Source says</span><p>Declassified document associated with the remote viewing / Stargate universe. Records a 1984-05-22 session in which a subject describes perceptions about Mars at an approximate time of 1 million years ago, using coordinates provided by a monitor. The strong va</p></div><div><span>Evidence type</span><p>declassified / intelligence-adjacent record</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Why it matters</span><p>- joins CIA + Stargate + remote viewing + ancient Mars into a single parent document - is one of the most cited pieces of remote viewing documentary folklore - serves as a base node to connect with Project Stargate · Part 3 and future notes on Joseph McMoneagle, Monroe Institut</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
+      <div class="dossier-matrix-grid"><div><span>Dossier overview</span><p>Read the dialogue and coordinates from a declassified 1984 remote-viewing session about ancient Mars. The dossier distinguishes what the record documents from the participant’s descriptions.</p></div><div><span>Evidence type</span><p>declassified / intelligence-adjacent record</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Why it matters</span><p><a href="#why-it-matters-within-x-files">Why it matters within X Files</a></p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
       <a class="method-link" href="x-files-dossier-method.html">Open editorial method →</a>
     </div>
 
 
     <div class="related-evidence-map">
-      <div class="diagram-head"><strong>Related evidence map</strong><span>same-cluster paths + wikilinks</span></div>
+      <div class="diagram-head"><strong>Related evidence map</strong><span>Related topics and linked notes</span></div>
       <div class="evidence-grid"><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-3.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 3 of 3)</strong><span>CIA / Remote Viewing</span></a><a href="gondola-wish.html"><strong>GONDOLA WISH</strong><span>CIA / Remote Viewing</span></a><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-1.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 1 of 3)</strong><span>UFO / UAP</span></a><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-2.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 2 of 3)</strong><span>CIA / Remote Viewing</span></a><a href="stargate-documentary-trilogy-index.html"><strong>Stargate documentary trilogy index</strong><span>CIA / Remote Viewing</span></a><a href="cia-readingroom-record-273505.html"><strong>CIA Reading Room Record 273505</strong><span>CIA / Remote Viewing</span></a><a href="x-files.html"><strong>X Files</strong><span>wikilink</span></a></div>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Topic constellation</strong><span>connected tags</span></div>
-      <svg viewBox="0 0 330 310" class="diagram-svg" role="img" aria-label="Tag constellation">
-        <line x1="168" y1="154" x2="110" y2="48" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="245" y2="72" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="290" y2="168" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="225" y2="260" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="90" y2="262" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="42" y2="148" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" />
-        <circle cx="168" cy="154" r="42" fill="rgba(103,232,249,0.12)" stroke="#67e8f9" stroke-width="1.5" />
-        <text x="168" y="148" text-anchor="middle" class="diagram-core">RESOURCE</text>
-        <text x="168" y="170" text-anchor="middle" class="diagram-label">CIA / Remote Viewing</text>
-        <g><circle cx="110" cy="48" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="110" y="53" text-anchor="middle" class="diagram-mini">x-files</text></g><g><circle cx="245" cy="72" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="245" y="77" text-anchor="middle" class="diagram-mini">cia</text></g><g><circle cx="290" cy="168" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="290" y="173" text-anchor="middle" class="diagram-mini">remote-viewing</text></g><g><circle cx="225" cy="260" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="225" y="265" text-anchor="middle" class="diagram-mini">mars</text></g><g><circle cx="90" cy="262" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="90" y="267" text-anchor="middle" class="diagram-mini">stargate</text></g><g><circle cx="42" cy="148" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="42" y="153" text-anchor="middle" class="diagram-mini">theories</text></g>
-      </svg>
+      <div class="diagram-head"><strong>Explore connected tags</strong></div>
+      <nav class="tag-tree" aria-label="Explore connected tags"><div class="tag-root"><a href="topic-cia.html">CIA / Remote Viewing</a></div><div class="tag-branches"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=cia">cia</a> <a href="search.html?q=remote-viewing">remote-viewing</a> <a href="search.html?q=mars">mars</a> <a href="search.html?q=stargate">stargate</a> <a href="search.html?q=theories">theories</a></div></nav>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Note density</strong><span>structure and weight</span></div>
+      <div class="diagram-head"><strong>Note density</strong><span>Article structure</span></div>
       <div class="metric-rows"><div class="metric-row"><span>sections</span><div class="metric-bar"><i style="width:10%; background:#67e8f9"></i></div><b>23</b></div><div class="metric-row"><span>bullets</span><div class="metric-bar"><i style="width:10%; background:#a78bfa"></i></div><b>41</b></div><div class="metric-row"><span>links</span><div class="metric-bar"><i style="width:10%; background:#fb923c"></i></div><b>9</b></div><div class="metric-row"><span>words</span><div class="metric-bar"><i style="width:100%; background:#34d399"></i></div><b>2746</b></div></div>
     </div>
 
@@ -329,6 +307,6 @@
 </footer>
 </main>
 
-<script src="assets/app.js?v=f51c6d33c9" defer></script>
+<script src="assets/app.js?v=9313a9e506" defer></script>
 </body>
 </html>

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Diary Of A CEO — X Files source folder</title>
-  <link rel="stylesheet" href="assets/styles.css?v=8b1bf16">
-  <link rel="stylesheet" href="assets/library.css?v=65467dfb4e">
+  <link rel="stylesheet" href="assets/styles.css?v=9d918bb5d6">
+  <link rel="stylesheet" href="assets/library.css?v=8c8e125679">
 </head>
 <body data-view="dossier">
 
@@ -15,17 +15,18 @@
       <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span><span>X Files</span></a>
       <nav class="site-links" aria-label="Main navigation"><a class="nav-link" href="index.html#topic-hubs">Topics</a><a class="nav-link" href="search.html">Search</a><a class="nav-link" href="latest.html">Latest</a><a class="nav-link" href="x-files.html">Research map</a></nav>
       <div class="toolbar">
+        <button class="quick-links" data-open-commands type="button" aria-haspopup="dialog" aria-controls="command-palette">Quick links</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
       </div>
     </div>
   </header>
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <dialog class="mobile-drawer" id="mobile-drawer" aria-label="Explore the archive">
     <div class="mobile-drawer-panel">
       <div class="mobile-drawer-head"><strong>Explore the archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
       <nav aria-label="Archive collections"><a href="topic-uap.html">UFO / UAP</a><a href="topic-cia.html">CIA / Remote Viewing</a><a href="topic-mars.html">Mars</a><a href="topic-ancient.html">Ancient Civilizations</a><a href="topic-liminal.html">Uncanny / Liminal</a><a href="topic-methods.html">Methods &amp; media</a><a href="x-files.html">Research map</a><a href="x-files-dossier-method.html">Editorial method</a></nav>
       <button class="theme-toggle" type="button" data-drawer-theme>Theme</button>
     </div>
-  </div>
+  </dialog>
   <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
       <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
       <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
@@ -33,19 +34,19 @@
       <a href="latest.html"><span aria-hidden="true">◷</span><b>Latest</b></a>
       <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
   </nav>
-  <div id="command-palette" class="command-palette" aria-hidden="true" role="dialog" aria-label="Command palette">
+  <dialog id="command-palette" class="command-palette" aria-label="Quick links">
     <div class="command-backdrop" data-command-close></div>
     <div class="command-panel glass-panel">
-      <div class="command-head"><strong>Command palette</strong><button type="button" data-command-close aria-label="Close command palette">×</button></div>
+      <div class="command-head"><strong>Quick links</strong><button type="button" data-command-close aria-label="Close quick links">×</button></div>
       <div class="command-items">
-        <button type="button" class="command-item" data-command-href="index.html"><span>Home</span></button>
-        <button type="button" class="command-item" data-command-href="search.html"><span>Search archive</span><small>/</small></button>
+        <a class="command-item" href="index.html"><span>Home</span></a>
+        <a class="command-item" href="search.html"><span>Search archive</span><small>/</small></a>
         <button type="button" class="command-item" data-command-theme><span>Toggle theme</span><small>Dark / light</small></button>
         <button type="button" class="command-item" data-command-reading><span>Reading mode</span></button>
-        <button type="button" class="command-item" data-command-href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></button>
+        <a class="command-item" href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></a><a class="command-item" href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></a><a class="command-item" href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></a><a class="command-item" href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></a><a class="command-item" href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></a><a class="command-item" href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></a>
       </div>
     </div>
-  </div>
+  </dialog>
 <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
 <main id="main-content" class="shell library-shell" tabindex="-1">
 
@@ -59,56 +60,35 @@
       <div class="note-stats dossier-stats"><span>Updated: Jun 15, 2026</span>
               <span>1 min read</span></div>
     </div>
-    <figure class="dossier-figure">
-      <picture>
+    <figure class="dossier-figure"><a class="inspect-image" href="assets/visuals/dossiers/diary-of-a-ceo-index.jpg" aria-label="Open the full-size cover illustration"><picture>
   <source media="(max-width: 600px)" srcset="assets/visuals/dossiers/diary-of-a-ceo-index-thumb.jpg">
   <img src="assets/visuals/dossiers/diary-of-a-ceo-index.jpg" width="1152" height="768" alt="" fetchpriority="high">
-</picture>
-      <figcaption>Editorial illustration</figcaption>
-    </figure>
+</picture></a><figcaption>Editorial illustration</figcaption></figure>
   </header>
   <div class="dossier-toolbar" aria-label="Reading tools">
     <button id="reading-mode-toggle" type="button">Reading mode</button>
     <a href="#dossier-sources">Sources and citations <span aria-hidden="true">↘</span></a>
     <details class="dossier-tags-menu"><summary>Tags</summary><div class="dossier-tags"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=diary-of-a-ceo">diary-of-a-ceo</a> <a href="search.html?q=podcasts">podcasts</a> <a href="search.html?q=source-index">source-index</a></div></details>
   </div>
-  <details class="dossier-mobile-outline"><summary>On this page</summary><nav aria-label="Sections"><a href="#episodes-ingested">Episodes ingested</a><a href="#ingestion-rule">Ingestion rule</a></nav></details>
+  <details class="dossier-mobile-outline"><summary>On this page</summary><nav aria-label="Sections"><a href="#episodes-ingested">Episodes in the archive</a><a href="#ingestion-rule">How episodes are documented</a></nav></details>
   <div class="dossier-layout">
     <aside class="dossier-outline">
-      <nav aria-label="On this page"><h2>On this page</h2><a href="#episodes-ingested">Episodes ingested</a><a href="#ingestion-rule">Ingestion rule</a></nav>
+      <nav aria-label="On this page"><h2>On this page</h2><a href="#episodes-ingested">Episodes in the archive</a><a href="#ingestion-rule">How episodes are documented</a></nav>
     </aside>
     <div class="dossier-main">
       <section class="note-body prose">
-<p>Area: <a href="x-files.html">x-files</a></p>
+<p>Area: <a href="x-files.html">Research map</a></p>
 <p>Purpose: staging folder for Diary Of A CEO episodes that touch X Files themes: ancient civilizations, alternative archaeology, consciousness, psychedelics, anomalous history, AI/religion and social epistemology.</p>
-<h2 id="episodes-ingested">Episodes ingested</h2>
-<ul><li><a href="diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac.html">graham-hancock-archaeology-warning-antarctica-lost-civilization-doac</a> — Graham Hancock on Antarctica maps, ancient astronomy, Great Pyramid, Amazon discoveries, shamanism, science-as-authority and AI/machine-god framing.</li></ul>
-<h2 id="ingestion-rule">Ingestion rule</h2>
-<p>For each new episode:</p>
-<p>1. save YouTube metadata and best available timestamped transcript under <code>raw/articles/diary-of-a-ceo/</code></p>
-<p>2. create a structured note in this folder</p>
-<p>3. extract only the X Files-relevant claims and timestamps</p>
-<p>4. separate evidence, claim, critique and speculation</p>
-<p>5. update this hub, <a href="x-files.html">x-files</a>, <a href="index.html">index</a> and <span class="dead-link">log</span></p></section>
+<h2 id="episodes-ingested">Episodes in the archive</h2>
+<ul><li><a href="diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac.html">Graham Hancock: Archaeology Warning / Antarctica Maps | The Diary Of A CEO</a> — Graham Hancock on Antarctica maps, ancient astronomy, Great Pyramid, Amazon discoveries, shamanism, science-as-authority and AI/machine-god framing.</li></ul>
+<h2 id="ingestion-rule">How episodes are documented</h2>
+<p>Each episode links to the recording. Use the chapter times to hear a passage in context. The source notes tell you whether an excerpt comes from captions, a transcript or the archive’s own listening notes.</p></section>
       <nav class="dossier-neighbors" aria-label="More in this topic"><a rel="next" href="lex-fridman-podcast-index.html"><small>Next dossier</small><strong>Lex Fridman Podcast — X Files source folder</strong></a></nav>
     </div>
     <aside class="dossier-context" aria-label="Dossier references">
       <details id="dossier-sources" class="dossier-sources">
       <summary>Sources and citations</summary>
-      <div class="dossier-source-content">
-    <div class="source-box">
-      <strong>Source context</strong>
-      <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
-      <div><span>No explicit external URL in note body</span></div>
-    </div>
-
-
-    <div class="citation-panel">
-      <strong>Citation panel</strong>
-      <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
-      <div><span>Obsidian source note only</span></div>
-    </div>
-      </div>
+      <div class="dossier-source-content"><p>This entry cites the archive notebook. Follow the linked dossiers for further context.</p><p class="dossier-source-path">Obsidian note · <code>resources/diary-of-a-ceo/index.md</code></p></div>
     </details>
       <section class="dossier-related" aria-labelledby="dossier-related-title">
         <h2 id="dossier-related-title">Related dossiers</h2>
@@ -116,7 +96,7 @@
     <img src="assets/visuals/dossiers/lex-fridman-podcast-index-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>Lex Fridman Podcast — X Files source folder</span>
   </a><a class="related-entry" href="diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac.html">
-    <img src="assets/visuals/dossiers/diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
+    <img src="assets/visuals/videos/Xs94KBeIiAo-400.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
     <span>Graham Hancock on archaeology and Antarctica</span>
   </a><a class="related-entry" href="aaro-uap-workshop-2025.html">
     <img src="assets/visuals/dossiers/aaro-uap-workshop-2025-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
@@ -125,7 +105,6 @@
       </section>
       <details class="dossier-extra">
         <summary>Research details</summary>
-        <p class="dossier-source-path">Obsidian note · <code>resources/diary-of-a-ceo/index.md</code></p>
         <div class="note-insights">
 
     <div class="dossier-matrix" id="dossier-method">
@@ -136,25 +115,19 @@
 
 
     <div class="related-evidence-map">
-      <div class="diagram-head"><strong>Related evidence map</strong><span>same-cluster paths + wikilinks</span></div>
+      <div class="diagram-head"><strong>Related evidence map</strong><span>Related topics and linked notes</span></div>
       <div class="evidence-grid"><a href="lex-fridman-podcast-index.html"><strong>Lex Fridman Podcast — X Files source folder</strong><span>Other</span></a><a href="diary-of-a-ceo-graham-hancock-archaeology-warning-antarctica-lost-civilization-doac.html"><strong>Graham Hancock: Archaeology Warning / Antarctica Maps | The Diary Of A CEO</strong><span>Ancient Civilizations</span></a><a href="aaro-uap-workshop-2025.html"><strong>AARO UAP Workshop Paper (2025)</strong><span>UFO / UAP</span></a><a href="ancient-civilizations-and-theories.html"><strong>Ancient Civilizations and Alternative Chronology</strong><span>Ancient Civilizations</span></a><a href="ancient-civilizations-research-map.html"><strong>Ancient Civilizations Research Map</strong><span>Ancient Civilizations</span></a><a href="ancient-ocean-on-mars-evidence-vs-open-debate.html"><strong>Ancient Ocean on Mars: Evidence vs Open Debate</strong><span>Mars</span></a><a href="x-files.html"><strong>X Files</strong><span>wikilink</span></a><a href="index.html"><strong>Index</strong><span>wikilink</span></a></div>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Topic constellation</strong><span>connected tags</span></div>
-      <svg viewBox="0 0 330 310" class="diagram-svg" role="img" aria-label="Tag constellation">
-        <line x1="168" y1="154" x2="110" y2="48" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="245" y2="72" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="290" y2="168" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="225" y2="260" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" />
-        <circle cx="168" cy="154" r="42" fill="rgba(103,232,249,0.12)" stroke="#67e8f9" stroke-width="1.5" />
-        <text x="168" y="148" text-anchor="middle" class="diagram-core">RESOURCE-I</text>
-        <text x="168" y="170" text-anchor="middle" class="diagram-label">Other</text>
-        <g><circle cx="110" cy="48" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="110" y="53" text-anchor="middle" class="diagram-mini">x-files</text></g><g><circle cx="245" cy="72" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="245" y="77" text-anchor="middle" class="diagram-mini">diary-of-a-ceo</text></g><g><circle cx="290" cy="168" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="290" y="173" text-anchor="middle" class="diagram-mini">podcasts</text></g><g><circle cx="225" cy="260" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="225" y="265" text-anchor="middle" class="diagram-mini">source-index</text></g>
-      </svg>
+      <div class="diagram-head"><strong>Explore connected tags</strong></div>
+      <nav class="tag-tree" aria-label="Explore connected tags"><div class="tag-root"><a href="topic-methods.html">Methods &amp; media</a></div><div class="tag-branches"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=diary-of-a-ceo">diary-of-a-ceo</a> <a href="search.html?q=podcasts">podcasts</a> <a href="search.html?q=source-index">source-index</a></div></nav>
     </div>
 
 
     <div class="diagram-card">
-      <div class="diagram-head"><strong>Note density</strong><span>structure and weight</span></div>
+      <div class="diagram-head"><strong>Note density</strong><span>Article structure</span></div>
       <div class="metric-rows"><div class="metric-row"><span>sections</span><div class="metric-bar"><i style="width:10%; background:#67e8f9"></i></div><b>3</b></div><div class="metric-row"><span>bullets</span><div class="metric-bar"><i style="width:10%; background:#a78bfa"></i></div><b>1</b></div><div class="metric-row"><span>links</span><div class="metric-bar"><i style="width:10%; background:#fb923c"></i></div><b>5</b></div><div class="metric-row"><span>words</span><div class="metric-bar"><i style="width:100%; background:#34d399"></i></div><b>132</b></div></div>
     </div>
 
@@ -188,6 +161,6 @@
 </footer>
 </main>
 
-<script src="assets/app.js?v=f51c6d33c9" defer></script>
+<script src="assets/app.js?v=9313a9e506" defer></script>
 </body>
 </html>
