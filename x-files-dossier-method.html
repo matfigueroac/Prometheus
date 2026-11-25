@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   
     
     <header class="sitebar-wrap">
@@ -29,15 +30,15 @@
     <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
       <div class="mobile-drawer-panel">
         <div class="mobile-drawer-head"><strong>Navigate archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
-        <nav><a href="index.html">Home</a><a href="index.html#search">Search</a><a href="index.html#topic-hubs">Topics</a><a href="index.html#timeline">Timeline</a><a href="x-files.html">X Files Area</a><a href="index.html#group-ufo-uap">UFO / UAP</a><a href="index.html#group-cia-remote-viewing">CIA / Remote Viewing</a><a href="index.html#group-marte">Mars</a><a href="index.html#group-ancient-civilizations">Ancient Civilizations</a><a href="index.html#group-uncanny-liminal">Uncanny / Liminal</a><a href="index.html#group-otros">Other</a></nav>
+        <nav><a href="index.html">Home</a><a href="index.html#search">Search</a><a href="index.html#topic-hubs">Topics</a><a href="index.html#latest">Latest notes</a><a href="x-files.html">X Files Area</a><a href="index.html#group-ufo-uap">UFO / UAP</a><a href="index.html#group-cia-remote-viewing">CIA / Remote Viewing</a><a href="index.html#group-marte">Mars</a><a href="index.html#group-ancient-civilizations">Ancient Civilizations</a><a href="index.html#group-uncanny-liminal">Uncanny / Liminal</a><a href="index.html#group-otros">Methods &amp; media</a></nav>
       </div>
     </div>
     <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
-      <a href="index.html"><span>⌂</span><b>Home</b></a>
-      <a href="index.html#search"><span>⌕</span><b>Search</b></a>
-      <a href="index.html#topic-hubs"><span>◈</span><b>Topics</b></a>
-      <a href="index.html#timeline"><span>◷</span><b>Timeline</b></a>
-      <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span>☰</span><b>More</b></button>
+      <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
+      <a href="index.html#search"><span aria-hidden="true">⌕</span><b>Search</b></a>
+      <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
+      <a href="index.html#latest"><span aria-hidden="true">◷</span><b>Latest</b></a>
+      <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
     </nav>
     
     
@@ -57,15 +58,15 @@
     </div>
     
     <div class="reading-progress"><span id="reading-progress-bar"></span></div>
-    <div class="shell note-shell">
+    <main class="shell note-shell" id="main-content">
       <article class="note glass-panel" style="--note-accent:#94a3b8;">
         <header class="note-header dossier-hero">
           <div class="note-header-copy">
             <div class="note-topline">
               <div class="card-kind">methodology</div>
-              <span class="card-group">Other</span>
+              <span class="card-group">Methods &amp; media</span>
             </div>
-            <h1>X Files Dossier Method</h1>
+            <h1 id="x-files-dossier-method">X Files Dossier Method</h1>
             <p>This note defines the editorial contract for the public X Files wiki app.</p>
             <div class="card-tags note-tag-links"><a href="index.html?q=x-files#search">x-files</a> <a href="index.html?q=methodology#search">methodology</a> <a href="index.html?q=evidence#search">evidence</a> <a href="index.html?q=source-quality#search">source-quality</a> <a href="index.html?q=dossier#search">dossier</a></div>
             <div class="note-stats">
@@ -89,8 +90,11 @@
       <a href="index.html#search">Search archive</a>
     </div>
     
-        <details class="mobile-toc"><summary>On this page</summary><div><a href="#x-files-dossier-method">X Files Dossier Method</a><a href="#purpose">Purpose</a><a href="#dossier-fields">Dossier fields</a><a href="#evidence-ladder">Evidence ladder</a><a href="#publishing-rule">Publishing rule</a><a href="#template">Template</a><a href="#summary">Summary</a><a href="#claim-object-of-study">Claim / object of study</a><a href="#what-the-source-actually-says">What the source actually says</a><a href="#evidence-type">Evidence type</a><a href="#source-quality">Source quality</a><a href="#critical-reading">Critical reading</a></div></details>
+        <details class="mobile-toc"><summary>On this page</summary><div><a href="#x-files-dossier-method">Overview</a><a href="#purpose">Purpose</a><a href="#dossier-fields">Dossier fields</a><a href="#evidence-ladder">Evidence ladder</a><a href="#publishing-rule">Publishing rule</a><a href="#template">Template</a><a href="#summary">Summary</a><a href="#claim-object-of-study">Claim / object of study</a><a href="#what-the-source-actually-says">What the source actually says</a><a href="#evidence-type">Evidence type</a><a href="#source-quality">Source quality</a><a href="#critical-reading">Critical reading</a></div></details>
         
+    <details class="dossier-sources">
+      <summary>Sources and citations</summary>
+      <div class="dossier-source-content">
     <div class="source-box">
       <strong>Source context</strong>
       <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
@@ -103,6 +107,8 @@
       <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
       <div><span>Obsidian source note only</span></div>
     </div>
+      </div>
+    </details>
     
 
         <div class="note-layout">
@@ -142,7 +148,7 @@
               
     <div class="diagram-card toc-card">
       <div class="diagram-head"><strong>Reading index</strong><span>quick jumps</span></div>
-      <div class="toc-list"><a href="#x-files-dossier-method" class="toc-link toc-level-1">X Files Dossier Method</a><a href="#purpose" class="toc-link toc-level-2">Purpose</a><a href="#dossier-fields" class="toc-link toc-level-2">Dossier fields</a><a href="#evidence-ladder" class="toc-link toc-level-2">Evidence ladder</a><a href="#publishing-rule" class="toc-link toc-level-2">Publishing rule</a><a href="#template" class="toc-link toc-level-2">Template</a><a href="#summary" class="toc-link toc-level-2">Summary</a><a href="#claim-object-of-study" class="toc-link toc-level-2">Claim / object of study</a><a href="#what-the-source-actually-says" class="toc-link toc-level-2">What the source actually says</a><a href="#evidence-type" class="toc-link toc-level-2">Evidence type</a><a href="#source-quality" class="toc-link toc-level-2">Source quality</a><a href="#critical-reading" class="toc-link toc-level-2">Critical reading</a><a href="#why-it-matters-within-x-files" class="toc-link toc-level-2">Why it matters within X Files</a><a href="#open-questions" class="toc-link toc-level-2">Open questions</a><a href="#related" class="toc-link toc-level-2">Related</a></div>
+      <div class="toc-list"><a href="#x-files-dossier-method" class="toc-link toc-level-1">Overview</a><a href="#purpose" class="toc-link toc-level-2">Purpose</a><a href="#dossier-fields" class="toc-link toc-level-2">Dossier fields</a><a href="#evidence-ladder" class="toc-link toc-level-2">Evidence ladder</a><a href="#publishing-rule" class="toc-link toc-level-2">Publishing rule</a><a href="#template" class="toc-link toc-level-2">Template</a><a href="#summary" class="toc-link toc-level-2">Summary</a><a href="#claim-object-of-study" class="toc-link toc-level-2">Claim / object of study</a><a href="#what-the-source-actually-says" class="toc-link toc-level-2">What the source actually says</a><a href="#evidence-type" class="toc-link toc-level-2">Evidence type</a><a href="#source-quality" class="toc-link toc-level-2">Source quality</a><a href="#critical-reading" class="toc-link toc-level-2">Critical reading</a><a href="#why-it-matters-within-x-files" class="toc-link toc-level-2">Why it matters within X Files</a><a href="#open-questions" class="toc-link toc-level-2">Open questions</a><a href="#related" class="toc-link toc-level-2">Related</a></div>
     </div>
     
               
@@ -154,7 +160,7 @@
               
             </section>
           </aside>
-          <section class="note-body prose"><h1 id="x-files-dossier-method">X Files Dossier Method</h1>
+          <section class="note-body prose">
 <p>This note defines the editorial contract for the public X Files wiki app.</p>
 <h2 id="purpose">Purpose</h2>
 <p>Every public dossier should help a reader separate signal from mythology without deleting the weirdness that makes the material worth tracking.</p>
@@ -188,7 +194,7 @@
         <span>Source: resources/x-files-dossier-method.md</span>
         <span><a href="index.html">Back to index</a></span>
       </footer>
-    </div>
+    </main>
     
   <script src="assets/app.js" defer></script>
 </body>

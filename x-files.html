@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   
     
     <header class="sitebar-wrap">
@@ -29,15 +30,15 @@
     <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
       <div class="mobile-drawer-panel">
         <div class="mobile-drawer-head"><strong>Navigate archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
-        <nav><a href="index.html">Home</a><a href="index.html#search">Search</a><a href="index.html#topic-hubs">Topics</a><a href="index.html#timeline">Timeline</a><a href="x-files.html">X Files Area</a><a href="index.html#group-ufo-uap">UFO / UAP</a><a href="index.html#group-cia-remote-viewing">CIA / Remote Viewing</a><a href="index.html#group-marte">Mars</a><a href="index.html#group-ancient-civilizations">Ancient Civilizations</a><a href="index.html#group-uncanny-liminal">Uncanny / Liminal</a><a href="index.html#group-otros">Other</a></nav>
+        <nav><a href="index.html">Home</a><a href="index.html#search">Search</a><a href="index.html#topic-hubs">Topics</a><a href="index.html#latest">Latest notes</a><a href="x-files.html">X Files Area</a><a href="index.html#group-ufo-uap">UFO / UAP</a><a href="index.html#group-cia-remote-viewing">CIA / Remote Viewing</a><a href="index.html#group-marte">Mars</a><a href="index.html#group-ancient-civilizations">Ancient Civilizations</a><a href="index.html#group-uncanny-liminal">Uncanny / Liminal</a><a href="index.html#group-otros">Methods &amp; media</a></nav>
       </div>
     </div>
     <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
-      <a href="index.html"><span>⌂</span><b>Home</b></a>
-      <a href="index.html#search"><span>⌕</span><b>Search</b></a>
-      <a href="index.html#topic-hubs"><span>◈</span><b>Topics</b></a>
-      <a href="index.html#timeline"><span>◷</span><b>Timeline</b></a>
-      <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span>☰</span><b>More</b></button>
+      <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
+      <a href="index.html#search"><span aria-hidden="true">⌕</span><b>Search</b></a>
+      <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
+      <a href="index.html#latest"><span aria-hidden="true">◷</span><b>Latest</b></a>
+      <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
     </nav>
     
     
@@ -57,15 +58,15 @@
     </div>
     
     <div class="reading-progress"><span id="reading-progress-bar"></span></div>
-    <div class="shell note-shell">
+    <main class="shell note-shell" id="main-content">
       <article class="note glass-panel" style="--note-accent:#94a3b8;">
         <header class="note-header dossier-hero">
           <div class="note-header-copy">
             <div class="note-topline">
               <div class="card-kind">area</div>
-              <span class="card-group">Other</span>
+              <span class="card-group">Methods &amp; media</span>
             </div>
-            <h1>X Files</h1>
+            <h1 id="x-files">X Files</h1>
             <p>Personal research area for anomalies, intelligence archives, UFO/UAP, alternative archaeology, Mars folklore/science, liminal spaces and strange media.</p>
             <div class="card-tags note-tag-links"><a href="index.html?q=personal#search">personal</a> <a href="index.html?q=x-files#search">x-files</a> <a href="index.html?q=mysteries#search">mysteries</a> <a href="index.html?q=theories#search">theories</a> <a href="index.html?q=weird#search">weird</a> <a href="index.html?q=media#search">media</a></div>
             <div class="note-stats">
@@ -89,8 +90,11 @@
       <a href="index.html#search">Search archive</a>
     </div>
     
-        <details class="mobile-toc"><summary>On this page</summary><div><a href="#x-files">X Files</a><a href="#operating-rule">Operating rule</a><a href="#quality-criteria">Quality criteria</a><a href="#current-operating-status">Current operating status</a><a href="#active-now">Active now</a><a href="#completed-strong-packages">Completed strong packages</a><a href="#derivation-rule">Derivation rule</a><a href="#subarea-map">Subarea map</a><a href="#cia-stargate-remote-viewing">CIA / Stargate / remote viewing</a><a href="#ufo-uap-government">UFO / UAP / government</a><a href="#mars-anomalies-science-and-folklore">Mars: anomalies, science and folklore</a><a href="#ancient-civilizations-alternative-archaeology">Ancient civilizations / alternative archaeology</a></div></details>
+        <details class="mobile-toc"><summary>On this page</summary><div><a href="#x-files">Overview</a><a href="#operating-rule">Operating rule</a><a href="#quality-criteria">Quality criteria</a><a href="#current-operating-status">Current operating status</a><a href="#active-now">Active now</a><a href="#completed-strong-packages">Completed strong packages</a><a href="#derivation-rule">Derivation rule</a><a href="#subarea-map">Subarea map</a><a href="#cia-stargate-remote-viewing">CIA / Stargate / remote viewing</a><a href="#ufo-uap-government">UFO / UAP / government</a><a href="#mars-anomalies-science-and-folklore">Mars: anomalies, science and folklore</a><a href="#ancient-civilizations-alternative-archaeology">Ancient civilizations / alternative archaeology</a></div></details>
         
+    <details class="dossier-sources">
+      <summary>Sources and citations</summary>
+      <div class="dossier-source-content">
     <div class="source-box">
       <strong>Source context</strong>
       <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
@@ -103,6 +107,8 @@
       <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
       <div><span>Obsidian source note only</span></div>
     </div>
+      </div>
+    </details>
     
 
         <div class="note-layout">
@@ -142,7 +148,7 @@
               
     <div class="diagram-card toc-card">
       <div class="diagram-head"><strong>Reading index</strong><span>quick jumps</span></div>
-      <div class="toc-list"><a href="#x-files" class="toc-link toc-level-1">X Files</a><a href="#operating-rule" class="toc-link toc-level-2">Operating rule</a><a href="#quality-criteria" class="toc-link toc-level-2">Quality criteria</a><a href="#current-operating-status" class="toc-link toc-level-2">Current operating status</a><a href="#active-now" class="toc-link toc-level-3">Active now</a><a href="#completed-strong-packages" class="toc-link toc-level-3">Completed strong packages</a><a href="#derivation-rule" class="toc-link toc-level-2">Derivation rule</a><a href="#subarea-map" class="toc-link toc-level-2">Subarea map</a><a href="#cia-stargate-remote-viewing" class="toc-link toc-level-3">CIA / Stargate / remote viewing</a><a href="#ufo-uap-government" class="toc-link toc-level-3">UFO / UAP / government</a><a href="#mars-anomalies-science-and-folklore" class="toc-link toc-level-3">Mars: anomalies, science and folklore</a><a href="#ancient-civilizations-alternative-archaeology" class="toc-link toc-level-3">Ancient civilizations / alternative archaeology</a><a href="#lex-fridman-podcast" class="toc-link toc-level-3">Lex Fridman Podcast</a><a href="#the-diary-of-a-ceo" class="toc-link toc-level-3">The Diary Of A CEO</a><a href="#uncanny-liminal" class="toc-link toc-level-3">Uncanny / Liminal</a><a href="#suggested-tags" class="toc-link toc-level-2">Suggested tags</a><a href="#related" class="toc-link toc-level-2">Related</a></div>
+      <div class="toc-list"><a href="#x-files" class="toc-link toc-level-1">Overview</a><a href="#operating-rule" class="toc-link toc-level-2">Operating rule</a><a href="#quality-criteria" class="toc-link toc-level-2">Quality criteria</a><a href="#current-operating-status" class="toc-link toc-level-2">Current operating status</a><a href="#active-now" class="toc-link toc-level-3">Active now</a><a href="#completed-strong-packages" class="toc-link toc-level-3">Completed strong packages</a><a href="#derivation-rule" class="toc-link toc-level-2">Derivation rule</a><a href="#subarea-map" class="toc-link toc-level-2">Subarea map</a><a href="#cia-stargate-remote-viewing" class="toc-link toc-level-3">CIA / Stargate / remote viewing</a><a href="#ufo-uap-government" class="toc-link toc-level-3">UFO / UAP / government</a><a href="#mars-anomalies-science-and-folklore" class="toc-link toc-level-3">Mars: anomalies, science and folklore</a><a href="#ancient-civilizations-alternative-archaeology" class="toc-link toc-level-3">Ancient civilizations / alternative archaeology</a><a href="#lex-fridman-podcast" class="toc-link toc-level-3">Lex Fridman Podcast</a><a href="#the-diary-of-a-ceo" class="toc-link toc-level-3">The Diary Of A CEO</a><a href="#uncanny-liminal" class="toc-link toc-level-3">Uncanny / Liminal</a><a href="#suggested-tags" class="toc-link toc-level-2">Suggested tags</a><a href="#related" class="toc-link toc-level-2">Related</a></div>
     </div>
     
               
@@ -162,7 +168,7 @@
     
             </section>
           </aside>
-          <section class="note-body prose"><h1 id="x-files">X Files</h1>
+          <section class="note-body prose">
 <p>Personal research area for anomalies, intelligence archives, UFO/UAP, alternative archaeology, Mars folklore/science, liminal spaces and strange media.</p>
 <h2 id="operating-rule">Operating rule</h2>
 <p>X Files notes must separate:</p>
@@ -206,7 +212,7 @@
         <span>Source: areas/x-files.md</span>
         <span><a href="index.html">Back to index</a></span>
       </footer>
-    </div>
+    </main>
     
   <script src="assets/app.js" defer></script>
 </body>

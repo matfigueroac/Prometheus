@@ -76,40 +76,31 @@ function initSearch() {
 
   const renderCards = (matches, query) => {
     if (!matches.length) {
-      resultsNode.innerHTML = `<div class="empty-state">No results for <strong>${escapeHtml(query)}</strong>. Try <code>mars</code>, <code>cia</code>, <code>remote viewing</code>, or <code>uap</code>.</div>`;
-      countNode.textContent = '0 results';
-      updateSearchState(query, 0);
-      return;
-    }
-
-    resultsNode.innerHTML = matches.map((item, index) => `
-      <a class="result-card" href="${item.url}">
-        <div class="result-rank">#${index + 1}</div>
-        <div class="result-body">
-          <div class="result-head">
+      resultsNode.innerHTML = '<p class="empty-state">No dossiers match <strong>' + escapeHtml(query)
+        + '</strong>. Try a different topic or clear the search.</p>';
+    } else {
+      resultsNode.innerHTML = matches.map((item) => `
+        <a class="result-card" href="${escapeHtml(item.url)}">
+          <div class="result-body">
+            <div class="result-meta">
+              <span class="result-pill">${escapeHtml(item.group || 'Archive')}</span>
+              <span>${escapeHtml(item.updated)}</span>
+            </div>
             <h3>${highlightText(item.title, query)}</h3>
-            <span>${escapeHtml(item.updated)}</span>
+            <p>${highlightText(item.summary, query)}</p>
           </div>
-          <div class="result-meta">
-            <span class="result-pill">${escapeHtml(item.group || 'Archivo')}</span>
-            <span class="result-pill result-pill-muted">${escapeHtml(item.kind || 'nota')}</span>
-            <span class="result-pill result-pill-muted">${escapeHtml(item.source_path || 'Obsidian')}</span>
-          </div>
-          <p>${highlightText(item.summary, query)}</p>
-          <div class="card-tags">${item.tags.map((tag) => `<span>${highlightText(tag, query)}</span>`).join('')}</div>
-        </div>
-      </a>
-    `).join('');
+        </a>
+      `).join('');
+    }
     countNode.textContent = `${matches.length} result${matches.length === 1 ? '' : 's'}`;
-    updateSearchState(query, matches.length);
+    updateSearchState(query);
   };
 
   const searchItems = (query) => {
     return items
       .map((item) => ({ ...item, score: scoreItem(item, query) }))
       .filter((item) => item.score > 0)
-      .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title, 'es'))
-      .slice(0, 24);
+      .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title, 'en'));
   };
 
   function updateSearch() {
@@ -118,13 +109,9 @@ function initSearch() {
     updateUrl(query);
 
     if (!query) {
-      resultsNode.innerHTML = `
-        <div class="empty-state empty-state-rich">
-          <strong>Search ready.</strong>
-          <span>Use the suggestions above or type a topic, source, tag, or dossier title.</span>
-        </div>`;
-      countNode.textContent = `${items.length} indexed notes`;
-      updateSearchState('', items.length);
+      resultsNode.replaceChildren();
+      countNode.textContent = `${items.length} dossiers`;
+      updateSearchState('');
       return;
     }
 
@@ -195,11 +182,10 @@ function bindSuggestionChips() {
   });
 }
 
-function updateSearchState(query, count) {
+function updateSearchState(query) {
   const shell = document.getElementById('search');
   if (!shell) return;
   shell.classList.toggle('has-query', !!query);
-  shell.classList.toggle('has-results', Number(count) > 0);
   if (clearButton) {
     clearButton.disabled = !query;
     clearButton.setAttribute('aria-disabled', query ? 'false' : 'true');
@@ -236,18 +222,17 @@ function scoreItem(item, query) {
 }
 
 function highlightText(value, query) {
-  const safe = escapeHtml(String(value || ''));
-  if (!query) return safe;
+  const source = String(value || '');
+  if (!query) return escapeHtml(source);
 
-  const terms = [...new Set(query.split(' ').filter(Boolean))];
-  if (!terms.length) return safe;
+  const terms = [...new Set(query.split(' ').filter(Boolean))]
+    .sort((first, second) => second.length - first.length)
+    .map(escapeRegex);
+  if (!terms.length) return escapeHtml(source);
 
-  let highlighted = safe;
-  for (const term of terms) {
-    const escapedTerm = escapeRegex(term);
-    highlighted = highlighted.replace(new RegExp(`(${escapedTerm})`, 'gi'), '<mark>$1</mark>');
-  }
-  return highlighted;
+  return source.split(new RegExp(`(${terms.join('|')})`, 'gi'))
+    .map((part, index) => index % 2 ? `<mark>${escapeHtml(part)}</mark>` : escapeHtml(part))
+    .join('');
 }
 
 function normalize(value) {
@@ -280,7 +265,7 @@ function escapeHtml(value) {
 
 
 function initActiveSectionNav() {
-  const groupLinks = [...document.querySelectorAll('.site-links a[href^="index.html#group-"]')];
+  const groupLinks = [...document.querySelectorAll('.site-links a[href^="#"], .site-links a[href^="index.html#group-"]')];
   if (!groupLinks.length || !('IntersectionObserver' in window)) return;
 
   const byHash = new Map(groupLinks.map((link) => [new URL(link.href, window.location.href).hash, link]));
@@ -308,10 +293,13 @@ function initMobileNavigation() {
   if (!drawer || !toggle) return;
 
   const setOpen = (open) => {
+    if (drawer.classList.contains('is-open') === open) return;
+    if (!open) toggle.focus();
     drawer.classList.toggle('is-open', open);
     drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     document.body.classList.toggle('drawer-open', open);
+    if (open) close?.focus();
   };
 
   toggle.addEventListener('click', () => setOpen(!drawer.classList.contains('is-open')));
@@ -323,14 +311,19 @@ function initMobileNavigation() {
     if (event.key === 'Escape') setOpen(false);
   });
 
-  const current = `${window.location.pathname.split('/').pop() || 'index.html'}${window.location.hash}`;
-  bottomItems.forEach((item) => {
-    if (item.tagName === 'A') {
+  const markCurrent = () => {
+    const current = `${window.location.pathname.split('/').pop() || 'index.html'}${window.location.hash}`;
+    bottomItems.filter((item) => item.tagName === 'A').forEach((item) => {
       const url = new URL(item.href, window.location.href);
       const itemKey = `${url.pathname.split('/').pop() || 'index.html'}${url.hash}`;
-      if (current === itemKey || (!window.location.hash && itemKey === 'index.html')) item.classList.add('mobile-active');
-    }
-  });
+      const active = current === itemKey;
+      item.classList.toggle('mobile-active', active);
+      if (active) item.setAttribute('aria-current', url.hash ? 'location' : 'page');
+      else item.removeAttribute('aria-current');
+    });
+  };
+  markCurrent();
+  window.addEventListener('hashchange', markCurrent);
 }
 
 function initReadingMode() {
