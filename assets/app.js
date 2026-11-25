@@ -190,28 +190,59 @@ function initHeadingAnchors() {
 function initDossierNavigation() {
   const outline = document.querySelector('.dossier-outline');
   if (!outline) return;
-  const links = [...outline.querySelectorAll('a')];
-  const headings = links
-    .map((link) => document.getElementById(link.hash.slice(1)))
-    .filter(Boolean);
+  const mobileOutline = document.querySelector('.dossier-mobile-outline');
+  const mobileLinks = new Map([...mobileOutline?.querySelectorAll('a') ?? []].map((link) => [link.hash, link]));
+  const sections = [...outline.querySelectorAll('a')].map((link) => ({
+    heading: document.getElementById(link.hash.slice(1)),
+    link,
+    mobileLink: mobileLinks.get(link.hash),
+  })).filter(({ heading }) => heading);
+  const outlineTitle = outline.querySelector('h2');
+  let current;
+  let anchorOffset;
+  let frame = 0;
 
-  const setCurrent = (heading) => {
-    links.forEach((link) => {
-      if (link.hash.slice(1) === heading?.id) link.setAttribute('aria-current', 'location');
-      else link.removeAttribute('aria-current');
-    });
+  const setCurrent = (section) => {
+    if (current === section) return;
+    current?.link.removeAttribute('aria-current');
+    current?.mobileLink?.removeAttribute('aria-current');
+    current = section;
+    if (!current) return;
+    current.link.setAttribute('aria-current', 'location');
+    current.mobileLink?.setAttribute('aria-current', 'location');
+
+    if (outline.scrollHeight <= outline.clientHeight || !outline.clientHeight) return;
+    const top = outlineTitle.getBoundingClientRect().bottom;
+    const bottom = outline.getBoundingClientRect().bottom;
+    const linkBounds = current.link.getBoundingClientRect();
+    if (linkBounds.top < top) outline.scrollTop += linkBounds.top - top;
+    else if (linkBounds.bottom > bottom) outline.scrollTop += linkBounds.bottom - bottom;
   };
 
+  const updateCurrent = () => {
+    frame = 0;
+    const atEnd = window.scrollY + root.clientHeight >= root.scrollHeight - 2;
+    const section = atEnd ? sections.at(-1) : sections.findLast(({ heading }) =>
+      heading.getBoundingClientRect().top <= anchorOffset + 4
+    );
+    setCurrent(section ?? sections[0]);
+  };
+  const scheduleUpdate = () => {
+    if (!frame) frame = requestAnimationFrame(updateCurrent);
+  };
+  const measureOffset = () => {
+    anchorOffset = parseFloat(getComputedStyle(root).scrollPaddingTop) || 0;
+    scheduleUpdate();
+  };
   const revealFragment = () => {
     const target = document.getElementById(window.location.hash.slice(1));
     if (!target) return;
     for (let details = target.closest('details'); details; details = details.parentElement?.closest('details')) {
       details.open = true;
     }
-    if (headings.includes(target)) setCurrent(target);
+    scheduleUpdate();
   };
 
-  const mobileOutline = document.querySelector('.dossier-mobile-outline');
   mobileOutline?.addEventListener('click', (event) => {
     if (event.target.closest('a')) mobileOutline.open = false;
   });
@@ -220,14 +251,10 @@ function initDossierNavigation() {
   });
 
   revealFragment();
+  measureOffset();
   window.addEventListener('hashchange', revealFragment);
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries.find((entry) => entry.isIntersecting);
-      if (visible) setCurrent(visible.target);
-    }, { rootMargin: '-80px 0px -65% 0px' });
-    headings.forEach((heading) => observer.observe(heading));
-  }
+  window.addEventListener('resize', measureOffset);
+  document.addEventListener('scroll', scheduleUpdate, { passive: true });
 }
 
 initMobileNavigation();

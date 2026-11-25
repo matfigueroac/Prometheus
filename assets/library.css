@@ -242,15 +242,47 @@
   gap: clamp(16px, 3vw, 50px);
   align-items: start;
 }
-.dossier-outline { position: sticky; top: 87px; min-width: 0; max-height: calc(100dvh - 107px); overflow: auto; }
+
+html:has(.dossier-layout) {
+  --dossier-anchor-offset: 72px;
+  scroll-padding-top: var(--dossier-anchor-offset);
+}
+/* Clip horizontal overflow without creating a second scroll container for the sticky index. */
+body:has(.dossier-layout) { overflow-x: clip; }
+.dossier-outline {
+  position: sticky;
+  top: var(--dossier-anchor-offset);
+  min-width: 0;
+  max-height: calc(100dvh - var(--dossier-anchor-offset) - 16px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scroll-padding-top: 2rem;
+}
 .dossier-outline h2, .dossier-related h2 { margin: 0 0 9px; font-size: .94rem; line-height: 1.25; }
-.dossier-outline nav { display: flex; flex-direction: column; gap: 4px; }
+.dossier-outline h2 {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0 0 10px;
+  background: var(--bg);
+}
+.dossier-outline nav { display: grid; gap: 2px; }
 .dossier-outline a, .dossier-mobile-outline a { display: block; color: var(--soft); font-size: .85rem; line-height: 1.35; overflow-wrap: anywhere; }
 .dossier-outline a { padding: 7px 8px; border-left: 2px solid var(--line); }
-.dossier-outline a:is(:hover, [aria-current="location"]) { border-color: var(--accent); color: var(--text); background: var(--panel-2); text-decoration: none; }
+.dossier-outline a:is(:hover, :focus-visible, [aria-current="location"]),
+.dossier-mobile-outline a[aria-current="location"] {
+  border-color: var(--accent);
+  color: var(--text);
+  background: var(--panel-2);
+  text-decoration: none;
+}
+.dossier-outline a[aria-current="location"], .dossier-mobile-outline a[aria-current="location"] { font-weight: 650; }
+.dossier-outline a:focus-visible, .dossier-mobile-outline a:focus-visible { outline-offset: -2px; }
 .dossier-mobile-outline { display: none; }
 .dossier-main { min-width: 0; }
 .dossier-main .note-body { width: 100%; max-width: 78ch; margin-inline: auto; overflow-wrap: anywhere; }
+.dossier-main .note-body :is(h2, h3, h4)[id] { scroll-margin-top: 0; }
 .dossier-main .note-body > h2:first-child { margin-top: 0; }
 .dossier-main .note-body h2 { padding-left: 0; border-left: 0; }
 .dossier-context { display: grid; gap: 12px; min-width: 0; }
@@ -281,7 +313,7 @@ body.reading-mode .dossier-layout { grid-template-columns: minmax(0, 1fr); }
 body.reading-mode .dossier-context { grid-column: auto; }
 body.reading-mode .dossier-outline, body.reading-mode .dossier-figure { display: none; }
 body.reading-mode .dossier-page .dossier-hero { grid-template-columns: minmax(0, 1fr); }
-body.reading-mode .dossier-mobile-outline { display: block; margin-bottom: 18px; }
+body.reading-mode .dossier-mobile-outline { display: block; }
 
 @media (max-width: 1120px) {
   .library-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -308,10 +340,26 @@ body.reading-mode .dossier-mobile-outline { display: block; margin-bottom: 18px;
   .dossier-figure img { max-height: 240px; aspect-ratio: 16 / 8.5; }
   .dossier-outline { display: none; }
   .dossier-context { grid-column: auto; }
-  .dossier-mobile-outline { display: block; margin-bottom: 18px; }
+  .dossier-mobile-outline { display: block; }
 }
 
-.dossier-mobile-outline nav { display: grid; gap: 1px; padding-top: 7px; }
+.dossier-page .dossier-mobile-outline {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin-bottom: 18px;
+  padding: 0;
+  border-block: 1px solid var(--line);
+  background: var(--bg);
+}
+.dossier-mobile-outline summary { display: list-item; padding: 12px 4px; }
+.dossier-mobile-outline nav {
+  display: grid;
+  max-height: min(50dvh, 24rem);
+  gap: 1px;
+  overflow: auto;
+  overscroll-behavior-y: contain;
+}
 .dossier-mobile-outline a { padding: 8px 0; border-top: 1px solid var(--line); }
 
 @media (max-width: 510px) {
