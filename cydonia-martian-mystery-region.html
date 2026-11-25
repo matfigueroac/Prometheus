@@ -1,173 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cydonia: Martian Mystery Region</title>
-  <link rel="stylesheet" href="assets/styles.css?v=8b1bf16" />
+  <link rel="stylesheet" href="assets/styles.css?v=8b1bf16">
+  <link rel="stylesheet" href="assets/library.css?v=65467dfb4e">
 </head>
-<body>
+<body data-view="dossier">
+
   <a class="skip-link" href="#main-content">Skip to content</a>
-  
-    
-    <header class="sitebar-wrap">
-      <div class="sitebar">
-        <a class="brand" href="index.html">
-          <span class="brand-dot"></span>
-          <span>X Files</span>
-        </a>
-        <nav class="site-links"><a href="index.html" class="nav-link">Home</a><a href="x-files.html" class="nav-link">X Files Area</a><a href="index.html#group-ufo-uap" class="nav-link">UFO / UAP</a><a href="index.html#group-cia-remote-viewing" class="nav-link">CIA / Remote Viewing</a><a href="index.html#group-marte" class="nav-link">Mars</a><a href="index.html#group-ancient-civilizations" class="nav-link">Ancient Civilizations</a><a href="index.html#group-uncanny-liminal" class="nav-link">Uncanny / Liminal</a><a href="index.html#group-otros" class="nav-link">Other</a><span class="nav-current">Cydonia: Martian Mystery Region</span></nav>
-        <div class="toolbar">
-          <form id="quick-search-form" class="quick-search" action="index.html#search" method="get" role="search">
-            <input id="quick-search-input" name="q" type="search" placeholder="Quick search" autocomplete="off" aria-label="Quick search" />
-          </form>
-          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
-        </div>
-      </div>
-    </header>
-    
-    
-    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
-      <div class="mobile-drawer-panel">
-        <div class="mobile-drawer-head"><strong>Navigate archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
-        <nav><a href="index.html">Home</a><a href="index.html#search">Search</a><a href="index.html#topic-hubs">Topics</a><a href="index.html#latest">Latest notes</a><a href="x-files.html">X Files Area</a><a href="index.html#group-ufo-uap">UFO / UAP</a><a href="index.html#group-cia-remote-viewing">CIA / Remote Viewing</a><a href="index.html#group-marte">Mars</a><a href="index.html#group-ancient-civilizations">Ancient Civilizations</a><a href="index.html#group-uncanny-liminal">Uncanny / Liminal</a><a href="index.html#group-otros">Methods &amp; media</a></nav>
+  <header class="sitebar-wrap">
+    <div class="sitebar">
+      <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span><span>X Files</span></a>
+      <nav class="site-links" aria-label="Main navigation"><a class="nav-link" href="index.html#topic-hubs">Topics</a><a class="nav-link" href="search.html">Search</a><a class="nav-link" href="latest.html">Latest</a><a class="nav-link" href="x-files.html">Research map</a></nav>
+      <div class="toolbar">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
       </div>
     </div>
-    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+  </header>
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-panel">
+      <div class="mobile-drawer-head"><strong>Explore the archive</strong><button type="button" id="mobile-drawer-close" aria-label="Close menu">×</button></div>
+      <nav aria-label="Archive collections"><a href="topic-uap.html">UFO / UAP</a><a href="topic-cia.html">CIA / Remote Viewing</a><a href="topic-mars.html">Mars</a><a href="topic-ancient.html">Ancient Civilizations</a><a href="topic-liminal.html">Uncanny / Liminal</a><a href="topic-methods.html">Methods &amp; media</a><a href="x-files.html">Research map</a><a href="x-files-dossier-method.html">Editorial method</a></nav>
+      <button class="theme-toggle" type="button" data-drawer-theme>Theme</button>
+    </div>
+  </div>
+  <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
       <a href="index.html"><span aria-hidden="true">⌂</span><b>Home</b></a>
-      <a href="index.html#search"><span aria-hidden="true">⌕</span><b>Search</b></a>
       <a href="index.html#topic-hubs"><span aria-hidden="true">◈</span><b>Topics</b></a>
-      <a href="index.html#latest"><span aria-hidden="true">◷</span><b>Latest</b></a>
+      <a href="search.html"><span aria-hidden="true">⌕</span><b>Search</b></a>
+      <a href="latest.html"><span aria-hidden="true">◷</span><b>Latest</b></a>
       <button type="button" id="mobile-menu-toggle" aria-controls="mobile-drawer" aria-expanded="false"><span aria-hidden="true">☰</span><b>More</b></button>
-    </nav>
-    
-    
-    <div id="command-palette" class="command-palette" aria-hidden="true" role="dialog" aria-label="Command palette">
-      <div class="command-backdrop" data-command-close></div>
-      <div class="command-panel glass-panel">
-        <div class="command-head"><strong>Command center</strong><button type="button" data-command-close aria-label="Close command palette">×</button></div>
-        <div class="command-items">
-          <button type="button" class="command-item" data-command-href="index.html"><span>Home</span><small>Archive dashboard</small></button>
-          <button type="button" class="command-item" data-command-href="index.html#search"><span>Search archive</span><small>Local index</small></button>
-          <button type="button" class="command-item" data-command-theme><span>Toggle theme</span><small>Dark / light</small></button>
-          <button type="button" class="command-item" data-command-reading><span>Toggle reading mode</span><small>Dossier pages</small></button>
-          <button type="button" class="command-item" data-command-href="index.html#group-ufo-uap"><span>UFO / UAP</span><small>6 notes</small></button><button type="button" class="command-item" data-command-href="index.html#group-cia-remote-viewing"><span>CIA / Remote Viewing</span><small>7 notes</small></button><button type="button" class="command-item" data-command-href="index.html#group-marte"><span>Mars</span><small>7 notes</small></button><button type="button" class="command-item" data-command-href="index.html#group-ancient-civilizations"><span>Ancient Civilizations</span><small>11 notes</small></button><button type="button" class="command-item" data-command-href="index.html#group-uncanny-liminal"><span>Uncanny / Liminal</span><small>5 notes</small></button><button type="button" class="command-item" data-command-href="index.html#group-otros"><span>Other</span><small>3 notes</small></button>
-        </div>
-        <p class="command-hint">Shortcut: <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>K</kbd>. Use <kbd>Esc</kbd> to close.</p>
+  </nav>
+  <div id="command-palette" class="command-palette" aria-hidden="true" role="dialog" aria-label="Command palette">
+    <div class="command-backdrop" data-command-close></div>
+    <div class="command-panel glass-panel">
+      <div class="command-head"><strong>Command palette</strong><button type="button" data-command-close aria-label="Close command palette">×</button></div>
+      <div class="command-items">
+        <button type="button" class="command-item" data-command-href="index.html"><span>Home</span></button>
+        <button type="button" class="command-item" data-command-href="search.html"><span>Search archive</span><small>/</small></button>
+        <button type="button" class="command-item" data-command-theme><span>Toggle theme</span><small>Dark / light</small></button>
+        <button type="button" class="command-item" data-command-reading><span>Reading mode</span></button>
+        <button type="button" class="command-item" data-command-href="topic-uap.html"><span>UFO / UAP</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-cia.html"><span>CIA / Remote Viewing</span><small>8 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-mars.html"><span>Mars</span><small>7 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-ancient.html"><span>Ancient Civilizations</span><small>11 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-liminal.html"><span>Uncanny / Liminal</span><small>5 dossiers</small></button><button type="button" class="command-item" data-command-href="topic-methods.html"><span>Methods &amp; media</span><small>3 dossiers</small></button>
       </div>
     </div>
-    
-    <div class="reading-progress"><span id="reading-progress-bar"></span></div>
-    <main class="shell note-shell" id="main-content">
-      <article class="note glass-panel" style="--note-accent:#fb923c;">
-        <header class="note-header dossier-hero">
-          <div class="note-header-copy">
-            <div class="note-topline">
-              <div class="card-kind">resource</div>
-              <span class="card-group">Mars</span>
-            </div>
-            <h1 id="cydonia-martian-mystery-region">Cydonia: Martian Mystery Region</h1>
-            <p>Cydonia is one of the most useful regions in the entire Mars folder because it concentrates two stories at the same time: a real scientific story about Martian geology, ice, and climate; and a cultural history about the …</p>
-            <div class="card-tags note-tag-links"><a href="index.html?q=x-files#search">x-files</a> <a href="index.html?q=mars#search">mars</a> <a href="index.html?q=cydonia#search">cydonia</a> <a href="index.html?q=nasa#search">nasa</a> <a href="index.html?q=theories#search">theories</a> <a href="index.html?q=anomalies#search">anomalies</a></div>
-            <div class="note-stats">
-              <span>Updated: Apr 23, 2026</span>
-              <span>4 min read</span>
-              <span>942 words</span>
-            </div>
-          </div>
-          
-        <figure class="note-hero-visual note-image-hero" style="--visual:#fb923c;">
-          <img src="assets/visuals/categories/mars-anomalies-cover.jpg" alt="Cydonia: Martian Mystery Region visual dossier image" loading="eager" />
-          <figcaption>Mars visual dossier</figcaption>
-        </figure>
-        
-        </header>
+  </div>
+<div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
+<main id="main-content" class="shell library-shell" tabindex="-1">
 
-        
-    <div class="reading-tools" aria-label="Reading tools">
-      <button id="reading-mode-toggle" type="button">Reading mode</button>
-      <a href="index.html#search">Search archive</a>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="topic-mars.html">Mars</a></li><li aria-current="page">Cydonia: Martian Mystery Region</li></ol></nav>
+<article class="dossier-page">
+  <header class="dossier-hero">
+    <div class="dossier-heading">
+      <div class="dossier-kicker">Dossier <a href="topic-mars.html">Mars</a></div>
+      <h1 id="cydonia-martian-mystery-region">Cydonia: Martian Mystery Region</h1>
+      <p class="dossier-standfirst">Explore the geology of Cydonia alongside the history of the Face on Mars. The dossier ties orbital imagery to terrain, ice and climate while tracing the region’s reputation as a mystery.</p>
+      <div class="note-stats dossier-stats"><span>Updated: Apr 23, 2026</span>
+              <span>4 min read</span></div>
     </div>
-    
-        <details class="mobile-toc"><summary>On this page</summary><div><a href="#cydonia-martian-mystery-region">Overview</a><a href="#summary">Summary</a><a href="#what-does-the-source-actually-contain">What does the source actually contain?</a><a href="#why-it-matters-within-x-files">Why it matters within X Files</a><a href="#useful-metadata">Useful metadata</a><a href="#what-scientific-stories-does-the-fountain-cross">What scientific stories does the fountain cross</a><a href="#1-the-great-martian-dichotomy">1) The great Martian dichotomy</a><a href="#2-ice-water-in-the-subsoil">2) Ice/water in the subsoil</a><a href="#3-mars-as-a-planet-with-climatic-cycles">3) Mars as a planet with climatic cycles</a><a href="#4-the-face-as-an-eroded-table">4) The Face as an eroded table</a><a href="#useful-cydonia-case-structure">Useful Cydonia Case Structure</a><a href="#block-a-transitional-landscape">Block A — transitional landscape</a></div></details>
-        
-    <details class="dossier-sources">
-      <summary>Sources and citations</summary>
-      <div class="dossier-source-content">
-    <div class="source-box">
-      <strong>Source context</strong>
-      <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
-      <div><span>No explicit external URL in note body</span></div>
-    </div>
-    
-        
-    <div class="citation-panel">
-      <strong>Citation panel</strong>
-      <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
-      <div><span>Obsidian source note only</span></div>
-    </div>
-      </div>
-    </details>
-    
-
-        <div class="note-layout">
-          <aside class="note-sidebar">
-            <section class="note-insights">
-              
-    <div class="dossier-matrix" id="dossier-method">
-      <div class="diagram-head"><strong>Dossier method</strong><span>claim · evidence · uncertainty</span></div>
-      <div class="dossier-matrix-grid"><div><span>Source says</span><p>Cydonia is one of the most useful regions in the entire Mars folder because it concentrates two stories at the same time: a real scientific story about Martian geology, ice, and climate; and a cultural history about the Face on Mars, apparent ruins and lost ci</p></div><div><span>Evidence type</span><p>| Field | Data | |---|---| | Region | Cydonia Mensae | | Context | transition between Arabia Terra and the northern lowlands | | Operational source | THEMIS / Mars Odyssey feature page | | Image coordinates | 40.2°N, 350.2°E | | Reported image size | 87.5 x 10</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Why it matters</span><p>- It is the most useful official node to bring down the myth of Cydonia - shows that a place can be scientifically fascinating without needing artificialistic hypotheses - serves as a direct counterpart to face-on-mars-official-image-reanalysis - allows connec</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
-      <a class="method-link" href="x-files-dossier-method.html">Open editorial method →</a>
-    </div>
-    
-              
-    <div class="related-evidence-map">
-      <div class="diagram-head"><strong>Related evidence map</strong><span>same-cluster paths + wikilinks</span></div>
-      <div class="evidence-grid"><a href="face-on-mars-official-image-reanalysis.html"><strong>Face on Mars: Official Image Reanalysis</strong><span>Mars</span></a><a href="mars-x-files-anomalies-vs-official-readings.html"><strong>Mars X Files: Anomalies vs Official Readings</strong><span>Mars</span></a><a href="ancient-ocean-on-mars-evidence-vs-open-debate.html"><strong>Ancient Ocean on Mars: Evidence vs Open Debate</strong><span>Mars</span></a><a href="ancient-water-on-mars-and-climate-loss.html"><strong>Ancient Water on Mars and Climate Loss</strong><span>Mars</span></a><a href="cia-mars-exploration-1984.html"><strong>CIA Mars Exploration 1984</strong><span>CIA / Remote Viewing</span></a><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-3.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 3 of 3)</strong><span>CIA / Remote Viewing</span></a><a href="face-on-mars-official-image-reanalysis.html"><strong>Face On Mars Official Image Reanalysis</strong><span>wikilink</span></a><a href="mars-x-files-anomalies-vs-official-readings.html"><strong>Mars X Files Anomalies Vs Official Readings</strong><span>wikilink</span></a></div>
-    </div>
-    
-              
-    <div class="diagram-card">
-      <div class="diagram-head"><strong>Topic constellation</strong><span>connected tags</span></div>
-      <svg viewBox="0 0 330 310" class="diagram-svg" role="img" aria-label="Tag constellation">
-        <line x1="168" y1="154" x2="110" y2="48" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="245" y2="72" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="290" y2="168" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="225" y2="260" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="90" y2="262" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="42" y2="148" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" />
-        <circle cx="168" cy="154" r="42" fill="rgba(103,232,249,0.12)" stroke="#67e8f9" stroke-width="1.5" />
-        <text x="168" y="148" text-anchor="middle" class="diagram-core">RESOURCE</text>
-        <text x="168" y="170" text-anchor="middle" class="diagram-label">Mars</text>
-        <g><circle cx="110" cy="48" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="110" y="53" text-anchor="middle" class="diagram-mini">x-files</text></g><g><circle cx="245" cy="72" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="245" y="77" text-anchor="middle" class="diagram-mini">mars</text></g><g><circle cx="290" cy="168" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="290" y="173" text-anchor="middle" class="diagram-mini">cydonia</text></g><g><circle cx="225" cy="260" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="225" y="265" text-anchor="middle" class="diagram-mini">nasa</text></g><g><circle cx="90" cy="262" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="90" y="267" text-anchor="middle" class="diagram-mini">theories</text></g><g><circle cx="42" cy="148" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="42" y="153" text-anchor="middle" class="diagram-mini">anomalies</text></g>
-      </svg>
-    </div>
-    
-              
-    <div class="diagram-card">
-      <div class="diagram-head"><strong>Note density</strong><span>structure and weight</span></div>
-      <div class="metric-rows"><div class="metric-row"><span>sections</span><div class="metric-bar"><i style="width:10%; background:#67e8f9"></i></div><b>26</b></div><div class="metric-row"><span>bullets</span><div class="metric-bar"><i style="width:10%; background:#a78bfa"></i></div><b>27</b></div><div class="metric-row"><span>links</span><div class="metric-bar"><i style="width:10%; background:#fb923c"></i></div><b>7</b></div><div class="metric-row"><span>words</span><div class="metric-bar"><i style="width:100%; background:#34d399"></i></div><b>942</b></div></div>
-    </div>
-    
-              
-    <div class="diagram-card toc-card">
-      <div class="diagram-head"><strong>Reading index</strong><span>quick jumps</span></div>
-      <div class="toc-list"><a href="#cydonia-martian-mystery-region" class="toc-link toc-level-1">Overview</a><a href="#summary" class="toc-link toc-level-2">Summary</a><a href="#what-does-the-source-actually-contain" class="toc-link toc-level-2">What does the source actually contain?</a><a href="#why-it-matters-within-x-files" class="toc-link toc-level-2">Why it matters within X Files</a><a href="#useful-metadata" class="toc-link toc-level-2">Useful metadata</a><a href="#what-scientific-stories-does-the-fountain-cross" class="toc-link toc-level-2">What scientific stories does the fountain cross</a><a href="#1-the-great-martian-dichotomy" class="toc-link toc-level-3">1) The great Martian dichotomy</a><a href="#2-ice-water-in-the-subsoil" class="toc-link toc-level-3">2) Ice/water in the subsoil</a><a href="#3-mars-as-a-planet-with-climatic-cycles" class="toc-link toc-level-3">3) Mars as a planet with climatic cycles</a><a href="#4-the-face-as-an-eroded-table" class="toc-link toc-level-3">4) The Face as an eroded table</a><a href="#useful-cydonia-case-structure" class="toc-link toc-level-2">Useful Cydonia Case Structure</a><a href="#block-a-transitional-landscape" class="toc-link toc-level-3">Block A — transitional landscape</a><a href="#block-b-water-ice-signals" class="toc-link toc-level-3">Block B—water/ice signals</a><a href="#block-c-suggestive-shapes" class="toc-link toc-level-3">Block C — suggestive shapes</a><a href="#block-d-cultural-reappropriation" class="toc-link toc-level-3">Block D — cultural reappropriation</a><a href="#main-claims-of-the-source" class="toc-link toc-level-2">Main claims of the source</a><a href="#what-makes-cydonia-such-a-powerful-case" class="toc-link toc-level-2">What makes Cydonia such a powerful case?</a><a href="#because-the-place-does-have-real-rarity" class="toc-link toc-level-3">Because the place does have real rarity</a><a href="#because-a-famous-image-colonized-everything-else" class="toc-link toc-level-3">Because a famous image colonized everything else</a><a href="#because-it-mixes-strong-science-with-open-narrative" class="toc-link toc-level-3">Because it mixes strong science with open narrative</a><a href="#critical-reading" class="toc-link toc-level-2">Critical reading</a><a href="#what-it-does-show" class="toc-link toc-level-3">What it does show</a><a href="#what-it-does-not-prove" class="toc-link toc-level-3">What it does not prove</a><a href="#useful-interpretation" class="toc-link toc-level-3">Useful interpretation</a><a href="#how-to-use-this-note-on-the-wiki" class="toc-link toc-level-2">How to use this note on the wiki</a><a href="#related" class="toc-link toc-level-2">Related</a></div>
-    </div>
-    
-              
-    <div class="diagram-card related-card">
-      <div class="diagram-head"><strong>Related paths</strong><span>topic continuity</span></div>
-      <div class="related-list"><a class="related-link" href="face-on-mars-official-image-reanalysis.html"><strong>Face on Mars: Official Image Reanalysis</strong><span>Mars</span></a><a class="related-link" href="mars-x-files-anomalies-vs-official-readings.html"><strong>Mars X Files: Anomalies vs Official Readings</strong><span>Mars</span></a><a class="related-link" href="ancient-ocean-on-mars-evidence-vs-open-debate.html"><strong>Ancient Ocean on Mars: Evidence vs Open Debate</strong><span>Mars</span></a><a class="related-link" href="ancient-water-on-mars-and-climate-loss.html"><strong>Ancient Water on Mars and Climate Loss</strong><span>Mars</span></a></div>
-    </div>
-    
-              
-    <div class="diagram-card wiki-index-card">
-      <div class="diagram-head"><strong>Wiki graph</strong><span>clickable references</span></div>
-      <div class="wiki-link-columns">
-        <div><h4>Outgoing links</h4><a href="face-on-mars-official-image-reanalysis.html">Face On Mars Official Image Reanalysis</a><a href="mars-x-files-anomalies-vs-official-readings.html">Mars X Files Anomalies Vs Official Readings</a><a href="ancient-water-on-mars-and-climate-loss.html">Ancient Water On Mars And Climate Loss</a><a href="mars-x-files-map.html">Mars X Files Map</a><a href="x-files.html">X Files</a><a href="index.html">Index</a></div>
-        <div><h4>Backlinks</h4><a href="ancient-ocean-on-mars-evidence-vs-open-debate.html">Ancient Ocean on Mars: Evidence vs Open Debate</a><a href="ancient-water-on-mars-and-climate-loss.html">Ancient Water on Mars and Climate Loss</a><a href="face-on-mars-official-image-reanalysis.html">Face on Mars: Official Image Reanalysis</a><a href="mars-canals-schiaparelli-lowell-and-the-interpretive-error.html">Mars Canals: Schiaparelli, Lowell, and the Interpretive Error</a><a href="mars-x-files-anomalies-vs-official-readings.html">Mars X Files: Anomalies vs Official Readings</a><a href="mars-x-files-map.html">Mars X Files Map</a></div>
-      </div>
-    </div>
-    
-            </section>
-          </aside>
-          <section class="note-body prose">
+    <figure class="dossier-figure">
+      <picture>
+  <source media="(max-width: 600px)" srcset="assets/visuals/dossiers/cydonia-martian-mystery-region-thumb.jpg">
+  <img src="assets/visuals/dossiers/cydonia-martian-mystery-region.jpg" width="1152" height="768" alt="" fetchpriority="high">
+</picture>
+      <figcaption>Editorial illustration</figcaption>
+    </figure>
+  </header>
+  <div class="dossier-toolbar" aria-label="Reading tools">
+    <button id="reading-mode-toggle" type="button">Reading mode</button>
+    <a href="#dossier-sources">Sources and citations <span aria-hidden="true">↘</span></a>
+    <details class="dossier-tags-menu"><summary>Tags</summary><div class="dossier-tags"><a href="search.html?q=x-files">x-files</a> <a href="search.html?q=mars">mars</a> <a href="search.html?q=cydonia">cydonia</a> <a href="search.html?q=nasa">nasa</a> <a href="search.html?q=theories">theories</a> <a href="search.html?q=anomalies">anomalies</a></div></details>
+  </div>
+  <details class="dossier-mobile-outline"><summary>On this page</summary><nav aria-label="Sections"><a href="#summary">Summary</a><a href="#what-does-the-source-actually-contain">What does the source actually contain?</a><a href="#why-it-matters-within-x-files">Why it matters within X Files</a><a href="#useful-metadata">Useful metadata</a><a href="#what-scientific-stories-does-the-fountain-cross">What scientific stories does the fountain cross</a><a href="#useful-cydonia-case-structure">Useful Cydonia Case Structure</a><a href="#main-claims-of-the-source">Main claims of the source</a><a href="#what-makes-cydonia-such-a-powerful-case">What makes Cydonia such a powerful case?</a><a href="#critical-reading">Critical reading</a><a href="#how-to-use-this-note-on-the-wiki">How to use this note on the wiki</a><a href="#related">Related</a></nav></details>
+  <div class="dossier-layout">
+    <aside class="dossier-outline">
+      <nav aria-label="On this page"><h2>On this page</h2><a href="#summary">Summary</a><a href="#what-does-the-source-actually-contain">What does the source actually contain?</a><a href="#why-it-matters-within-x-files">Why it matters within X Files</a><a href="#useful-metadata">Useful metadata</a><a href="#what-scientific-stories-does-the-fountain-cross">What scientific stories does the fountain cross</a><a href="#useful-cydonia-case-structure">Useful Cydonia Case Structure</a><a href="#main-claims-of-the-source">Main claims of the source</a><a href="#what-makes-cydonia-such-a-powerful-case">What makes Cydonia such a powerful case?</a><a href="#critical-reading">Critical reading</a><a href="#how-to-use-this-note-on-the-wiki">How to use this note on the wiki</a><a href="#related">Related</a></nav>
+    </aside>
+    <div class="dossier-main">
+      <section class="note-body prose">
 <h2 id="summary">Summary</h2>
 <p>Cydonia is one of the most useful regions in the entire Mars folder because it concentrates two stories at the same time: a real scientific story about Martian geology, ice, and climate; and a cultural history about the <code>Face on Mars</code>, apparent ruins and lost civilizations. The strength of this note is in treating Cydonia not as evidence of architecture, but as a point of collision between real landscape and human imagination.</p>
 <h2 id="what-does-the-source-actually-contain">What does the source actually contain?</h2>
@@ -229,15 +140,104 @@
 <ul><li>as an official baseline when reading any claim about ruins in Cydonia</li><li>as a bridge between Mars science and the cultural history of anomalies</li><li>as required context before reading more speculative material on the Face</li></ul>
 <h2 id="related">Related</h2>
 <p><a href="face-on-mars-official-image-reanalysis.html">face-on-mars-official-image-reanalysis</a> <a href="mars-x-files-anomalies-vs-official-readings.html">mars-x-files-anomalies-vs-official-readings</a> <a href="ancient-water-on-mars-and-climate-loss.html">ancient-water-on-mars-and-climate-loss</a> <a href="mars-x-files-map.html">mars-x-files-map</a> <a href="x-files.html">x-files</a> <a href="index.html">index</a></p></section>
-        </div>
-      </article>
+      <nav class="dossier-neighbors" aria-label="More in this topic"><a rel="prev" href="ancient-water-on-mars-and-climate-loss.html"><small>Previous dossier</small><strong>Ancient Water on Mars and Climate Loss</strong></a><a rel="next" href="face-on-mars-official-image-reanalysis.html"><small>Next dossier</small><strong>Face on Mars: Official Image Reanalysis</strong></a></nav>
+    </div>
+    <aside class="dossier-context" aria-label="Dossier references">
+      <details id="dossier-sources" class="dossier-sources">
+      <summary>Sources and citations</summary>
+      <div class="dossier-source-content">
+    <div class="source-box">
+      <strong>Source context</strong>
+      <p>Generated from Obsidian source note. Treat claims as research leads until corroborated by primary material.</p>
+      <div><span>No explicit external URL in note body</span></div>
+    </div>
 
-      <footer class="footer">
-        <span>Source: resources/cydonia-martian-mystery-region.md</span>
-        <span><a href="index.html">Back to index</a></span>
-      </footer>
-    </main>
-    
-  <script src="assets/app.js?v=3c50441" defer></script>
+
+    <div class="citation-panel">
+      <strong>Citation panel</strong>
+      <p>Generated from the vault source. Use linked sources and cross-references as the verification trail.</p>
+      <div><span>Obsidian source note only</span></div>
+    </div>
+      </div>
+    </details>
+      <section class="dossier-related" aria-labelledby="dossier-related-title">
+        <h2 id="dossier-related-title">Related dossiers</h2>
+        <a class="related-entry" href="face-on-mars-official-image-reanalysis.html">
+    <img src="assets/visuals/dossiers/face-on-mars-official-image-reanalysis-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
+    <span>Face on Mars: Official Image Reanalysis</span>
+  </a><a class="related-entry" href="mars-x-files-anomalies-vs-official-readings.html">
+    <img src="assets/visuals/dossiers/mars-x-files-anomalies-vs-official-readings-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
+    <span>Mars X Files: Anomalies vs Official Readings</span>
+  </a><a class="related-entry" href="ancient-ocean-on-mars-evidence-vs-open-debate.html">
+    <img src="assets/visuals/dossiers/ancient-ocean-on-mars-evidence-vs-open-debate-thumb.jpg" alt="" width="480" height="320" loading="lazy" decoding="async">
+    <span>Ancient Ocean on Mars: Evidence vs Open Debate</span>
+  </a>
+      </section>
+      <details class="dossier-extra">
+        <summary>Research details</summary>
+        <p class="dossier-source-path">Obsidian note · <code>resources/cydonia-martian-mystery-region.md</code></p>
+        <div class="note-insights">
+
+    <div class="dossier-matrix" id="dossier-method">
+      <div class="diagram-head"><strong>Dossier method</strong><span>claim · evidence · uncertainty</span></div>
+      <div class="dossier-matrix-grid"><div><span>Source says</span><p>Cydonia is one of the most useful regions in the entire Mars folder because it concentrates two stories at the same time: a real scientific story about Martian geology, ice, and climate; and a cultural history about the Face on Mars, apparent ruins and lost ci</p></div><div><span>Evidence type</span><p>| Field | Data | |---|---| | Region | Cydonia Mensae | | Context | transition between Arabia Terra and the northern lowlands | | Operational source | THEMIS / Mars Odyssey feature page | | Image coordinates | 40.2°N, 350.2°E | | Reported image size | 87.5 x 10</p></div><div><span>Source quality</span><p>Check source context, citations and internal links before treating claims as established.</p></div><div><span>Why it matters</span><p>- It is the most useful official node to bring down the myth of Cydonia - shows that a place can be scientifically fascinating without needing artificialistic hypotheses - serves as a direct counterpart to face-on-mars-official-image-reanalysis - allows connec</p></div><div><span>Open questions</span><p>Use related paths and source links to identify what still needs verification.</p></div></div>
+      <a class="method-link" href="x-files-dossier-method.html">Open editorial method →</a>
+    </div>
+
+
+    <div class="related-evidence-map">
+      <div class="diagram-head"><strong>Related evidence map</strong><span>same-cluster paths + wikilinks</span></div>
+      <div class="evidence-grid"><a href="face-on-mars-official-image-reanalysis.html"><strong>Face on Mars: Official Image Reanalysis</strong><span>Mars</span></a><a href="mars-x-files-anomalies-vs-official-readings.html"><strong>Mars X Files: Anomalies vs Official Readings</strong><span>Mars</span></a><a href="ancient-ocean-on-mars-evidence-vs-open-debate.html"><strong>Ancient Ocean on Mars: Evidence vs Open Debate</strong><span>Mars</span></a><a href="ancient-water-on-mars-and-climate-loss.html"><strong>Ancient Water on Mars and Climate Loss</strong><span>Mars</span></a><a href="cia-mars-exploration-1984.html"><strong>CIA Mars Exploration 1984</strong><span>CIA / Remote Viewing</span></a><a href="how-the-cia-spent-millions-on-psychic-spies-project-stargate-documentary-3.html"><strong>How The CIA Spent Millions On Psychic Spies - PROJECT: STARGATE (Documentary 3 of 3)</strong><span>CIA / Remote Viewing</span></a><a href="face-on-mars-official-image-reanalysis.html"><strong>Face On Mars Official Image Reanalysis</strong><span>wikilink</span></a><a href="mars-x-files-anomalies-vs-official-readings.html"><strong>Mars X Files Anomalies Vs Official Readings</strong><span>wikilink</span></a></div>
+    </div>
+
+
+    <div class="diagram-card">
+      <div class="diagram-head"><strong>Topic constellation</strong><span>connected tags</span></div>
+      <svg viewBox="0 0 330 310" class="diagram-svg" role="img" aria-label="Tag constellation">
+        <line x1="168" y1="154" x2="110" y2="48" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="245" y2="72" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="290" y2="168" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="225" y2="260" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="90" y2="262" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" /><line x1="168" y1="154" x2="42" y2="148" stroke="rgba(103,232,249,0.45)" stroke-width="1.2" />
+        <circle cx="168" cy="154" r="42" fill="rgba(103,232,249,0.12)" stroke="#67e8f9" stroke-width="1.5" />
+        <text x="168" y="148" text-anchor="middle" class="diagram-core">RESOURCE</text>
+        <text x="168" y="170" text-anchor="middle" class="diagram-label">Mars</text>
+        <g><circle cx="110" cy="48" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="110" y="53" text-anchor="middle" class="diagram-mini">x-files</text></g><g><circle cx="245" cy="72" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="245" y="77" text-anchor="middle" class="diagram-mini">mars</text></g><g><circle cx="290" cy="168" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="290" y="173" text-anchor="middle" class="diagram-mini">cydonia</text></g><g><circle cx="225" cy="260" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="225" y="265" text-anchor="middle" class="diagram-mini">nasa</text></g><g><circle cx="90" cy="262" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="90" y="267" text-anchor="middle" class="diagram-mini">theories</text></g><g><circle cx="42" cy="148" r="24" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.3" /><text x="42" y="153" text-anchor="middle" class="diagram-mini">anomalies</text></g>
+      </svg>
+    </div>
+
+
+    <div class="diagram-card">
+      <div class="diagram-head"><strong>Note density</strong><span>structure and weight</span></div>
+      <div class="metric-rows"><div class="metric-row"><span>sections</span><div class="metric-bar"><i style="width:10%; background:#67e8f9"></i></div><b>26</b></div><div class="metric-row"><span>bullets</span><div class="metric-bar"><i style="width:10%; background:#a78bfa"></i></div><b>27</b></div><div class="metric-row"><span>links</span><div class="metric-bar"><i style="width:10%; background:#fb923c"></i></div><b>7</b></div><div class="metric-row"><span>words</span><div class="metric-bar"><i style="width:100%; background:#34d399"></i></div><b>942</b></div></div>
+    </div>
+
+
+
+
+
+    <div class="diagram-card related-card">
+      <div class="diagram-head"><strong>Related paths</strong><span>topic continuity</span></div>
+      <div class="related-list"><a class="related-link" href="face-on-mars-official-image-reanalysis.html"><strong>Face on Mars: Official Image Reanalysis</strong><span>Mars</span></a><a class="related-link" href="mars-x-files-anomalies-vs-official-readings.html"><strong>Mars X Files: Anomalies vs Official Readings</strong><span>Mars</span></a><a class="related-link" href="ancient-ocean-on-mars-evidence-vs-open-debate.html"><strong>Ancient Ocean on Mars: Evidence vs Open Debate</strong><span>Mars</span></a><a class="related-link" href="ancient-water-on-mars-and-climate-loss.html"><strong>Ancient Water on Mars and Climate Loss</strong><span>Mars</span></a></div>
+    </div>
+
+
+    <div class="diagram-card wiki-index-card">
+      <div class="diagram-head"><strong>Wiki graph</strong><span>clickable references</span></div>
+      <div class="wiki-link-columns">
+        <div><h4>Outgoing links</h4><a href="face-on-mars-official-image-reanalysis.html">Face On Mars Official Image Reanalysis</a><a href="mars-x-files-anomalies-vs-official-readings.html">Mars X Files Anomalies Vs Official Readings</a><a href="ancient-water-on-mars-and-climate-loss.html">Ancient Water On Mars And Climate Loss</a><a href="mars-x-files-map.html">Mars X Files Map</a><a href="x-files.html">X Files</a><a href="index.html">Index</a></div>
+        <div><h4>Backlinks</h4><a href="ancient-ocean-on-mars-evidence-vs-open-debate.html">Ancient Ocean on Mars: Evidence vs Open Debate</a><a href="ancient-water-on-mars-and-climate-loss.html">Ancient Water on Mars and Climate Loss</a><a href="face-on-mars-official-image-reanalysis.html">Face on Mars: Official Image Reanalysis</a><a href="mars-canals-schiaparelli-lowell-and-the-interpretive-error.html">Mars Canals: Schiaparelli, Lowell, and the Interpretive Error</a><a href="mars-x-files-anomalies-vs-official-readings.html">Mars X Files: Anomalies vs Official Readings</a><a href="mars-x-files-map.html">Mars X Files Map</a></div>
+      </div>
+    </div>
+
+            </div>
+      </details>
+    </aside>
+  </div>
+</article>
+
+<footer class="library-footer">
+  <a href="index.html">X Files · Prometheus</a>
+  <nav aria-label="About the archive"><a href="x-files.html">Research map</a><a href="x-files-dossier-method.html">Editorial method</a></nav>
+</footer>
+</main>
+
+<script src="assets/app.js?v=f51c6d33c9" defer></script>
 </body>
 </html>
